@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frameweb:FramewebProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:frameweb="http://nemo.inf.ufes.br/projects/frameweb/FW-2015" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <compose xsi:type="frameweb:EntityModel" name="Java">
+    <packagedElement xsi:type="uml:PrimitiveType" name="byte"/>
+    <packagedElement xsi:type="uml:PrimitiveType" name="short"/>
+    <packagedElement xsi:type="uml:PrimitiveType" name="int"/>
+    <packagedElement xsi:type="uml:PrimitiveType" name="long"/>
+    <packagedElement xsi:type="uml:PrimitiveType" name="float"/>
+    <packagedElement xsi:type="uml:PrimitiveType" name="double"/>
+    <packagedElement xsi:type="uml:PrimitiveType" name="boolean"/>
+    <packagedElement xsi:type="uml:PrimitiveType" name="char"/>
+    <packagedElement xsi:type="uml:Class" name="Object"/>
+    <packagedElement xsi:type="uml:Class" name="String"/>
+    <packagedElement xsi:type="uml:Class" name="Date"/>
+    <packagedElement xsi:type="uml:Class" name="Byte"/>
+    <packagedElement xsi:type="uml:Class" name="Short"/>
+    <packagedElement xsi:type="uml:Class" name="Integer"/>
+    <packagedElement xsi:type="uml:Class" name="Long"/>
+    <packagedElement xsi:type="uml:Class" name="Float"/>
+    <packagedElement xsi:type="uml:Class" name="Double"/>
+    <packagedElement xsi:type="uml:Class" name="Boolean"/>
+    <packagedElement xsi:type="uml:Class" name="Character"/>
+    <packagedElement xsi:type="uml:Class" name="Collection"/>
+    <packagedElement xsi:type="uml:Class" name="Deque"/>
+    <packagedElement xsi:type="uml:Class" name="List"/>
+    <packagedElement xsi:type="uml:Class" name="Map"/>
+    <packagedElement xsi:type="uml:Class" name="Queue"/>
+    <packagedElement xsi:type="uml:Class" name="Set"/>
+    <packagedElement xsi:type="uml:Class" name="SortedSet"/>
+    <packagedElement xsi:type="uml:Class" name="SortedMap"/>
+    <packagedElement xsi:type="uml:Class" name="BigDecimal"/>
+    <packagedElement xsi:type="uml:Class" name="BigInteger"/>
+  </compose>
+</frameweb:FramewebProject>

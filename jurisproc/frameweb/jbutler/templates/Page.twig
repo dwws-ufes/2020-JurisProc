@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:p="http://primefaces.org/ui"
+    xmlns:adm="http://github.com/adminfaces"
+    template="/WEB-INF/templates/template.xhtml">
+    
+    {#- Defines left and right JSF EL brackets. -#}
+    {%- set left = "#{" -%}
+	{%- set right = "}" -%}
+    
+    {#- Looks for any connection to any controller to derive a feature name from it. -#}
+	{% set featureName = "featureName" %}
+	{% set controllerName = "controllerName" %}
+    {%- for relationship in merge(page.getSourceDirectedRelationships(), page.getTargetDirectedRelationships()) -%}
+    	{%- for obj in merge(relationship.getClients(), relationship.getSuppliers()) -%}
+    		{%- if obj.getPageTagLib is not defined -%}
+    			{%- set featureName = lower_first(replace(obj.getName(), {'Controller': ''})) -%}
+    			{%- set controllerName = lower_first(obj.getName()) -%}
+    		{%- endif -%}
+    	{%- endfor -%}
+    {%- endfor -%}
+    {%- for form in forms -%}
+        {%- for relationship in merge(form.getSourceDirectedRelationships(), form.getTargetDirectedRelationships()) -%}
+        	{%- for obj in merge(relationship.getClients(), relationship.getSuppliers()) -%}
+        		{%- if obj.getPageTagLib is not defined -%}
+        			{%- set featureName = lower_first(replace(obj.getName(), {'Controller': ''})) -%}
+    			    {%- set controllerName = lower_first(obj.getName()) -%}
+        		{%- endif -%}
+        	{%- endfor -%}
+        {%- endfor -%}
+    {%- endfor %}
+
+    <ui:define name="title">
+        <h:outputText value="#{msgsCore['{{ featureName }}.title']}" />
+    </ui:define>
+
+    <ui:define name="description">
+        <h:outputText value="#{msgsCore['{{ featureName }}.title.description']}" />
+    </ui:define>
+
+    <ui:define name="body">
+		<adm:breadcrumb link="/core/registration/index" title="#{msgsCore['{{ featureName }}.title']}" />
+
+	{#- Prints components owned directly by the page. -#}
+	{%- for attribute in page.getOwnedAttributes() -%}{%- if not empty(attribute.Name) -%}
+		{%- if attribute.Type.Name == "inputHidden" -%}{%- set tag = "h:inputHidden" -%}
+		{%- elseif attribute.Type.Name == "outputFormat" -%}{%- set tag = "h:outputFormat" -%}
+		{%- elseif attribute.Type.Name == "outputLink" -%}{%- set tag = "h:outputLink" -%}
+		{%- elseif attribute.Type.Name == "outputText" -%}{%- set tag = "h:outputText" -%}
+		{%- elseif attribute.Type.Name == "panelGroup" -%}{%- set tag = "h:panelGroup" -%}
+		{%- elseif attribute.Type.Name == "selectManyListbox" -%}{%- set tag = "h:selectManyListbox" -%}
+		{%- else -%}{%- set tag = "p:" ~ attribute.Type.Name -%}{%- endif -%}
+		{% if tag == "p:commandButton" %}
+		<p:commandButton value="{{ attribute.Name }}" action="{{ left }}{{ controllerName }}.{{ methodName }}{{ right }}" />
+		{% else %}
+		<{{ tag }} id="{{ attribute.Name }}" value="{{ left }}{{ controllerName }}.{{ attribute.Name }}{{ right }}" />
+		{%- endif -%}
+	{%- endif -%}{%- endfor -%}
+
+	{#- Prints forms and components owned by the forms. -#}
+	{% for form in forms %}
+        {%- for relationship in form.getSourceDirectedRelationships() -%}
+        	{%- for obj in relationship.getSuppliers() -%}
+        		{%- if obj.getPageTagLib is not defined -%}
+    			    {%- set controllerName = lower_first(obj.getName()) -%}
+        		{%- endif -%}
+        	{%- endfor -%}
+        {%- endfor -%}
+	    <h:form id="{{ form.Name }}">
+		{% for attribute in form.Attributes %}
+			{%- if attribute.Type.Name == "inputHidden" -%}{%- set tag = "h:inputHidden" -%}
+			{%- elseif attribute.Type.Name == "outputFormat" -%}{%- set tag = "h:outputFormat" -%}
+			{%- elseif attribute.Type.Name == "outputLink" -%}{%- set tag = "h:outputLink" -%}
+			{%- elseif attribute.Type.Name == "outputText" -%}{%- set tag = "h:outputText" -%}
+			{%- elseif attribute.Type.Name == "panelGroup" -%}{%- set tag = "h:panelGroup" -%}
+			{%- elseif attribute.Type.Name == "selectManyListbox" -%}{%- set tag = "h:selectManyListbox" -%}
+			{%- else -%}{%- set tag = "p:" ~ attribute.Type.Name -%}{%- endif -%}
+			{% if tag == "p:commandButton" %}
+			<p:commandButton value="{{ attribute.Name }}" action="{{ left }}{{ controllerName }}.{{ methodName }}{{ right }}" />
+			{% else %}
+			<{{ tag }} id="{{ attribute.Name }}" value="{{ left }}{{ controllerName }}.{{ attribute.Name }}{{ right }}" />
+			{%- endif -%}
+		{% endfor %}
+		</h:form>
+    {% endfor %}
+    </ui:define>
+</ui:composition>

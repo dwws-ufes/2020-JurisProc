@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<frameweb:FramewebProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:frameweb="http://nemo.inf.ufes.br/projects/frameweb/FW-2015" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <compose xsi:type="frameweb:EntityModel" name="Entity Model">
+    <packagedElement xsi:type="frameweb:DomainPackage" name="br.ufes.informatica.jurisproc.core.domain">
+      <packagedElement xsi:type="frameweb:DomainClass" name="Usuario">
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="nome" visibility="private" size="100">
+          <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/String"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="email" visibility="private" size="100">
+          <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/String"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="senha" visibility="private" size="12">
+          <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/String"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:DateTimeAttribute" name="dataRegistro" visibility="private">
+          <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/Date"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:IdAttribute" name="idUsuario" visibility="private">
+          <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/Integer"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:DomainClass" name="Peticao"/>
+      <packagedElement xsi:type="frameweb:DomainClass" name="SystemRole">
+        <ownedAttribute xsi:type="frameweb:IdAttribute" name="nome" visibility="private" size="10">
+          <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/String"/>
+        </ownedAttribute>
+      </packagedElement>
+    </packagedElement>
+  </compose>
+</frameweb:FramewebProject>
