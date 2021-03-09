@@ -25,6 +25,16 @@
           <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/String"/>
         </ownedAttribute>
       </packagedElement>
+      <packagedElement xsi:type="frameweb:DomainClass" name="TipoPeticao"/>
+      <packagedElement xsi:type="frameweb:DomainClass" name="Tribunal">
+        <ownedAttribute xsi:type="frameweb:IdAttribute" name="sigla" visibility="private">
+          <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/String"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="nomeTribunal" visibility="private" size="50">
+          <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:DomainClass" name="Foro"/>
     </packagedElement>
   </compose>
 </frameweb:FramewebProject>
