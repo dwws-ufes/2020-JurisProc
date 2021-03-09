@@ -60,6 +60,9 @@
         <ownedOperation xsi:type="frameweb:DAOMethod" name="excluiRegistro">
           <ownedParameter name="peticao" type="//@compose.0/br.ufes.informatica.jurisproc.core.domain/Peticao"/>
         </ownedOperation>
+        <ownedOperation xsi:type="frameweb:DAOMethod" name="atualizaRegistro" methodType="//@compose.0/br.ufes.informatica.jurisproc.core.domain/Peticao">
+          <ownedParameter name="peticao" type="//@compose.0/br.ufes.informatica.jurisproc.core.domain/Peticao"/>
+        </ownedOperation>
       </packagedElement>
       <packagedElement xsi:type="frameweb:DAORealization" client="//@compose.1/br.ufes.informatica.jurisproc.core.persistence/peticaoDAOJPA" supplier="//@compose.1/br.ufes.informatica.jurisproc.core.persistence/peticaoDAO"/>
     </packagedElement>
