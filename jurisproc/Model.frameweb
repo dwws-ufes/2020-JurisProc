@@ -131,7 +131,11 @@
       <packagedElement xsi:type="frameweb:NavigationAssociation" memberEnd="//@compose.2/%2Fcore%2Fpeticao%2F/@packagedElement.2/@ownedEnd.0 //@compose.2/%2Fcore%2Fpeticao%2F/cadastro/@ownedAttribute.0">
         <ownedEnd xsi:type="frameweb:NavigationCompositionPart" type="//@compose.2/%2Fcore%2Fpeticao%2F/cadastro" association="//@compose.2/%2Fcore%2Fpeticao%2F/@packagedElement.2"/>
       </packagedElement>
-      <packagedElement xsi:type="frameweb:Page" name="lista"/>
+      <packagedElement xsi:type="frameweb:Page" name="lista">
+        <ownedAttribute xsi:type="frameweb:UIComponentField" name="peticoes" visibility="private">
+          <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/List"/>
+        </ownedAttribute>
+      </packagedElement>
     </packagedElement>
     <packagedElement xsi:type="frameweb:FrontControllerDependency" client="//@compose.2/%2Fcore%2Fpeticao%2F/cadastroForm" supplier="//@compose.2/br.ufes.informatica.jurisproc.core.application/PeticaoController" method="//@compose.2/br.ufes.informatica.jurisproc.core.application/PeticaoController/anexaPeticao"/>
     <packagedElement xsi:type="frameweb:ResultDependency" client="//@compose.2/br.ufes.informatica.jurisproc.core.application/PeticaoController" supplier="//@compose.2/%2Fcore%2Fpeticao%2F/lista" resultMethod="//@compose.2/br.ufes.informatica.jurisproc.core.application/PeticaoController/anexaPeticao">

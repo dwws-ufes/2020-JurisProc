@@ -42,7 +42,7 @@
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='Method%20Diagram']"/>
         <target xmi:type="frameweb:DAOMethod" href="Model.frameweb#//@compose.1/br.ufes.informatica.jurisproc.core.persistence/peticaoDAOJPA/atualizaRegistro"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_LYRDYYBvEeuTeq2d20D-mA" name="FrameWebNavigationModel" repPath="#_LYPOMIBvEeuTeq2d20D-mA" changeId="ee1ede78-ba90-486d-ae39-429fa4a7a8cd">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_LYRDYYBvEeuTeq2d20D-mA" name="FrameWebNavigationModel" repPath="#_LYPOMIBvEeuTeq2d20D-mA" changeId="87ee51d1-5828-4f4e-8f76-ac48196fda98">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']"/>
         <target xmi:type="frameweb:NavigationModel" href="Model.frameweb#//@compose.2"/>
       </ownedRepresentationDescriptors>
@@ -1246,6 +1246,10 @@
             <children xmi:type="notation:Node" xmi:id="_JqJX4IBzEeuTeq2d20D-mA" type="3009" element="_Jp6uYIBzEeuTeq2d20D-mA">
               <children xmi:type="notation:Node" xmi:id="_JqJX44BzEeuTeq2d20D-mA" type="5004"/>
               <children xmi:type="notation:Node" xmi:id="_JqJ-8IBzEeuTeq2d20D-mA" type="7003">
+                <children xmi:type="notation:Node" xmi:id="_CK8l8IB0EeuTeq2d20D-mA" type="3010" element="_CKvKkIB0EeuTeq2d20D-mA">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_CK8l8YB0EeuTeq2d20D-mA" fontName="Ubuntu" fontHeight="8"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_CK8l8oB0EeuTeq2d20D-mA"/>
+                </children>
                 <styles xmi:type="notation:SortingStyle" xmi:id="_JqJ-8YBzEeuTeq2d20D-mA"/>
                 <styles xmi:type="notation:FilteringStyle" xmi:id="_JqJ-8oBzEeuTeq2d20D-mA"/>
               </children>
@@ -1594,6 +1598,14 @@
           <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']/@subContainerMappings[name='Page%20Node']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']/@subContainerMappings[name='Page%20Node']"/>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_CKvKkIB0EeuTeq2d20D-mA" name=" - peticoes : List">
+          <target xmi:type="frameweb:UIComponentField" href="Model.frameweb#//@compose.2/%2Fcore%2Fpeticao%2F/lista/peticoes"/>
+          <semanticElements xmi:type="frameweb:UIComponentField" href="Model.frameweb#//@compose.2/%2Fcore%2Fpeticao%2F/lista/peticoes"/>
+          <ownedStyle xmi:type="diagram:Dot" uid="_CKvxoIB0EeuTeq2d20D-mA" showIcon="false" labelAlignment="LEFT" labelPosition="node">
+            <description xmi:type="style:DotDescription" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']/@subContainerMappings[name='Page%20Node']/@subNodeMappings[name='UI%20Component%20Field%20Node']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']/@subContainerMappings[name='Page%20Node']/@subNodeMappings[name='UI%20Component%20Field%20Node']"/>
+        </ownedElements>
       </ownedDiagramElements>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_69_sgIByEeuTeq2d20D-mA" sourceNode="_eI8z0IByEeuTeq2d20D-mA" targetNode="_l4RP8IByEeuTeq2d20D-mA" endLabel="1">
