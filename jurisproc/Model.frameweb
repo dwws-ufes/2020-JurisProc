@@ -19,7 +19,14 @@
           <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/Integer"/>
         </ownedAttribute>
       </packagedElement>
-      <packagedElement xsi:type="frameweb:DomainClass" name="Peticao"/>
+      <packagedElement xsi:type="frameweb:DomainClass" name="Peticao">
+        <ownedAttribute xsi:type="frameweb:IdAttribute" name="id" visibility="private">
+          <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/Long"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="caminhoPeticaoAnexo" visibility="private">
+          <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/String"/>
+        </ownedAttribute>
+      </packagedElement>
       <packagedElement xsi:type="frameweb:DomainClass" name="SystemRole">
         <ownedAttribute xsi:type="frameweb:IdAttribute" name="nome" visibility="private" size="10">
           <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/String"/>
