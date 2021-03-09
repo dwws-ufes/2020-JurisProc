@@ -37,4 +37,31 @@
       <packagedElement xsi:type="frameweb:DomainClass" name="Foro"/>
     </packagedElement>
   </compose>
+  <compose xsi:type="frameweb:PersistenceModel" name="Persistence Model">
+    <packagedElement xsi:type="frameweb:PersistencePackage" name="br.ufes.informatica.jurisproc.core.persistence">
+      <packagedElement xsi:type="frameweb:DAOInterface" name="UsuarioDAO"/>
+      <packagedElement xsi:type="frameweb:DAOClass" name="UsuarioDAOJPA">
+        <ownedOperation xsi:type="frameweb:DAOMethod" name="fazLogin">
+          <ownedParameter name="usuario" type="//@compose.0/br.ufes.informatica.jurisproc.core.domain/Usuario"/>
+          <methodType xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/Boolean"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:DAORealization" client="//@compose.1/br.ufes.informatica.jurisproc.core.persistence/UsuarioDAOJPA" supplier="//@compose.1/br.ufes.informatica.jurisproc.core.persistence/UsuarioDAO"/>
+      <packagedElement xsi:type="frameweb:DAOInterface" name="peticaoDAO"/>
+      <packagedElement xsi:type="frameweb:DAOClass" name="peticaoDAOJPA">
+        <ownedOperation xsi:type="frameweb:DAOMethod" name="incluir">
+          <ownedParameter name="peticao" type="//@compose.0/br.ufes.informatica.jurisproc.core.domain/Peticao"/>
+        </ownedOperation>
+        <ownedOperation xsi:type="frameweb:DAOMethod" name="buscarPorId" methodType="//@compose.0/br.ufes.informatica.jurisproc.core.domain/Peticao">
+          <ownedParameter name="id">
+            <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/Long"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xsi:type="frameweb:DAOMethod" name="excluiRegistro">
+          <ownedParameter name="peticao" type="//@compose.0/br.ufes.informatica.jurisproc.core.domain/Peticao"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:DAORealization" client="//@compose.1/br.ufes.informatica.jurisproc.core.persistence/peticaoDAOJPA" supplier="//@compose.1/br.ufes.informatica.jurisproc.core.persistence/peticaoDAO"/>
+    </packagedElement>
+  </compose>
 </frameweb:FramewebProject>
