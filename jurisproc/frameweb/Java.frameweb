@@ -30,5 +30,6 @@
     <packagedElement xsi:type="uml:Class" name="SortedMap"/>
     <packagedElement xsi:type="uml:Class" name="BigDecimal"/>
     <packagedElement xsi:type="uml:Class" name="BigInteger"/>
+    <packagedElement xsi:type="uml:Class" name="Part"/>
   </compose>
 </frameweb:FramewebProject>
