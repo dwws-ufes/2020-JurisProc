@@ -165,7 +165,25 @@
       </packagedElement>
       <packagedElement xsi:type="frameweb:DAORealization" client="//@compose.1/br.ufes.informatica.jurisproc.core.persistence/PedidoUniformizacaoDAOJPA" supplier="//@compose.1/br.ufes.informatica.jurisproc.core.persistence/PedidoUniformizacaoDAO"/>
       <packagedElement xsi:type="frameweb:DAOInterface" name="AssuntoDAO"/>
-      <packagedElement xsi:type="frameweb:DAOClass" name="AssuntoDAOJPA"/>
+      <packagedElement xsi:type="frameweb:DAOClass" name="AssuntoDAOJPA">
+        <ownedOperation xsi:type="frameweb:DAOMethod" name="incluir">
+          <ownedParameter name="assunto" type="//@compose.0/br.ufes.informatica.jurisproc.core.domain/Assunto"/>
+        </ownedOperation>
+        <ownedOperation xsi:type="frameweb:DAOMethod" name="buscarPorId" methodType="//@compose.0/br.ufes.informatica.jurisproc.core.domain/Assunto">
+          <ownedParameter name="id">
+            <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/Integer"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xsi:type="frameweb:DAOMethod" name="excluir">
+          <ownedParameter name="assunto" type="//@compose.0/br.ufes.informatica.jurisproc.core.domain/Assunto"/>
+        </ownedOperation>
+        <ownedOperation xsi:type="frameweb:DAOMethod" name="atualizar" methodType="//@compose.0/br.ufes.informatica.jurisproc.core.domain/Assunto">
+          <ownedParameter name="assunto" type="//@compose.0/br.ufes.informatica.jurisproc.core.domain/Assunto"/>
+        </ownedOperation>
+        <ownedOperation xsi:type="frameweb:DAOMethod" name="buscaTodos">
+          <methodType xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/List"/>
+        </ownedOperation>
+      </packagedElement>
       <packagedElement xsi:type="frameweb:DAORealization" client="//@compose.1/br.ufes.informatica.jurisproc.core.persistence/AssuntoDAOJPA" supplier="//@compose.1/br.ufes.informatica.jurisproc.core.persistence/AssuntoDAO"/>
     </packagedElement>
   </compose>
