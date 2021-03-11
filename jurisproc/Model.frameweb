@@ -54,14 +54,6 @@
           <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/String"/>
         </ownedAttribute>
       </packagedElement>
-      <packagedElement xsi:type="frameweb:DomainClass" name="Tribunal">
-        <ownedAttribute xsi:type="frameweb:IdAttribute" name="sigla" visibility="private">
-          <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/String"/>
-        </ownedAttribute>
-        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="nomeTribunal" visibility="private" size="50">
-          <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/String"/>
-        </ownedAttribute>
-      </packagedElement>
       <packagedElement xsi:type="frameweb:DomainAssociation" name="possui" memberEnd="//@compose.0/br.ufes.informatica.jurisproc.core.domain/possui/Source //@compose.0/br.ufes.informatica.jurisproc.core.domain/possui/Target">
         <ownedRule xsi:type="frameweb:DomainConstraints" name="Source Constraint" constrainedElement="//@compose.0/br.ufes.informatica.jurisproc.core.domain/possui/Source"/>
         <ownedRule xsi:type="frameweb:DomainConstraints" name="Target Constraint" constrainedElement="//@compose.0/br.ufes.informatica.jurisproc.core.domain/possui/Target"/>
@@ -98,6 +90,40 @@
         <ownedRule xsi:type="frameweb:VocabularyConstraints" name="Vocabulary Constraint" constrainedElement="//@compose.0/br.ufes.informatica.jurisproc.core.domain/possui.1"/>
         <ownedEnd xsi:type="frameweb:DomainProperty" name="Source" type="//@compose.0/br.ufes.informatica.jurisproc.core.domain/Peticao" association="//@compose.0/br.ufes.informatica.jurisproc.core.domain/possui.1"/>
         <ownedEnd xsi:type="frameweb:DomainProperty" name="Target" type="//@compose.0/br.ufes.informatica.jurisproc.core.domain/Assunto" association="//@compose.0/br.ufes.informatica.jurisproc.core.domain/possui.1"/>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:DomainClass" name="TurmaRecursal">
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="competencia" visibility="private">
+          <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:DomainAssociation" name="Pertence" memberEnd="//@compose.0/br.ufes.informatica.jurisproc.core.domain/Pertence/Source //@compose.0/br.ufes.informatica.jurisproc.core.domain/Pertence/Target">
+        <ownedRule xsi:type="frameweb:DomainConstraints" name="Source Constraint" constrainedElement="//@compose.0/br.ufes.informatica.jurisproc.core.domain/Pertence/Source"/>
+        <ownedRule xsi:type="frameweb:DomainConstraints" name="Target Constraint" constrainedElement="//@compose.0/br.ufes.informatica.jurisproc.core.domain/Pertence/Target"/>
+        <ownedRule xsi:type="frameweb:VocabularyConstraints" name="Vocabulary Constraint" constrainedElement="//@compose.0/br.ufes.informatica.jurisproc.core.domain/Pertence"/>
+        <ownedEnd xsi:type="frameweb:DomainProperty" name="Source" type="//@compose.0/br.ufes.informatica.jurisproc.core.domain/Peticao" association="//@compose.0/br.ufes.informatica.jurisproc.core.domain/Pertence"/>
+        <ownedEnd xsi:type="frameweb:DomainProperty" name="Target" type="//@compose.0/br.ufes.informatica.jurisproc.core.domain/TurmaRecursal" association="//@compose.0/br.ufes.informatica.jurisproc.core.domain/Pertence"/>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:DomainClass" name="SecaoJudiciaria">
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="nome" visibility="private">
+          <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/String"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="latitude" visibility="private" isNull="true">
+          <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/String"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="longitude" visibility="private" isNull="true">
+          <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/String"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:IdAttribute" name="id" visibility="private">
+          <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/Integer"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:DomainClass" name="Tribunal"/>
+      <packagedElement xsi:type="frameweb:DomainAssociation" name="pertence" memberEnd="//@compose.0/br.ufes.informatica.jurisproc.core.domain/pertence/Source //@compose.0/br.ufes.informatica.jurisproc.core.domain/pertence/Target">
+        <ownedRule xsi:type="frameweb:DomainConstraints" name="Source Constraint" constrainedElement="//@compose.0/br.ufes.informatica.jurisproc.core.domain/pertence/Source"/>
+        <ownedRule xsi:type="frameweb:DomainConstraints" name="Target Constraint" constrainedElement="//@compose.0/br.ufes.informatica.jurisproc.core.domain/pertence/Target"/>
+        <ownedRule xsi:type="frameweb:VocabularyConstraints" name="Vocabulary Constraint" constrainedElement="//@compose.0/br.ufes.informatica.jurisproc.core.domain/pertence"/>
+        <ownedEnd xsi:type="frameweb:DomainProperty" name="Source" type="//@compose.0/br.ufes.informatica.jurisproc.core.domain/TurmaRecursal" association="//@compose.0/br.ufes.informatica.jurisproc.core.domain/pertence"/>
+        <ownedEnd xsi:type="frameweb:DomainProperty" name="Target" type="//@compose.0/br.ufes.informatica.jurisproc.core.domain/SecaoJudiciaria" association="//@compose.0/br.ufes.informatica.jurisproc.core.domain/pertence"/>
       </packagedElement>
     </packagedElement>
   </compose>
