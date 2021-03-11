@@ -135,9 +135,15 @@
           <ownedParameter name="usuario" type="//@compose.0/br.ufes.informatica.jurisproc.core.domain/Usuario"/>
           <methodType xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/Boolean"/>
         </ownedOperation>
-        <ownedOperation xsi:type="frameweb:DAOMethod" name="incluirUsuario"/>
-        <ownedOperation xsi:type="frameweb:DAOMethod" name="excluirUsuario"/>
-        <ownedOperation xsi:type="frameweb:DAOMethod" name="atualizaUsuario"/>
+        <ownedOperation xsi:type="frameweb:DAOMethod" name="incluirUsuario">
+          <ownedParameter name="usuario" type="//@compose.0/br.ufes.informatica.jurisproc.core.domain/Usuario"/>
+        </ownedOperation>
+        <ownedOperation xsi:type="frameweb:DAOMethod" name="excluirUsuario">
+          <ownedParameter name="usuario" type="//@compose.0/br.ufes.informatica.jurisproc.core.domain/Usuario"/>
+        </ownedOperation>
+        <ownedOperation xsi:type="frameweb:DAOMethod" name="atualizaUsuario" methodType="//@compose.0/br.ufes.informatica.jurisproc.core.domain/Usuario">
+          <ownedParameter name="usuario" type="//@compose.0/br.ufes.informatica.jurisproc.core.domain/Usuario"/>
+        </ownedOperation>
       </packagedElement>
       <packagedElement xsi:type="frameweb:DAORealization" client="//@compose.1/br.ufes.informatica.jurisproc.core.persistence/UsuarioDAOJPA" supplier="//@compose.1/br.ufes.informatica.jurisproc.core.persistence/UsuarioDAO"/>
       <packagedElement xsi:type="frameweb:DAOInterface" name="pedidoUniformizacaoDAO"/>
