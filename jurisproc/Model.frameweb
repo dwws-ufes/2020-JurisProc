@@ -131,7 +131,7 @@
     <packagedElement xsi:type="frameweb:PersistencePackage" name="br.ufes.informatica.jurisproc.core.persistence">
       <packagedElement xsi:type="frameweb:DAOInterface" name="UsuarioDAO"/>
       <packagedElement xsi:type="frameweb:DAOClass" name="UsuarioDAOJPA">
-        <ownedOperation xsi:type="frameweb:DAOMethod" name="fazLogin">
+        <ownedOperation xsi:type="frameweb:DAOMethod" name="buscaUsuario">
           <ownedParameter name="usuario" type="//@compose.0/br.ufes.informatica.jurisproc.core.domain/Usuario"/>
           <methodType xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/Boolean"/>
         </ownedOperation>
@@ -146,8 +146,8 @@
         </ownedOperation>
       </packagedElement>
       <packagedElement xsi:type="frameweb:DAORealization" client="//@compose.1/br.ufes.informatica.jurisproc.core.persistence/UsuarioDAOJPA" supplier="//@compose.1/br.ufes.informatica.jurisproc.core.persistence/UsuarioDAO"/>
-      <packagedElement xsi:type="frameweb:DAOInterface" name="pedidoUniformizacaoDAO"/>
-      <packagedElement xsi:type="frameweb:DAOClass" name="pedidoUniformizacaoDAOJPA">
+      <packagedElement xsi:type="frameweb:DAOInterface" name="PedidoUniformizacaoDAO"/>
+      <packagedElement xsi:type="frameweb:DAOClass" name="PedidoUniformizacaoDAOJPA">
         <ownedOperation xsi:type="frameweb:DAOMethod" name="incluir">
           <ownedParameter name="peticao" type="//@compose.0/br.ufes.informatica.jurisproc.core.domain/PedidoUniformizacao"/>
         </ownedOperation>
@@ -163,7 +163,10 @@
           <ownedParameter name="peticao" type="//@compose.0/br.ufes.informatica.jurisproc.core.domain/PedidoUniformizacao"/>
         </ownedOperation>
       </packagedElement>
-      <packagedElement xsi:type="frameweb:DAORealization" client="//@compose.1/br.ufes.informatica.jurisproc.core.persistence/pedidoUniformizacaoDAOJPA" supplier="//@compose.1/br.ufes.informatica.jurisproc.core.persistence/pedidoUniformizacaoDAO"/>
+      <packagedElement xsi:type="frameweb:DAORealization" client="//@compose.1/br.ufes.informatica.jurisproc.core.persistence/PedidoUniformizacaoDAOJPA" supplier="//@compose.1/br.ufes.informatica.jurisproc.core.persistence/PedidoUniformizacaoDAO"/>
+      <packagedElement xsi:type="frameweb:DAOInterface" name="AssuntoDAO"/>
+      <packagedElement xsi:type="frameweb:DAOClass" name="AssuntoDAOJPA"/>
+      <packagedElement xsi:type="frameweb:DAORealization" client="//@compose.1/br.ufes.informatica.jurisproc.core.persistence/AssuntoDAOJPA" supplier="//@compose.1/br.ufes.informatica.jurisproc.core.persistence/AssuntoDAO"/>
     </packagedElement>
   </compose>
   <compose xsi:type="frameweb:NavigationModel" name="Navigation Model">
@@ -234,4 +237,5 @@
       <resultDependencyConstraint result="lista.xhtml"/>
     </packagedElement>
   </compose>
+  <compose xsi:type="frameweb:ApplicationModel" name="Application Model"/>
 </frameweb:FramewebProject>
