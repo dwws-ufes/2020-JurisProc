@@ -121,6 +121,9 @@
         <ownedAttribute xsi:type="frameweb:DomainAttribute" name="juizMembro" visibility="private">
           <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/String"/>
         </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="acordao" visibility="private">
+          <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/String"/>
+        </ownedAttribute>
       </packagedElement>
       <packagedElement xsi:type="frameweb:DomainClass" name="SecaoAdmissibilidade">
         <generalization xsi:type="frameweb:DomainGeneralization"/>
