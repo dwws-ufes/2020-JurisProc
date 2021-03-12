@@ -234,6 +234,7 @@
         <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole"/>
         <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole" type="//@compose.2/%2Fcore%2Flogin%2F/loginForm" association="//@compose.2/%2Fcore%2Flogin%2F/@packagedElement.3"/>
         <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole" type="//@compose.2/%2Fcore%2F/index"/>
+        <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole" type="//@compose.2/%2Fcore%2Flogin%2F/recupera_senha" association="//@compose.2/%2Fcore%2Flogin%2F/@packagedElement.7"/>
       </packagedElement>
       <packagedElement xsi:type="frameweb:UIComponent" name="loginForm">
         <ownedAttribute xsi:type="frameweb:UIComponentField" name="usuario.email" visibility="private">
@@ -249,12 +250,28 @@
       <packagedElement xsi:type="frameweb:NavigationAssociation" memberEnd="//@compose.2/%2Fcore%2Flogin%2F/@packagedElement.3/@ownedEnd.0 //@compose.2/%2Fcore%2Flogin%2F/login/@ownedAttribute.1">
         <ownedEnd xsi:type="frameweb:NavigationCompositionPart" type="//@compose.2/%2Fcore%2Flogin%2F/login" association="//@compose.2/%2Fcore%2Flogin%2F/@packagedElement.3"/>
       </packagedElement>
+      <packagedElement xsi:type="frameweb:Page" name="recupera_senha">
+        <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole" type="//@compose.2/%2Fcore%2Flogin%2F/recuperaForm" association="//@compose.2/%2Fcore%2Flogin%2F/@packagedElement.6"/>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:UIComponent" name="recuperaForm">
+        <ownedAttribute xsi:type="frameweb:UIComponentField" name="usuario.email" visibility="private">
+          <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/PrimeFaces/inputText"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:NavigationAssociation" memberEnd="//@compose.2/%2Fcore%2Flogin%2F/@packagedElement.6/@ownedEnd.0 //@compose.2/%2Fcore%2Flogin%2F/recupera_senha/@ownedAttribute.0">
+        <ownedEnd xsi:type="frameweb:NavigationCompositionPart" type="//@compose.2/%2Fcore%2Flogin%2F/recupera_senha" association="//@compose.2/%2Fcore%2Flogin%2F/@packagedElement.6"/>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:NavigationAssociation" memberEnd="//@compose.2/%2Fcore%2Flogin%2F/@packagedElement.7/@ownedEnd.0 //@compose.2/%2Fcore%2Flogin%2F/login/@ownedAttribute.3">
+        <ownedEnd xsi:type="frameweb:NavigationCompositionPart" type="//@compose.2/%2Fcore%2Flogin%2F/login" association="//@compose.2/%2Fcore%2Flogin%2F/@packagedElement.7"/>
+      </packagedElement>
     </packagedElement>
     <packagedElement xsi:type="frameweb:ControllerPackage" name="br.ufes.informatica.jurisproc.core.controller">
       <packagedElement xsi:type="frameweb:FrontControllerClass" name="LoginController">
         <ownedAttribute xsi:type="frameweb:IOParameter" name="usuario" visibility="private" type="//@compose.0/br.ufes.informatica.jurisproc.core.domain/Usuario"/>
         <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="fazLogin">
-          <ownedParameter name="usuario" type="//@compose.0/br.ufes.informatica.jurisproc.core.domain/Usuario"/>
+          <methodType xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/String"/>
+        </ownedOperation>
+        <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="processaRecuperarSenha" requestMethod="">
           <methodType xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/String"/>
         </ownedOperation>
       </packagedElement>
@@ -262,8 +279,8 @@
         <ownedAttribute xsi:type="frameweb:IOParameter" name="anexoPeticao" visibility="private">
           <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/Part"/>
         </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:IOParameter" name="pedidoUniformizacao" visibility="private" type="//@compose.0/br.ufes.informatica.jurisproc.core.domain/PedidoUniformizacao"/>
         <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="cadastraPedidoUniformizacao">
-          <ownedParameter name="pedidoUniformizacao" type="//@compose.0/br.ufes.informatica.jurisproc.core.domain/PedidoUniformizacao"/>
           <methodType xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/String"/>
         </ownedOperation>
       </packagedElement>
@@ -341,6 +358,13 @@
       <resultDependencyConstraint result="login.xhtml"/>
     </packagedElement>
     <packagedElement xsi:type="frameweb:FrontControllerDependency" client="//@compose.2/%2Fcore%2Fpeticao%2F/cadastroForm" supplier="//@compose.2/br.ufes.informatica.jurisproc.core.controller/PeticaoController" method="//@compose.2/br.ufes.informatica.jurisproc.core.controller/PeticaoController/cadastraPedidoUniformizacao"/>
+    <packagedElement xsi:type="frameweb:FrontControllerDependency" client="//@compose.2/%2Fcore%2Flogin%2F/recuperaForm" supplier="//@compose.2/br.ufes.informatica.jurisproc.core.controller/LoginController" method="//@compose.2/br.ufes.informatica.jurisproc.core.controller/LoginController/processaRecuperarSenha"/>
+    <packagedElement xsi:type="frameweb:ResultDependency" client="//@compose.2/br.ufes.informatica.jurisproc.core.controller/LoginController" supplier="//@compose.2/%2Fcore%2Flogin%2F/login" resultMethod="//@compose.2/br.ufes.informatica.jurisproc.core.controller/LoginController/processaRecuperarSenha">
+      <resultDependencyConstraint result="login.xhtml"/>
+    </packagedElement>
+    <packagedElement xsi:type="frameweb:ResultDependency" client="//@compose.2/br.ufes.informatica.jurisproc.core.controller/PeticaoController" supplier="//@compose.2/%2Fcore%2Fpeticao%2F/lista" resultMethod="//@compose.2/br.ufes.informatica.jurisproc.core.controller/PeticaoController/cadastraPedidoUniformizacao">
+      <resultDependencyConstraint result="lista.xhtml"/>
+    </packagedElement>
   </compose>
   <compose xsi:type="frameweb:ApplicationModel" name="Application Model"/>
 </frameweb:FramewebProject>
