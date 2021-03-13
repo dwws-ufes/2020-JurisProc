@@ -14,7 +14,7 @@
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWeb%20Project']"/>
         <target xmi:type="frameweb:FramewebProject" href="Model.frameweb#/"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_HpNpsX-pEeuoqITK6ND7Bg" name="FrameWebEntityModel" repPath="#_HpJYQH-pEeuoqITK6ND7Bg" changeId="93febb00-7dc0-4d77-8156-513befc22748">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_HpNpsX-pEeuoqITK6ND7Bg" name="FrameWebEntityModel" repPath="#_HpJYQH-pEeuoqITK6ND7Bg" changeId="672489b5-ef18-4d93-919e-9d549b681f76">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']"/>
         <target xmi:type="frameweb:EntityModel" href="Model.frameweb#//@compose.0"/>
       </ownedRepresentationDescriptors>
@@ -484,6 +484,10 @@
                 <children xmi:type="notation:Node" xmi:id="_KDUZcIQvEeunHMm8M-bTBw" type="3010" element="_KDBegIQvEeunHMm8M-bTBw">
                   <styles xmi:type="notation:FontStyle" xmi:id="_KDUZcYQvEeunHMm8M-bTBw" fontName="Ubuntu" fontHeight="8"/>
                   <layoutConstraint xmi:type="notation:Location" xmi:id="_KDUZcoQvEeunHMm8M-bTBw"/>
+                </children>
+                <children xmi:type="notation:Node" xmi:id="_t6Uh4IRDEeu0JeU5L4nvGA" type="3010" element="_t52AwIRDEeu0JeU5L4nvGA">
+                  <styles xmi:type="notation:FontStyle" xmi:id="_t6Uh4YRDEeu0JeU5L4nvGA" fontName="Ubuntu" fontHeight="8"/>
+                  <layoutConstraint xmi:type="notation:Location" xmi:id="_t6Uh4oRDEeu0JeU5L4nvGA"/>
                 </children>
                 <styles xmi:type="notation:SortingStyle" xmi:id="_C8cdYYQvEeunHMm8M-bTBw"/>
                 <styles xmi:type="notation:FilteringStyle" xmi:id="_C8cdYoQvEeunHMm8M-bTBw"/>
@@ -973,6 +977,14 @@
           <target xmi:type="uml:EnumerationLiteral" href="Model.frameweb#//@compose.0/br.ufes.informatica.jurisproc.core.domain/TRF/TRF4"/>
           <semanticElements xmi:type="uml:EnumerationLiteral" href="Model.frameweb#//@compose.0/br.ufes.informatica.jurisproc.core.domain/TRF/TRF4"/>
           <ownedStyle xmi:type="diagram:Dot" uid="_KDBegYQvEeunHMm8M-bTBw" showIcon="false" labelAlignment="LEFT">
+            <description xmi:type="style:DotDescription" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='Enumeration']/@subNodeMappings[name='EnumerationLiteral']/@style"/>
+          </ownedStyle>
+          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='Enumeration']/@subNodeMappings[name='EnumerationLiteral']"/>
+        </ownedElements>
+        <ownedElements xmi:type="diagram:DNodeListElement" uid="_t52AwIRDEeu0JeU5L4nvGA" name="TRF5">
+          <target xmi:type="uml:EnumerationLiteral" href="Model.frameweb#//@compose.0/br.ufes.informatica.jurisproc.core.domain/TRF/TRF5"/>
+          <semanticElements xmi:type="uml:EnumerationLiteral" href="Model.frameweb#//@compose.0/br.ufes.informatica.jurisproc.core.domain/TRF/TRF5"/>
+          <ownedStyle xmi:type="diagram:Dot" uid="_t52n0IRDEeu0JeU5L4nvGA" showIcon="false" labelAlignment="LEFT">
             <description xmi:type="style:DotDescription" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='Enumeration']/@subNodeMappings[name='EnumerationLiteral']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@containerMappings[name='Domain%20Package']/@subContainerMappings[name='Enumeration']/@subNodeMappings[name='EnumerationLiteral']"/>

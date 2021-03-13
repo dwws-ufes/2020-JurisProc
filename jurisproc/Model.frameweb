@@ -154,6 +154,7 @@
         <ownedLiteral name="TRF2" classifier="//@compose.0/br.ufes.informatica.jurisproc.core.domain/TRF"/>
         <ownedLiteral name="TRF3" classifier="//@compose.0/br.ufes.informatica.jurisproc.core.domain/TRF"/>
         <ownedLiteral name="TRF4" classifier="//@compose.0/br.ufes.informatica.jurisproc.core.domain/TRF"/>
+        <ownedLiteral name="TRF5" classifier="//@compose.0/br.ufes.informatica.jurisproc.core.domain/TRF"/>
       </packagedElement>
       <packagedElement xsi:type="uml:Enumeration" name="TemaRecurso">
         <ownedLiteral name="TNU" classifier="//@compose.0/br.ufes.informatica.jurisproc.core.domain/TemaRecurso"/>
