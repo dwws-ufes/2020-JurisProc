@@ -15,7 +15,7 @@
         <ownedAttribute xsi:type="frameweb:DateTimeAttribute" name="dataRegistro" visibility="private">
           <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/Date"/>
         </ownedAttribute>
-        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="OAB" visibility="private">
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="OAB" visibility="private" size="10">
           <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/String"/>
         </ownedAttribute>
       </packagedElement>
