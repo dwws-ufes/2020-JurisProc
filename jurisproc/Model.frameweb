@@ -289,7 +289,7 @@
         <ownedAttribute xsi:type="frameweb:IOParameter" name="anexoPeticao" visibility="private">
           <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/Part"/>
         </ownedAttribute>
-        <ownedAttribute xsi:type="frameweb:IOParameter" name="pedidoUniformizacao" visibility="private" type="//@compose.0/br.ufes.informatica.jurisproc.core.domain/PedidoUniformizacao"/>
+        <ownedAttribute xsi:type="frameweb:IOParameter" name="pedido" visibility="private" type="//@compose.0/br.ufes.informatica.jurisproc.core.domain/PedidoUniformizacao"/>
         <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="cadastraPedidoUniformizacao">
           <methodType xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/String"/>
         </ownedOperation>
@@ -373,9 +373,13 @@
         <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole"/>
         <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole"/>
         <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole" type="//@compose.2/core%2Flogin%2F/login"/>
+        <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole" type="//@compose.2/core%2Fpeticao%2F/index" association="//@compose.2/core%2F/@packagedElement.2"/>
       </packagedElement>
       <packagedElement xsi:type="frameweb:NavigationAssociation">
         <ownedEnd xsi:type="frameweb:NavigationCompositionPart"/>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:NavigationAssociation" memberEnd="//@compose.2/core%2F/@packagedElement.2/@ownedEnd.0 //@compose.2/core%2F/index/@ownedAttribute.3">
+        <ownedEnd xsi:type="frameweb:NavigationCompositionPart" type="//@compose.2/core%2F/index" association="//@compose.2/core%2F/@packagedElement.2"/>
       </packagedElement>
     </packagedElement>
     <packagedElement xsi:type="frameweb:FrontControllerDependency" supplier="//@compose.2/br.ufes.informatica.jurisproc.core.controller/LoginController" method="//@compose.2/br.ufes.informatica.jurisproc.core.controller/LoginController/fazLogin"/>
