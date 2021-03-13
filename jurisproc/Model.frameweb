@@ -187,7 +187,7 @@
       <packagedElement xsi:type="uml:Enumeration" name="Opcoes">
         <ownedLiteral name="Sim" classifier="//@compose.0/br.ufes.informatica.jurisproc.core.domain/Opcoes"/>
         <ownedLiteral name="Nao" classifier="//@compose.0/br.ufes.informatica.jurisproc.core.domain/Opcoes"/>
-        <ownedLiteral name="Nao se aplica" classifier="//@compose.0/br.ufes.informatica.jurisproc.core.domain/Opcoes"/>
+        <ownedLiteral name="Nao_se_aplica" classifier="//@compose.0/br.ufes.informatica.jurisproc.core.domain/Opcoes"/>
       </packagedElement>
     </packagedElement>
   </compose>
