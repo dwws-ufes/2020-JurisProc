@@ -222,7 +222,7 @@
     </packagedElement>
   </compose>
   <compose xsi:type="frameweb:NavigationModel" name="Navigation Model">
-    <packagedElement xsi:type="frameweb:ViewPackage" name="/core/login/">
+    <packagedElement xsi:type="frameweb:ViewPackage" name="core/login/">
       <packagedElement xsi:type="frameweb:Page" name="login">
         <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole"/>
         <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole"/>
@@ -289,6 +289,15 @@
         <ownedEnd name="Source" type="//@compose.2/br.ufes.informatica.jurisproc.core.controller/LoginController" association="//@compose.2/br.ufes.informatica.jurisproc.core.controller/@packagedElement.3"/>
         <ownedEnd name="Target" type="//@compose.3/br.ufes.informatica.jurisproc.core.application/UsuarioService" association="//@compose.2/br.ufes.informatica.jurisproc.core.controller/@packagedElement.3"/>
       </packagedElement>
+      <packagedElement xsi:type="frameweb:FrontControllerClass" name="UsuarioController">
+        <ownedAttribute xsi:type="frameweb:IOParameter" name="usuario" visibility="private" type="//@compose.0/br.ufes.informatica.jurisproc.core.domain/Usuario"/>
+        <ownedAttribute xsi:type="frameweb:IOParameter" name="repeteSenha" visibility="private">
+          <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/String"/>
+        </ownedAttribute>
+        <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="register">
+          <methodType xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/String"/>
+        </ownedOperation>
+      </packagedElement>
     </packagedElement>
     <packagedElement xsi:type="frameweb:ResultDependency" client="//@compose.2/br.ufes.informatica.jurisproc.core.controller/LoginController" resultMethod="//@compose.2/br.ufes.informatica.jurisproc.core.controller/LoginController/fazLogin">
       <resultDependencyConstraint result="login.xhtml"/>
@@ -297,7 +306,7 @@
     <packagedElement xsi:type="frameweb:ResultDependency" client="//@compose.2/br.ufes.informatica.jurisproc.core.controller/LoginController" resultMethod="//@compose.2/br.ufes.informatica.jurisproc.core.controller/LoginController/fazLogin">
       <resultDependencyConstraint result="index.xhtml"/>
     </packagedElement>
-    <packagedElement xsi:type="frameweb:ViewPackage" name="/core/peticao/">
+    <packagedElement xsi:type="frameweb:ViewPackage" name="core/peticao/">
       <packagedElement xsi:type="frameweb:Page" name="index">
         <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole"/>
         <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole"/>
@@ -342,7 +351,7 @@
     <packagedElement xsi:type="frameweb:ResultDependency" client="//@compose.2/br.ufes.informatica.jurisproc.core.controller/PedidoUniformizacaoController" resultMethod="//@compose.2/br.ufes.informatica.jurisproc.core.controller/PedidoUniformizacaoController/cadastraPedidoUniformizacao">
       <resultDependencyConstraint result="lista.xhtml"/>
     </packagedElement>
-    <packagedElement xsi:type="frameweb:ViewPackage" name="/core/">
+    <packagedElement xsi:type="frameweb:ViewPackage" name="core/">
       <packagedElement xsi:type="frameweb:Page" name="index">
         <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole"/>
         <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole"/>
@@ -368,6 +377,44 @@
     </packagedElement>
     <packagedElement xsi:type="frameweb:ResultDependency" name="" client="//@compose.2/br.ufes.informatica.jurisproc.core.controller/PedidoUniformizacaoController" resultMethod="//@compose.2/br.ufes.informatica.jurisproc.core.controller/PedidoUniformizacaoController/cadastraPedidoUniformizacao">
       <resultDependencyConstraint result="index.xhtml"/>
+    </packagedElement>
+    <packagedElement xsi:type="frameweb:ViewPackage" name="core/usuario">
+      <packagedElement xsi:type="frameweb:Page" name="index">
+        <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole" type="//@compose.2/core%2Fusuario/cadastroForm" association="//@compose.2/core%2Fusuario/@packagedElement.2"/>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:UIComponent" name="cadastroForm">
+        <ownedAttribute xsi:type="frameweb:UIComponentField" name="usuario.nome" visibility="private">
+          <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/PrimeFaces/inputText"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:UIComponentField" name="usuario.email" visibility="private">
+          <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/PrimeFaces/inputText"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:UIComponentField" name="usuario.senha" visibility="private">
+          <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/PrimeFaces/password"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:UIComponentField" name="repeteSenha" visibility="private">
+          <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/PrimeFaces/password"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:UIComponentField" name="usuario.OAB" visibility="private">
+          <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/PrimeFaces/inputText"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:NavigationAssociation" memberEnd="//@compose.2/core%2Fusuario/@packagedElement.2/@ownedEnd.0 //@compose.2/core%2Fusuario/index/@ownedAttribute.0">
+        <ownedEnd xsi:type="frameweb:NavigationCompositionPart" type="//@compose.2/core%2Fusuario/index" association="//@compose.2/core%2Fusuario/@packagedElement.2"/>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:Page" name="sucess">
+        <ownedAttribute xsi:type="frameweb:UIComponentField" name="usuario.nome" visibility="private">
+          <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/JSF-HTML/outputText"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:UIComponentField" name="usuario.OAB" visibility="private">
+          <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/JSF-HTML/outputText"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:Page" name="emailinuse"/>
+    </packagedElement>
+    <packagedElement xsi:type="frameweb:FrontControllerDependency" client="//@compose.2/core%2Fusuario/cadastroForm" supplier="//@compose.2/br.ufes.informatica.jurisproc.core.controller/UsuarioController" method="//@compose.2/br.ufes.informatica.jurisproc.core.controller/UsuarioController/register"/>
+    <packagedElement xsi:type="frameweb:ResultDependency" client="//@compose.2/br.ufes.informatica.jurisproc.core.controller/UsuarioController" supplier="//@compose.2/core%2Fusuario/sucess" resultMethod="//@compose.2/br.ufes.informatica.jurisproc.core.controller/UsuarioController/register">
+      <resultDependencyConstraint result="sucess.xhtml"/>
     </packagedElement>
   </compose>
   <compose xsi:type="frameweb:ApplicationModel" name="Application Model">
