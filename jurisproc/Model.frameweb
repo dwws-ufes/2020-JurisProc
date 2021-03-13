@@ -410,11 +410,18 @@
           <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/JSF-HTML/outputText"/>
         </ownedAttribute>
       </packagedElement>
-      <packagedElement xsi:type="frameweb:Page" name="emailinuse"/>
+      <packagedElement xsi:type="frameweb:Page" name="emailinuse">
+        <ownedAttribute xsi:type="frameweb:UIComponentField" name="usuario.email">
+          <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/JSF-HTML/outputText"/>
+        </ownedAttribute>
+      </packagedElement>
     </packagedElement>
     <packagedElement xsi:type="frameweb:FrontControllerDependency" client="//@compose.2/core%2Fusuario/cadastroForm" supplier="//@compose.2/br.ufes.informatica.jurisproc.core.controller/UsuarioController" method="//@compose.2/br.ufes.informatica.jurisproc.core.controller/UsuarioController/register"/>
     <packagedElement xsi:type="frameweb:ResultDependency" client="//@compose.2/br.ufes.informatica.jurisproc.core.controller/UsuarioController" supplier="//@compose.2/core%2Fusuario/sucess" resultMethod="//@compose.2/br.ufes.informatica.jurisproc.core.controller/UsuarioController/register">
       <resultDependencyConstraint result="sucess.xhtml"/>
+    </packagedElement>
+    <packagedElement xsi:type="frameweb:ResultDependency" client="//@compose.2/br.ufes.informatica.jurisproc.core.controller/UsuarioController" supplier="//@compose.2/core%2Fusuario/emailinuse" resultMethod="//@compose.2/br.ufes.informatica.jurisproc.core.controller/UsuarioController/register">
+      <resultDependencyConstraint result="emailinuse.xhtml"/>
     </packagedElement>
   </compose>
   <compose xsi:type="frameweb:ApplicationModel" name="Application Model">
