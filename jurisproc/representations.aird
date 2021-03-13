@@ -37,7 +37,7 @@
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_o7wBUoBtEeuTeq2d20D-mA" name="Method Diagram" repPath="#_o7vaQIBtEeuTeq2d20D-mA" changeId="c486fcd5-ae28-40f5-b02c-7f1662fc2510">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='Method%20Diagram']"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_LYRDYYBvEeuTeq2d20D-mA" name="FrameWebNavigationModel" repPath="#_LYPOMIBvEeuTeq2d20D-mA" changeId="bdaaa16b-0d11-4ef9-8474-07ba9c7f1920">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_LYRDYYBvEeuTeq2d20D-mA" name="FrameWebNavigationModel" repPath="#_LYPOMIBvEeuTeq2d20D-mA" changeId="13f6d01d-5a98-4cac-8132-f35e0132fffb">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']"/>
         <target xmi:type="frameweb:NavigationModel" href="Model.frameweb#//@compose.2"/>
       </ownedRepresentationDescriptors>
@@ -2056,38 +2056,6 @@
                   <styles xmi:type="notation:FontStyle" xmi:id="_7C_WZIRFEeu0JeU5L4nvGA" fontName="Ubuntu" fontHeight="8"/>
                   <layoutConstraint xmi:type="notation:Location" xmi:id="_7C_WZYRFEeu0JeU5L4nvGA"/>
                 </children>
-                <children xmi:type="notation:Node" xmi:id="_7C_WZoRFEeu0JeU5L4nvGA" type="3010" element="_7CSy0IRFEeu0JeU5L4nvGA">
-                  <styles xmi:type="notation:FontStyle" xmi:id="_7C_WZ4RFEeu0JeU5L4nvGA" fontName="Ubuntu" fontHeight="8"/>
-                  <layoutConstraint xmi:type="notation:Location" xmi:id="_7C_WaIRFEeu0JeU5L4nvGA"/>
-                </children>
-                <children xmi:type="notation:Node" xmi:id="_7C_WaYRFEeu0JeU5L4nvGA" type="3010" element="_7CSy0oRFEeu0JeU5L4nvGA">
-                  <styles xmi:type="notation:FontStyle" xmi:id="_7C_WaoRFEeu0JeU5L4nvGA" fontName="Ubuntu" fontHeight="8"/>
-                  <layoutConstraint xmi:type="notation:Location" xmi:id="_7C_Wa4RFEeu0JeU5L4nvGA"/>
-                </children>
-                <children xmi:type="notation:Node" xmi:id="_7C_9cIRFEeu0JeU5L4nvGA" type="3010" element="_7CTZ4IRFEeu0JeU5L4nvGA">
-                  <styles xmi:type="notation:FontStyle" xmi:id="_7C_9cYRFEeu0JeU5L4nvGA" fontName="Ubuntu" fontHeight="8"/>
-                  <layoutConstraint xmi:type="notation:Location" xmi:id="_7C_9coRFEeu0JeU5L4nvGA"/>
-                </children>
-                <children xmi:type="notation:Node" xmi:id="_7C_9c4RFEeu0JeU5L4nvGA" type="3010" element="_7CTZ4oRFEeu0JeU5L4nvGA">
-                  <styles xmi:type="notation:FontStyle" xmi:id="_7C_9dIRFEeu0JeU5L4nvGA" fontName="Ubuntu" fontHeight="8"/>
-                  <layoutConstraint xmi:type="notation:Location" xmi:id="_7C_9dYRFEeu0JeU5L4nvGA"/>
-                </children>
-                <children xmi:type="notation:Node" xmi:id="_7C_9doRFEeu0JeU5L4nvGA" type="3010" element="_7CTZ5IRFEeu0JeU5L4nvGA">
-                  <styles xmi:type="notation:FontStyle" xmi:id="_7C_9d4RFEeu0JeU5L4nvGA" fontName="Ubuntu" fontHeight="8"/>
-                  <layoutConstraint xmi:type="notation:Location" xmi:id="_7C_9eIRFEeu0JeU5L4nvGA"/>
-                </children>
-                <children xmi:type="notation:Node" xmi:id="_7C_9eYRFEeu0JeU5L4nvGA" type="3010" element="_7CUA8YRFEeu0JeU5L4nvGA">
-                  <styles xmi:type="notation:FontStyle" xmi:id="_7C_9eoRFEeu0JeU5L4nvGA" fontName="Ubuntu" fontHeight="8"/>
-                  <layoutConstraint xmi:type="notation:Location" xmi:id="_7C_9e4RFEeu0JeU5L4nvGA"/>
-                </children>
-                <children xmi:type="notation:Node" xmi:id="_7DAkgIRFEeu0JeU5L4nvGA" type="3010" element="_7CUA84RFEeu0JeU5L4nvGA">
-                  <styles xmi:type="notation:FontStyle" xmi:id="_7DAkgYRFEeu0JeU5L4nvGA" fontName="Ubuntu" fontHeight="8"/>
-                  <layoutConstraint xmi:type="notation:Location" xmi:id="_7DAkgoRFEeu0JeU5L4nvGA"/>
-                </children>
-                <children xmi:type="notation:Node" xmi:id="_7DAkg4RFEeu0JeU5L4nvGA" type="3010" element="_7CUA9YRFEeu0JeU5L4nvGA">
-                  <styles xmi:type="notation:FontStyle" xmi:id="_7DAkhIRFEeu0JeU5L4nvGA" fontName="Ubuntu" fontHeight="8"/>
-                  <layoutConstraint xmi:type="notation:Location" xmi:id="_7DAkhYRFEeu0JeU5L4nvGA"/>
-                </children>
                 <styles xmi:type="notation:SortingStyle" xmi:id="_7C-IRYRFEeu0JeU5L4nvGA"/>
                 <styles xmi:type="notation:FilteringStyle" xmi:id="_7C-IRoRFEeu0JeU5L4nvGA"/>
               </children>
@@ -2658,70 +2626,6 @@
           <target xmi:type="frameweb:UIComponentField" href="Model.frameweb#//@compose.2/core%2Fpeticao%2F/cadastroForm/anexoPedidoUniformizacao"/>
           <semanticElements xmi:type="frameweb:UIComponentField" href="Model.frameweb#//@compose.2/core%2Fpeticao%2F/cadastroForm/anexoPedidoUniformizacao"/>
           <ownedStyle xmi:type="diagram:Dot" uid="_7CSLwoRFEeu0JeU5L4nvGA" showIcon="false" labelAlignment="LEFT" labelPosition="node">
-            <description xmi:type="style:DotDescription" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']/@subContainerMappings[name='UI%20Component%20Node']/@subNodeMappings[name='UI%20Component%20Field%20Node']/@style"/>
-          </ownedStyle>
-          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']/@subContainerMappings[name='UI%20Component%20Node']/@subNodeMappings[name='UI%20Component%20Field%20Node']"/>
-        </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_7CSy0IRFEeu0JeU5L4nvGA" name=" - pedidoUniformizacao.numeroPeticao : inputNumber">
-          <target xmi:type="frameweb:UIComponentField" href="Model.frameweb#//@compose.2/core%2Fpeticao%2F/cadastroForm/pedidoUniformizacao.numeroPeticao"/>
-          <semanticElements xmi:type="frameweb:UIComponentField" href="Model.frameweb#//@compose.2/core%2Fpeticao%2F/cadastroForm/pedidoUniformizacao.numeroPeticao"/>
-          <ownedStyle xmi:type="diagram:Dot" uid="_7CSy0YRFEeu0JeU5L4nvGA" showIcon="false" labelAlignment="LEFT" labelPosition="node">
-            <description xmi:type="style:DotDescription" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']/@subContainerMappings[name='UI%20Component%20Node']/@subNodeMappings[name='UI%20Component%20Field%20Node']/@style"/>
-          </ownedStyle>
-          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']/@subContainerMappings[name='UI%20Component%20Node']/@subNodeMappings[name='UI%20Component%20Field%20Node']"/>
-        </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_7CSy0oRFEeu0JeU5L4nvGA" name=" - pedidoUniformizacao.partesEnvolvidas : inputTextarea">
-          <target xmi:type="frameweb:UIComponentField" href="Model.frameweb#//@compose.2/core%2Fpeticao%2F/cadastroForm/pedidoUniformizacao.partesEnvolvidas"/>
-          <semanticElements xmi:type="frameweb:UIComponentField" href="Model.frameweb#//@compose.2/core%2Fpeticao%2F/cadastroForm/pedidoUniformizacao.partesEnvolvidas"/>
-          <ownedStyle xmi:type="diagram:Dot" uid="_7CSy04RFEeu0JeU5L4nvGA" showIcon="false" labelAlignment="LEFT" labelPosition="node">
-            <description xmi:type="style:DotDescription" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']/@subContainerMappings[name='UI%20Component%20Node']/@subNodeMappings[name='UI%20Component%20Field%20Node']/@style"/>
-          </ownedStyle>
-          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']/@subContainerMappings[name='UI%20Component%20Node']/@subNodeMappings[name='UI%20Component%20Field%20Node']"/>
-        </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_7CTZ4IRFEeu0JeU5L4nvGA" name=" - pedidoUniformizacao.numeroProcesso : inputNumber">
-          <target xmi:type="frameweb:UIComponentField" href="Model.frameweb#//@compose.2/core%2Fpeticao%2F/cadastroForm/pedidoUniformizacao.numeroProcesso"/>
-          <semanticElements xmi:type="frameweb:UIComponentField" href="Model.frameweb#//@compose.2/core%2Fpeticao%2F/cadastroForm/pedidoUniformizacao.numeroProcesso"/>
-          <ownedStyle xmi:type="diagram:Dot" uid="_7CTZ4YRFEeu0JeU5L4nvGA" showIcon="false" labelAlignment="LEFT" labelPosition="node">
-            <description xmi:type="style:DotDescription" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']/@subContainerMappings[name='UI%20Component%20Node']/@subNodeMappings[name='UI%20Component%20Field%20Node']/@style"/>
-          </ownedStyle>
-          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']/@subContainerMappings[name='UI%20Component%20Node']/@subNodeMappings[name='UI%20Component%20Field%20Node']"/>
-        </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_7CTZ4oRFEeu0JeU5L4nvGA" name=" - pedidoUniformizacao.paradigma : inputText">
-          <target xmi:type="frameweb:UIComponentField" href="Model.frameweb#//@compose.2/core%2Fpeticao%2F/cadastroForm/pedidoUniformizacao.paradigma"/>
-          <semanticElements xmi:type="frameweb:UIComponentField" href="Model.frameweb#//@compose.2/core%2Fpeticao%2F/cadastroForm/pedidoUniformizacao.paradigma"/>
-          <ownedStyle xmi:type="diagram:Dot" uid="_7CTZ44RFEeu0JeU5L4nvGA" showIcon="false" labelAlignment="LEFT" labelPosition="node">
-            <description xmi:type="style:DotDescription" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']/@subContainerMappings[name='UI%20Component%20Node']/@subNodeMappings[name='UI%20Component%20Field%20Node']/@style"/>
-          </ownedStyle>
-          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']/@subContainerMappings[name='UI%20Component%20Node']/@subNodeMappings[name='UI%20Component%20Field%20Node']"/>
-        </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_7CTZ5IRFEeu0JeU5L4nvGA" name=" - pedidoUniformizacao.direitoMaterial : checkbox">
-          <target xmi:type="frameweb:UIComponentField" href="Model.frameweb#//@compose.2/core%2Fpeticao%2F/cadastroForm/pedidoUniformizacao.direitoMaterial"/>
-          <semanticElements xmi:type="frameweb:UIComponentField" href="Model.frameweb#//@compose.2/core%2Fpeticao%2F/cadastroForm/pedidoUniformizacao.direitoMaterial"/>
-          <ownedStyle xmi:type="diagram:Dot" uid="_7CUA8IRFEeu0JeU5L4nvGA" showIcon="false" labelAlignment="LEFT" labelPosition="node">
-            <description xmi:type="style:DotDescription" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']/@subContainerMappings[name='UI%20Component%20Node']/@subNodeMappings[name='UI%20Component%20Field%20Node']/@style"/>
-          </ownedStyle>
-          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']/@subContainerMappings[name='UI%20Component%20Node']/@subNodeMappings[name='UI%20Component%20Field%20Node']"/>
-        </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_7CUA8YRFEeu0JeU5L4nvGA" name=" - pedidoUniformizacao.copiaParadigma : checkbox">
-          <target xmi:type="frameweb:UIComponentField" href="Model.frameweb#//@compose.2/core%2Fpeticao%2F/cadastroForm/pedidoUniformizacao.copiaParadigma"/>
-          <semanticElements xmi:type="frameweb:UIComponentField" href="Model.frameweb#//@compose.2/core%2Fpeticao%2F/cadastroForm/pedidoUniformizacao.copiaParadigma"/>
-          <ownedStyle xmi:type="diagram:Dot" uid="_7CUA8oRFEeu0JeU5L4nvGA" showIcon="false" labelAlignment="LEFT" labelPosition="node">
-            <description xmi:type="style:DotDescription" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']/@subContainerMappings[name='UI%20Component%20Node']/@subNodeMappings[name='UI%20Component%20Field%20Node']/@style"/>
-          </ownedStyle>
-          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']/@subContainerMappings[name='UI%20Component%20Node']/@subNodeMappings[name='UI%20Component%20Field%20Node']"/>
-        </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_7CUA84RFEeu0JeU5L4nvGA" name=" - pedidoUniformizacao.dataAcordum : datePicker">
-          <target xmi:type="frameweb:UIComponentField" href="Model.frameweb#//@compose.2/core%2Fpeticao%2F/cadastroForm/pedidoUniformizacao.dataAcordum"/>
-          <semanticElements xmi:type="frameweb:UIComponentField" href="Model.frameweb#//@compose.2/core%2Fpeticao%2F/cadastroForm/pedidoUniformizacao.dataAcordum"/>
-          <ownedStyle xmi:type="diagram:Dot" uid="_7CUA9IRFEeu0JeU5L4nvGA" showIcon="false" labelAlignment="LEFT" labelPosition="node">
-            <description xmi:type="style:DotDescription" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']/@subContainerMappings[name='UI%20Component%20Node']/@subNodeMappings[name='UI%20Component%20Field%20Node']/@style"/>
-          </ownedStyle>
-          <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']/@subContainerMappings[name='UI%20Component%20Node']/@subNodeMappings[name='UI%20Component%20Field%20Node']"/>
-        </ownedElements>
-        <ownedElements xmi:type="diagram:DNodeListElement" uid="_7CUA9YRFEeu0JeU5L4nvGA" name=" - pedidoUniformizacao.dataPeticao : datePicker">
-          <target xmi:type="frameweb:UIComponentField" href="Model.frameweb#//@compose.2/core%2Fpeticao%2F/cadastroForm/pedidoUniformizacao.dataPeticao"/>
-          <semanticElements xmi:type="frameweb:UIComponentField" href="Model.frameweb#//@compose.2/core%2Fpeticao%2F/cadastroForm/pedidoUniformizacao.dataPeticao"/>
-          <ownedStyle xmi:type="diagram:Dot" uid="_7CUoAIRFEeu0JeU5L4nvGA" showIcon="false" labelAlignment="LEFT" labelPosition="node">
             <description xmi:type="style:DotDescription" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']/@subContainerMappings[name='UI%20Component%20Node']/@subNodeMappings[name='UI%20Component%20Field%20Node']/@style"/>
           </ownedStyle>
           <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebNavigationModel']/@defaultLayer/@containerMappings[name='View%20Package']/@subContainerMappings[name='UI%20Component%20Node']/@subNodeMappings[name='UI%20Component%20Field%20Node']"/>

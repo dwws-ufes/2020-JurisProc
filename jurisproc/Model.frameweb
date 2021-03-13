@@ -332,30 +332,6 @@
         <ownedAttribute xsi:type="frameweb:UIComponentField" name="anexoPedidoUniformizacao" visibility="private">
           <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/PrimeFaces/fileUpload"/>
         </ownedAttribute>
-        <ownedAttribute xsi:type="frameweb:UIComponentField" name="pedidoUniformizacao.numeroPeticao" visibility="private">
-          <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/PrimeFaces/inputNumber"/>
-        </ownedAttribute>
-        <ownedAttribute xsi:type="frameweb:UIComponentField" name="pedidoUniformizacao.partesEnvolvidas" visibility="private">
-          <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/PrimeFaces/inputTextarea"/>
-        </ownedAttribute>
-        <ownedAttribute xsi:type="frameweb:UIComponentField" name="pedidoUniformizacao.numeroProcesso" visibility="private">
-          <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/PrimeFaces/inputNumber"/>
-        </ownedAttribute>
-        <ownedAttribute xsi:type="frameweb:UIComponentField" name="pedidoUniformizacao.paradigma" visibility="private">
-          <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/PrimeFaces/inputText"/>
-        </ownedAttribute>
-        <ownedAttribute xsi:type="frameweb:UIComponentField" name="pedidoUniformizacao.direitoMaterial" visibility="private">
-          <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/PrimeFaces/checkbox"/>
-        </ownedAttribute>
-        <ownedAttribute xsi:type="frameweb:UIComponentField" name="pedidoUniformizacao.copiaParadigma" visibility="private">
-          <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/PrimeFaces/checkbox"/>
-        </ownedAttribute>
-        <ownedAttribute xsi:type="frameweb:UIComponentField" name="pedidoUniformizacao.dataAcordum" visibility="private">
-          <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/PrimeFaces/datePicker"/>
-        </ownedAttribute>
-        <ownedAttribute xsi:type="frameweb:UIComponentField" name="pedidoUniformizacao.dataPeticao" visibility="private">
-          <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/PrimeFaces/datePicker"/>
-        </ownedAttribute>
       </packagedElement>
       <packagedElement xsi:type="frameweb:NavigationAssociation">
         <ownedEnd xsi:type="frameweb:NavigationCompositionPart"/>
