@@ -32,9 +32,6 @@
         <ownedAttribute xsi:type="frameweb:DateTimeAttribute" name="dataPeticao" visibility="private">
           <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/Date"/>
         </ownedAttribute>
-        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="partesEnvolvidas" visibility="private">
-          <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/String"/>
-        </ownedAttribute>
         <ownedAttribute xsi:type="frameweb:DomainAttribute" name="numeroProcesso" visibility="private">
           <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/Long"/>
         </ownedAttribute>
@@ -48,6 +45,13 @@
           <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/Boolean"/>
         </ownedAttribute>
         <ownedAttribute xsi:type="frameweb:DomainAttribute" name="temaRecurso" visibility="private" type="//@compose.0/br.ufes.informatica.jurisproc.core.domain/TemaRecurso"/>
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="parteAutor" visibility="private">
+          <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/String"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="parteReu" visibility="private">
+          <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/String"/>
+        </ownedAttribute>
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="acordaoRetratacao" visibility="private" type="//@compose.0/br.ufes.informatica.jurisproc.core.domain/Opcoes"/>
       </packagedElement>
       <packagedElement xsi:type="frameweb:DomainClass" name="SystemRole">
         <ownedAttribute xsi:type="frameweb:DomainAttribute" name="nome" visibility="private">
@@ -179,6 +183,11 @@
           <upperValue xsi:type="uml:LiteralUnlimitedNatural" value="*"/>
         </ownedEnd>
         <ownedEnd xsi:type="frameweb:DomainProperty" name="Target" type="//@compose.0/br.ufes.informatica.jurisproc.core.domain/SecaoJudiciaria" association="//@compose.0/br.ufes.informatica.jurisproc.core.domain/pertence.2"/>
+      </packagedElement>
+      <packagedElement xsi:type="uml:Enumeration" name="Opcoes">
+        <ownedLiteral name="Sim" classifier="//@compose.0/br.ufes.informatica.jurisproc.core.domain/Opcoes"/>
+        <ownedLiteral name="Nao" classifier="//@compose.0/br.ufes.informatica.jurisproc.core.domain/Opcoes"/>
+        <ownedLiteral name="Nao se aplica" classifier="//@compose.0/br.ufes.informatica.jurisproc.core.domain/Opcoes"/>
       </packagedElement>
     </packagedElement>
   </compose>
