@@ -517,6 +517,9 @@
             <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/String"/>
           </ownedParameter>
         </ownedOperation>
+        <ownedOperation xsi:type="frameweb:ServiceMethod" name="register">
+          <ownedParameter name="usuario" type="//@compose.0/br.ufes.informatica.jurisproc.core.domain/Usuario"/>
+        </ownedOperation>
       </packagedElement>
       <packagedElement xsi:type="frameweb:ServiceInterface" name="UsuarioService"/>
       <packagedElement xsi:type="frameweb:ServiceRealization" client="//@compose.3/br.ufes.informatica.jurisproc.core.application/UsuarioServiceBean" supplier="//@compose.3/br.ufes.informatica.jurisproc.core.application/UsuarioService"/>
