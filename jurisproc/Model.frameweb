@@ -385,6 +385,12 @@
       <packagedElement xsi:type="frameweb:NavigationAssociation" memberEnd="//@compose.2/core%2Fpeticao%2F/@packagedElement.4/@ownedEnd.0 //@compose.2/core%2Fpeticao%2F/index/@ownedAttribute.2">
         <ownedEnd xsi:type="frameweb:NavigationCompositionPart" type="//@compose.2/core%2Fpeticao%2F/index" association="//@compose.2/core%2Fpeticao%2F/@packagedElement.4"/>
       </packagedElement>
+      <packagedElement xsi:type="frameweb:Page" name="sucess">
+        <ownedAttribute xsi:type="frameweb:UIComponentField" name="pedido.numeroPeticao" visibility="private">
+          <type xsi:type="frameweb:Tag" href="frameweb/jbutler/NavigationModel_JButler_JSF_PrimeFaces.frameweb#//@configures.0/JSF-HTML/outputText"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:Page" name="error"/>
     </packagedElement>
     <packagedElement xsi:type="frameweb:FrontControllerDependency" supplier="//@compose.2/br.ufes.informatica.jurisproc.core.controller/PedidoUniformizacaoController" method="//@compose.2/br.ufes.informatica.jurisproc.core.controller/PedidoUniformizacaoController/cadastraPedidoUniformizacao"/>
     <packagedElement xsi:type="frameweb:ResultDependency" client="//@compose.2/br.ufes.informatica.jurisproc.core.controller/PedidoUniformizacaoController" resultMethod="//@compose.2/br.ufes.informatica.jurisproc.core.controller/PedidoUniformizacaoController/cadastraPedidoUniformizacao">
@@ -477,6 +483,13 @@
     <packagedElement xsi:type="frameweb:FrontControllerDependency" client="//@compose.2/core%2Flogin%2F/recuperaForm" supplier="//@compose.2/br.ufes.informatica.jurisproc.core.controller/LoginController" method="//@compose.2/br.ufes.informatica.jurisproc.core.controller/LoginController/processaRecuperarSenha"/>
     <packagedElement xsi:type="frameweb:ResultDependency" client="//@compose.2/br.ufes.informatica.jurisproc.core.controller/LoginController" supplier="//@compose.2/core%2Flogin%2F/login" resultMethod="//@compose.2/br.ufes.informatica.jurisproc.core.controller/LoginController/processaRecuperarSenha">
       <resultDependencyConstraint result="login.xhtml"/>
+    </packagedElement>
+    <packagedElement xsi:type="frameweb:FrontControllerDependency" client="//@compose.2/core%2Fpeticao%2F/cadastroForm" supplier="//@compose.2/br.ufes.informatica.jurisproc.core.controller/PedidoUniformizacaoController" method="//@compose.2/br.ufes.informatica.jurisproc.core.controller/PedidoUniformizacaoController/cadastraPedidoUniformizacao"/>
+    <packagedElement xsi:type="frameweb:ResultDependency" client="//@compose.2/br.ufes.informatica.jurisproc.core.controller/PedidoUniformizacaoController" supplier="//@compose.2/core%2Fpeticao%2F/sucess" resultMethod="//@compose.2/br.ufes.informatica.jurisproc.core.controller/PedidoUniformizacaoController/cadastraPedidoUniformizacao">
+      <resultDependencyConstraint result="sucess.xhtml"/>
+    </packagedElement>
+    <packagedElement xsi:type="frameweb:ResultDependency" client="//@compose.2/br.ufes.informatica.jurisproc.core.controller/PedidoUniformizacaoController" supplier="//@compose.2/core%2Fpeticao%2F/error" resultMethod="//@compose.2/br.ufes.informatica.jurisproc.core.controller/PedidoUniformizacaoController/cadastraPedidoUniformizacao">
+      <resultDependencyConstraint result="error.xhtml"/>
     </packagedElement>
   </compose>
   <compose xsi:type="frameweb:ApplicationModel" name="Application Model">
