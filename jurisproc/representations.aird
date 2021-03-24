@@ -14,7 +14,7 @@
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWeb%20Project']"/>
         <target xmi:type="frameweb:FramewebProject" href="Model.frameweb#/"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_HpNpsX-pEeuoqITK6ND7Bg" name="FrameWebEntityModel" repPath="#_HpJYQH-pEeuoqITK6ND7Bg" changeId="7115774e-69dc-418c-bd67-c58b48642baf">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_HpNpsX-pEeuoqITK6ND7Bg" name="FrameWebEntityModel" repPath="#_HpJYQH-pEeuoqITK6ND7Bg" changeId="b5bc1b8a-b6fd-4c72-98d6-ea6e999d120c">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']"/>
         <target xmi:type="frameweb:EntityModel" href="Model.frameweb#//@compose.0"/>
       </ownedRepresentationDescriptors>
@@ -557,7 +557,7 @@
             <styles xmi:type="notation:FilteringStyle" xmi:id="_IobD8n-pEeuoqITK6ND7Bg"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_Ioac4X-pEeuoqITK6ND7Bg" fontName="Ubuntu" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ioac4n-pEeuoqITK6ND7Bg" x="15" y="5" width="1273" height="528"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Ioac4n-pEeuoqITK6ND7Bg" x="-5" width="1273" height="528"/>
         </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_HpkPAn-pEeuoqITK6ND7Bg"/>
         <edges xmi:type="notation:Edge" xmi:id="_SgrLEIEgEeueIbrlrOKD0g" type="4001" element="_SgHxcIEgEeueIbrlrOKD0g" source="_4dZxYH-pEeuoqITK6ND7Bg" target="_8aUoAH-rEeuoqITK6ND7Bg">
@@ -565,10 +565,10 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SgryIYEgEeueIbrlrOKD0g" x="2" y="-42"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_SgtAQIEgEeueIbrlrOKD0g" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SgtAQYEgEeueIbrlrOKD0g" x="-4" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SgtAQYEgEeueIbrlrOKD0g" x="4" y="15" width="17" height="27"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_SgtnUIEgEeueIbrlrOKD0g" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SgtnUYEgEeueIbrlrOKD0g" x="-10" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_SgtnUYEgEeueIbrlrOKD0g" x="-5" y="20"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_SgrLEYEgEeueIbrlrOKD0g"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_SgrLEoEgEeueIbrlrOKD0g" fontName="Ubuntu" fontHeight="8"/>
@@ -1120,7 +1120,7 @@
         </ownedElements>
       </ownedDiagramElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_SgHxcIEgEeueIbrlrOKD0g" name="possui" sourceNode="_4c6pMH-pEeuoqITK6ND7Bg" targetNode="_8aGlkH-rEeuoqITK6ND7Bg" beginLabel="1" endLabel="1">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_SgHxcIEgEeueIbrlrOKD0g" name="possui" sourceNode="_4c6pMH-pEeuoqITK6ND7Bg" targetNode="_8aGlkH-rEeuoqITK6ND7Bg" beginLabel="1..*" endLabel="1">
       <target xmi:type="frameweb:DomainAssociation" href="Model.frameweb#//@compose.0/br.ufes.informatica.jurisproc.core.domain/possui"/>
       <semanticElements xmi:type="frameweb:DomainAssociation" href="Model.frameweb#//@compose.0/br.ufes.informatica.jurisproc.core.domain/possui"/>
       <semanticElements xmi:type="frameweb:DomainProperty" href="Model.frameweb#//@compose.0/br.ufes.informatica.jurisproc.core.domain/possui/Source"/>
@@ -1152,7 +1152,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@edgeMappings[name='DomainAssociation']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_wzpTGIIMEeuJ4LN8VDTC8A" name="possui" sourceNode="_h22wYH-rEeuoqITK6ND7Bg" targetNode="_s9iL4IIGEeuJ4LN8VDTC8A" beginLabel="1..*" endLabel="1..*">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_wzpTGIIMEeuJ4LN8VDTC8A" name="possui" sourceNode="_h22wYH-rEeuoqITK6ND7Bg" targetNode="_s9iL4IIGEeuJ4LN8VDTC8A" beginLabel="0..*" endLabel="1..*">
       <target xmi:type="frameweb:DomainAssociation" href="Model.frameweb#//@compose.0/br.ufes.informatica.jurisproc.core.domain/possui.1"/>
       <semanticElements xmi:type="frameweb:DomainAssociation" href="Model.frameweb#//@compose.0/br.ufes.informatica.jurisproc.core.domain/possui.1"/>
       <semanticElements xmi:type="frameweb:DomainProperty" href="Model.frameweb#//@compose.0/br.ufes.informatica.jurisproc.core.domain/possui.1/Source"/>
@@ -1168,7 +1168,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@edgeMappings[name='DomainAssociation']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_LwbhUILfEeuseYQW8iUDiw" name="interposto para" sourceNode="_h22wYH-rEeuoqITK6ND7Bg" targetNode="_Rw2pEIIPEeuJ4LN8VDTC8A" beginLabel="1..*" endLabel="1">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_LwbhUILfEeuseYQW8iUDiw" name="interposto para" sourceNode="_h22wYH-rEeuoqITK6ND7Bg" targetNode="_Rw2pEIIPEeuJ4LN8VDTC8A" beginLabel="0..*" endLabel="1">
       <target xmi:type="frameweb:DomainAssociation" href="Model.frameweb#//@compose.0/br.ufes.informatica.jurisproc.core.domain/interposto%20para"/>
       <semanticElements xmi:type="frameweb:DomainAssociation" href="Model.frameweb#//@compose.0/br.ufes.informatica.jurisproc.core.domain/interposto%20para"/>
       <semanticElements xmi:type="frameweb:DomainProperty" href="Model.frameweb#//@compose.0/br.ufes.informatica.jurisproc.core.domain/interposto%20para/Source"/>
@@ -1200,7 +1200,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/br.ufes.inf.nemo.FrameWeb_Martins2015.design/description/FrameWeb.odesign#//@ownedViewpoints[name='']/@ownedRepresentations[name='FrameWebEntityModel']/@defaultLayer/@edgeMappings[name='DomainAssociation']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KuQ5WIRCEeu0JeU5L4nvGA" name="pertence" sourceNode="_wCyBYIINEeuJ4LN8VDTC8A" targetNode="_Rw2pEIIPEeuJ4LN8VDTC8A" beginLabel="1..*" endLabel="1">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_KuQ5WIRCEeu0JeU5L4nvGA" name="pertence" sourceNode="_wCyBYIINEeuJ4LN8VDTC8A" targetNode="_Rw2pEIIPEeuJ4LN8VDTC8A" beginLabel="0..*" endLabel="1">
       <target xmi:type="frameweb:DomainAssociation" href="Model.frameweb#//@compose.0/br.ufes.informatica.jurisproc.core.domain/pertence.2"/>
       <semanticElements xmi:type="frameweb:DomainAssociation" href="Model.frameweb#//@compose.0/br.ufes.informatica.jurisproc.core.domain/pertence.2"/>
       <semanticElements xmi:type="frameweb:DomainProperty" href="Model.frameweb#//@compose.0/br.ufes.informatica.jurisproc.core.domain/pertence.2/Source"/>
