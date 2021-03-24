@@ -313,7 +313,7 @@
         <ownedAttribute xsi:type="frameweb:IOParameter" name="repeteSenha" visibility="private">
           <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/String"/>
         </ownedAttribute>
-        <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="register">
+        <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="registrar">
           <methodType xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/String"/>
         </ownedOperation>
       </packagedElement>
@@ -465,11 +465,11 @@
         </ownedAttribute>
       </packagedElement>
     </packagedElement>
-    <packagedElement xsi:type="frameweb:FrontControllerDependency" client="//@compose.2/core%2Fusuario/cadastroForm" supplier="//@compose.2/br.ufes.informatica.jurisproc.core.controller/UsuarioController" method="//@compose.2/br.ufes.informatica.jurisproc.core.controller/UsuarioController/register"/>
-    <packagedElement xsi:type="frameweb:ResultDependency" client="//@compose.2/br.ufes.informatica.jurisproc.core.controller/UsuarioController" supplier="//@compose.2/core%2Fusuario/sucess" resultMethod="//@compose.2/br.ufes.informatica.jurisproc.core.controller/UsuarioController/register">
+    <packagedElement xsi:type="frameweb:FrontControllerDependency" client="//@compose.2/core%2Fusuario/cadastroForm" supplier="//@compose.2/br.ufes.informatica.jurisproc.core.controller/UsuarioController" method="//@compose.2/br.ufes.informatica.jurisproc.core.controller/UsuarioController/registrar"/>
+    <packagedElement xsi:type="frameweb:ResultDependency" client="//@compose.2/br.ufes.informatica.jurisproc.core.controller/UsuarioController" supplier="//@compose.2/core%2Fusuario/sucess" resultMethod="//@compose.2/br.ufes.informatica.jurisproc.core.controller/UsuarioController/registrar">
       <resultDependencyConstraint result="sucess.xhtml"/>
     </packagedElement>
-    <packagedElement xsi:type="frameweb:ResultDependency" client="//@compose.2/br.ufes.informatica.jurisproc.core.controller/UsuarioController" supplier="//@compose.2/core%2Fusuario/emailinuse" resultMethod="//@compose.2/br.ufes.informatica.jurisproc.core.controller/UsuarioController/register">
+    <packagedElement xsi:type="frameweb:ResultDependency" client="//@compose.2/br.ufes.informatica.jurisproc.core.controller/UsuarioController" supplier="//@compose.2/core%2Fusuario/emailinuse" resultMethod="//@compose.2/br.ufes.informatica.jurisproc.core.controller/UsuarioController/registrar">
       <resultDependencyConstraint result="emailinuse.xhtml"/>
     </packagedElement>
     <packagedElement xsi:type="frameweb:FrontControllerDependency" client="//@compose.2/core%2Flogin%2F/loginForm" supplier="//@compose.2/br.ufes.informatica.jurisproc.core.controller/LoginController" method="//@compose.2/br.ufes.informatica.jurisproc.core.controller/LoginController/fazLogin"/>
@@ -522,7 +522,7 @@
             <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/String"/>
           </ownedParameter>
         </ownedOperation>
-        <ownedOperation xsi:type="frameweb:ServiceMethod" name="register">
+        <ownedOperation xsi:type="frameweb:ServiceMethod" name="registrar">
           <ownedParameter name="usuario" type="//@compose.0/br.ufes.informatica.jurisproc.core.domain/Usuario"/>
         </ownedOperation>
       </packagedElement>
