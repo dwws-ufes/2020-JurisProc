@@ -288,7 +288,7 @@
         </ownedOperation>
       </packagedElement>
       <packagedElement xsi:type="frameweb:FrontControllerClass" name="PedidoUniformizacaoController">
-        <ownedAttribute xsi:type="frameweb:IOParameter" name="anexoPeticao" visibility="private">
+        <ownedAttribute xsi:type="frameweb:IOParameter" name="anexoPedidoUniformizacao" visibility="private">
           <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/Part"/>
         </ownedAttribute>
         <ownedAttribute xsi:type="frameweb:IOParameter" name="pedido" visibility="private" type="//@compose.0/br.ufes.informatica.jurisproc.core.domain/PedidoUniformizacao"/>
