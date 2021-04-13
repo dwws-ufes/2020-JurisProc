@@ -32,9 +32,6 @@
         <ownedAttribute xsi:type="frameweb:DateTimeAttribute" name="dataPeticao" visibility="private">
           <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/Date"/>
         </ownedAttribute>
-        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="numeroProcesso" visibility="private">
-          <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/Long"/>
-        </ownedAttribute>
         <ownedAttribute xsi:type="frameweb:DomainAttribute" name="paradigma" visibility="private">
           <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/Long"/>
         </ownedAttribute>
@@ -62,7 +59,9 @@
         <ownedRule xsi:type="frameweb:DomainConstraints" name="Source Constraint" constrainedElement="//@compose.0/br.ufes.informatica.jurisproc.core.domain/possui/Source"/>
         <ownedRule xsi:type="frameweb:DomainConstraints" name="Target Constraint" constrainedElement="//@compose.0/br.ufes.informatica.jurisproc.core.domain/possui/Target"/>
         <ownedRule xsi:type="frameweb:VocabularyConstraints" name="Vocabulary Constraint" constrainedElement="//@compose.0/br.ufes.informatica.jurisproc.core.domain/possui"/>
-        <ownedEnd xsi:type="frameweb:DomainProperty" name="Source" type="//@compose.0/br.ufes.informatica.jurisproc.core.domain/Usuario" association="//@compose.0/br.ufes.informatica.jurisproc.core.domain/possui"/>
+        <ownedEnd xsi:type="frameweb:DomainProperty" name="Source" type="//@compose.0/br.ufes.informatica.jurisproc.core.domain/Usuario" association="//@compose.0/br.ufes.informatica.jurisproc.core.domain/possui">
+          <upperValue xsi:type="uml:LiteralUnlimitedNatural" value="*"/>
+        </ownedEnd>
         <ownedEnd xsi:type="frameweb:DomainProperty" name="Target" type="//@compose.0/br.ufes.informatica.jurisproc.core.domain/SystemRole" association="//@compose.0/br.ufes.informatica.jurisproc.core.domain/possui">
           <upperValue xsi:type="uml:LiteralUnlimitedNatural" value="1"/>
         </ownedEnd>
@@ -90,6 +89,7 @@
         <ownedRule xsi:type="frameweb:DomainConstraints" name="Target Constraint" constrainedElement="//@compose.0/br.ufes.informatica.jurisproc.core.domain/possui.1/Target"/>
         <ownedRule xsi:type="frameweb:VocabularyConstraints" name="Vocabulary Constraint" constrainedElement="//@compose.0/br.ufes.informatica.jurisproc.core.domain/possui.1"/>
         <ownedEnd xsi:type="frameweb:DomainProperty" name="Source" type="//@compose.0/br.ufes.informatica.jurisproc.core.domain/PedidoUniformizacao" association="//@compose.0/br.ufes.informatica.jurisproc.core.domain/possui.1">
+          <lowerValue xsi:type="uml:LiteralInteger"/>
           <upperValue xsi:type="uml:LiteralUnlimitedNatural" value="*"/>
         </ownedEnd>
         <ownedEnd xsi:type="frameweb:DomainProperty" name="Target" type="//@compose.0/br.ufes.informatica.jurisproc.core.domain/Assunto" association="//@compose.0/br.ufes.informatica.jurisproc.core.domain/possui.1">
@@ -142,17 +142,6 @@
         <ownedEnd xsi:type="frameweb:DomainProperty" name="Source" association="//@compose.0/br.ufes.informatica.jurisproc.core.domain/pertence"/>
         <ownedEnd xsi:type="frameweb:DomainProperty" name="Target" type="//@compose.0/br.ufes.informatica.jurisproc.core.domain/SecaoJudiciaria" association="//@compose.0/br.ufes.informatica.jurisproc.core.domain/pertence"/>
       </packagedElement>
-      <packagedElement xsi:type="frameweb:DomainAssociation" name="interposto para" memberEnd="//@compose.0/br.ufes.informatica.jurisproc.core.domain/interposto%20para/Source //@compose.0/br.ufes.informatica.jurisproc.core.domain/interposto%20para/Target">
-        <ownedRule xsi:type="frameweb:DomainConstraints" name="Source Constraint" constrainedElement="//@compose.0/br.ufes.informatica.jurisproc.core.domain/interposto%20para/Source"/>
-        <ownedRule xsi:type="frameweb:DomainConstraints" name="Target Constraint" constrainedElement="//@compose.0/br.ufes.informatica.jurisproc.core.domain/interposto%20para/Target"/>
-        <ownedRule xsi:type="frameweb:VocabularyConstraints" name="Vocabulary Constraint" constrainedElement="//@compose.0/br.ufes.informatica.jurisproc.core.domain/interposto%20para"/>
-        <ownedEnd xsi:type="frameweb:DomainProperty" name="Source" type="//@compose.0/br.ufes.informatica.jurisproc.core.domain/PedidoUniformizacao" association="//@compose.0/br.ufes.informatica.jurisproc.core.domain/interposto%20para">
-          <upperValue xsi:type="uml:LiteralUnlimitedNatural" value="*"/>
-        </ownedEnd>
-        <ownedEnd xsi:type="frameweb:DomainProperty" name="Target" type="//@compose.0/br.ufes.informatica.jurisproc.core.domain/SecaoJudiciaria" association="//@compose.0/br.ufes.informatica.jurisproc.core.domain/interposto%20para">
-          <upperValue xsi:type="uml:LiteralUnlimitedNatural" value="1"/>
-        </ownedEnd>
-      </packagedElement>
       <packagedElement xsi:type="uml:Enumeration" name="TRF">
         <ownedLiteral name="TRF1" classifier="//@compose.0/br.ufes.informatica.jurisproc.core.domain/TRF"/>
         <ownedLiteral name="TRF2" classifier="//@compose.0/br.ufes.informatica.jurisproc.core.domain/TRF"/>
@@ -181,6 +170,7 @@
         <ownedRule xsi:type="frameweb:DomainConstraints" name="Target Constraint" constrainedElement="//@compose.0/br.ufes.informatica.jurisproc.core.domain/pertence.2/Target"/>
         <ownedRule xsi:type="frameweb:VocabularyConstraints" name="Vocabulary Constraint" constrainedElement="//@compose.0/br.ufes.informatica.jurisproc.core.domain/pertence.2"/>
         <ownedEnd xsi:type="frameweb:DomainProperty" name="Source" type="//@compose.0/br.ufes.informatica.jurisproc.core.domain/TurmaRecursal" association="//@compose.0/br.ufes.informatica.jurisproc.core.domain/pertence.2">
+          <lowerValue xsi:type="uml:LiteralInteger" value="1"/>
           <upperValue xsi:type="uml:LiteralUnlimitedNatural" value="*"/>
         </ownedEnd>
         <ownedEnd xsi:type="frameweb:DomainProperty" name="Target" type="//@compose.0/br.ufes.informatica.jurisproc.core.domain/SecaoJudiciaria" association="//@compose.0/br.ufes.informatica.jurisproc.core.domain/pertence.2"/>
@@ -189,6 +179,30 @@
         <ownedLiteral name="Sim" classifier="//@compose.0/br.ufes.informatica.jurisproc.core.domain/Opcoes"/>
         <ownedLiteral name="Nao" classifier="//@compose.0/br.ufes.informatica.jurisproc.core.domain/Opcoes"/>
         <ownedLiteral name="Nao_se_aplica" classifier="//@compose.0/br.ufes.informatica.jurisproc.core.domain/Opcoes"/>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:DomainClass" name="Acordao">
+        <ownedAttribute xsi:type="frameweb:DomainAttribute" name="numeroProcesso" visibility="private">
+          <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/Long"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:DomainAssociation" name="interposto contra" memberEnd="//@compose.0/br.ufes.informatica.jurisproc.core.domain/interposto%20contra/Source //@compose.0/br.ufes.informatica.jurisproc.core.domain/interposto%20contra/Target">
+        <ownedRule xsi:type="frameweb:DomainConstraints" name="Source Constraint" constrainedElement="//@compose.0/br.ufes.informatica.jurisproc.core.domain/interposto%20contra/Source"/>
+        <ownedRule xsi:type="frameweb:DomainConstraints" name="Target Constraint" constrainedElement="//@compose.0/br.ufes.informatica.jurisproc.core.domain/interposto%20contra/Target"/>
+        <ownedRule xsi:type="frameweb:VocabularyConstraints" name="Vocabulary Constraint" constrainedElement="//@compose.0/br.ufes.informatica.jurisproc.core.domain/interposto%20contra"/>
+        <ownedEnd xsi:type="frameweb:DomainProperty" name="Source" type="//@compose.0/br.ufes.informatica.jurisproc.core.domain/PedidoUniformizacao" association="//@compose.0/br.ufes.informatica.jurisproc.core.domain/interposto%20contra">
+          <lowerValue xsi:type="uml:LiteralInteger"/>
+          <upperValue xsi:type="uml:LiteralUnlimitedNatural" value="*"/>
+        </ownedEnd>
+        <ownedEnd xsi:type="frameweb:DomainProperty" name="Target" type="//@compose.0/br.ufes.informatica.jurisproc.core.domain/Acordao" association="//@compose.0/br.ufes.informatica.jurisproc.core.domain/interposto%20contra"/>
+      </packagedElement>
+      <packagedElement xsi:type="frameweb:DomainAssociation" name="proferida pela" memberEnd="//@compose.0/br.ufes.informatica.jurisproc.core.domain/proferida%20pela/Source //@compose.0/br.ufes.informatica.jurisproc.core.domain/proferida%20pela/Target">
+        <ownedRule xsi:type="frameweb:DomainConstraints" name="Source Constraint" constrainedElement="//@compose.0/br.ufes.informatica.jurisproc.core.domain/proferida%20pela/Source"/>
+        <ownedRule xsi:type="frameweb:DomainConstraints" name="Target Constraint" constrainedElement="//@compose.0/br.ufes.informatica.jurisproc.core.domain/proferida%20pela/Target"/>
+        <ownedRule xsi:type="frameweb:VocabularyConstraints" name="Vocabulary Constraint" constrainedElement="//@compose.0/br.ufes.informatica.jurisproc.core.domain/proferida%20pela"/>
+        <ownedEnd xsi:type="frameweb:DomainProperty" name="Source" type="//@compose.0/br.ufes.informatica.jurisproc.core.domain/Acordao" association="//@compose.0/br.ufes.informatica.jurisproc.core.domain/proferida%20pela">
+          <upperValue xsi:type="uml:LiteralUnlimitedNatural" value="*"/>
+        </ownedEnd>
+        <ownedEnd xsi:type="frameweb:DomainProperty" name="Target" type="//@compose.0/br.ufes.informatica.jurisproc.core.domain/TurmaRecursal" association="//@compose.0/br.ufes.informatica.jurisproc.core.domain/proferida%20pela"/>
       </packagedElement>
     </packagedElement>
   </compose>
@@ -231,7 +245,7 @@
         <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole"/>
         <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole" type="//@compose.2/core%2Flogin%2F/loginForm" association="//@compose.2/core%2Flogin%2F/@packagedElement.8"/>
         <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole" type="//@compose.2/core%2Flogin%2F/recupera_senha" association="//@compose.2/core%2Flogin%2F/@packagedElement.9"/>
-        <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole" type="//@compose.2/core%2Fusuario/index" association="//@compose.2/core%2Flogin%2F/@packagedElement.11"/>
+        <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole" type="//@compose.2/core%2Fusuario/index"/>
       </packagedElement>
       <packagedElement xsi:type="frameweb:UIComponent" name="loginForm">
         <ownedAttribute xsi:type="frameweb:UIComponentField" name="usuario.email" visibility="private">
@@ -271,9 +285,6 @@
       <packagedElement xsi:type="frameweb:NavigationAssociation" memberEnd="//@compose.2/core%2Flogin%2F/@packagedElement.10/@ownedEnd.0 //@compose.2/core%2Flogin%2F/recupera_senha/@ownedAttribute.1">
         <ownedEnd xsi:type="frameweb:NavigationCompositionPart" type="//@compose.2/core%2Flogin%2F/recupera_senha" association="//@compose.2/core%2Flogin%2F/@packagedElement.10"/>
       </packagedElement>
-      <packagedElement xsi:type="frameweb:NavigationAssociation" memberEnd="//@compose.2/core%2Flogin%2F/@packagedElement.11/@ownedEnd.0 //@compose.2/core%2Flogin%2F/login/@ownedAttribute.6">
-        <ownedEnd xsi:type="frameweb:NavigationCompositionPart" type="//@compose.2/core%2Flogin%2F/login" association="//@compose.2/core%2Flogin%2F/@packagedElement.11"/>
-      </packagedElement>
     </packagedElement>
     <packagedElement xsi:type="frameweb:ControllerPackage" name="br.ufes.informatica.jurisproc.core.controller">
       <packagedElement xsi:type="frameweb:FrontControllerClass" name="LoginController">
@@ -286,7 +297,7 @@
         </ownedOperation>
       </packagedElement>
       <packagedElement xsi:type="frameweb:FrontControllerClass" name="PedidoUniformizacaoController">
-        <ownedAttribute xsi:type="frameweb:IOParameter" name="anexoPeticao" visibility="private">
+        <ownedAttribute xsi:type="frameweb:IOParameter" name="anexoPedidoUniformizacao" visibility="private">
           <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/Part"/>
         </ownedAttribute>
         <ownedAttribute xsi:type="frameweb:IOParameter" name="pedido" visibility="private" type="//@compose.0/br.ufes.informatica.jurisproc.core.domain/PedidoUniformizacao"/>
@@ -311,7 +322,7 @@
         <ownedAttribute xsi:type="frameweb:IOParameter" name="repeteSenha" visibility="private">
           <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/String"/>
         </ownedAttribute>
-        <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="register">
+        <ownedOperation xsi:type="frameweb:FrontControllerMethod" name="registrar">
           <methodType xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/String"/>
         </ownedOperation>
       </packagedElement>
@@ -401,13 +412,10 @@
         <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole"/>
         <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole"/>
         <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole" type="//@compose.2/core%2Flogin%2F/login"/>
-        <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole" type="//@compose.2/core%2Fpeticao%2F/index" association="//@compose.2/core%2F/@packagedElement.2"/>
+        <ownedAttribute xsi:type="frameweb:NavigationCompositionWhole" type="//@compose.2/core%2Fpeticao%2F/index"/>
       </packagedElement>
       <packagedElement xsi:type="frameweb:NavigationAssociation">
         <ownedEnd xsi:type="frameweb:NavigationCompositionPart"/>
-      </packagedElement>
-      <packagedElement xsi:type="frameweb:NavigationAssociation" memberEnd="//@compose.2/core%2F/@packagedElement.2/@ownedEnd.0 //@compose.2/core%2F/index/@ownedAttribute.3">
-        <ownedEnd xsi:type="frameweb:NavigationCompositionPart" type="//@compose.2/core%2F/index" association="//@compose.2/core%2F/@packagedElement.2"/>
       </packagedElement>
     </packagedElement>
     <packagedElement xsi:type="frameweb:FrontControllerDependency" supplier="//@compose.2/br.ufes.informatica.jurisproc.core.controller/LoginController" method="//@compose.2/br.ufes.informatica.jurisproc.core.controller/LoginController/fazLogin"/>
@@ -466,11 +474,11 @@
         </ownedAttribute>
       </packagedElement>
     </packagedElement>
-    <packagedElement xsi:type="frameweb:FrontControllerDependency" client="//@compose.2/core%2Fusuario/cadastroForm" supplier="//@compose.2/br.ufes.informatica.jurisproc.core.controller/UsuarioController" method="//@compose.2/br.ufes.informatica.jurisproc.core.controller/UsuarioController/register"/>
-    <packagedElement xsi:type="frameweb:ResultDependency" client="//@compose.2/br.ufes.informatica.jurisproc.core.controller/UsuarioController" supplier="//@compose.2/core%2Fusuario/sucess" resultMethod="//@compose.2/br.ufes.informatica.jurisproc.core.controller/UsuarioController/register">
+    <packagedElement xsi:type="frameweb:FrontControllerDependency" client="//@compose.2/core%2Fusuario/cadastroForm" supplier="//@compose.2/br.ufes.informatica.jurisproc.core.controller/UsuarioController" method="//@compose.2/br.ufes.informatica.jurisproc.core.controller/UsuarioController/registrar"/>
+    <packagedElement xsi:type="frameweb:ResultDependency" client="//@compose.2/br.ufes.informatica.jurisproc.core.controller/UsuarioController" supplier="//@compose.2/core%2Fusuario/sucess" resultMethod="//@compose.2/br.ufes.informatica.jurisproc.core.controller/UsuarioController/registrar">
       <resultDependencyConstraint result="sucess.xhtml"/>
     </packagedElement>
-    <packagedElement xsi:type="frameweb:ResultDependency" client="//@compose.2/br.ufes.informatica.jurisproc.core.controller/UsuarioController" supplier="//@compose.2/core%2Fusuario/emailinuse" resultMethod="//@compose.2/br.ufes.informatica.jurisproc.core.controller/UsuarioController/register">
+    <packagedElement xsi:type="frameweb:ResultDependency" client="//@compose.2/br.ufes.informatica.jurisproc.core.controller/UsuarioController" supplier="//@compose.2/core%2Fusuario/emailinuse" resultMethod="//@compose.2/br.ufes.informatica.jurisproc.core.controller/UsuarioController/registrar">
       <resultDependencyConstraint result="emailinuse.xhtml"/>
     </packagedElement>
     <packagedElement xsi:type="frameweb:FrontControllerDependency" client="//@compose.2/core%2Flogin%2F/loginForm" supplier="//@compose.2/br.ufes.informatica.jurisproc.core.controller/LoginController" method="//@compose.2/br.ufes.informatica.jurisproc.core.controller/LoginController/fazLogin"/>
@@ -490,6 +498,12 @@
     </packagedElement>
     <packagedElement xsi:type="frameweb:ResultDependency" client="//@compose.2/br.ufes.informatica.jurisproc.core.controller/PedidoUniformizacaoController" supplier="//@compose.2/core%2Fpeticao%2F/error" resultMethod="//@compose.2/br.ufes.informatica.jurisproc.core.controller/PedidoUniformizacaoController/cadastraPedidoUniformizacao">
       <resultDependencyConstraint result="error.xhtml"/>
+    </packagedElement>
+    <packagedElement xsi:type="frameweb:PageDependency" client="//@compose.2/core%2Flogin%2F/login" supplier="//@compose.2/core%2Fusuario/index">
+      <pageDependencyConstraint/>
+    </packagedElement>
+    <packagedElement xsi:type="frameweb:PageDependency" client="//@compose.2/core%2F/index" supplier="//@compose.2/core%2Fpeticao%2F/index">
+      <pageDependencyConstraint/>
     </packagedElement>
   </compose>
   <compose xsi:type="frameweb:ApplicationModel" name="Application Model">
@@ -517,7 +531,7 @@
             <type xsi:type="uml:Class" href="frameweb/Java.frameweb#//@compose.0/String"/>
           </ownedParameter>
         </ownedOperation>
-        <ownedOperation xsi:type="frameweb:ServiceMethod" name="register">
+        <ownedOperation xsi:type="frameweb:ServiceMethod" name="registrar">
           <ownedParameter name="usuario" type="//@compose.0/br.ufes.informatica.jurisproc.core.domain/Usuario"/>
         </ownedOperation>
       </packagedElement>
