@@ -15,6 +15,11 @@
 			<var>msgs</var>
 		</resource-bundle>
 
+		<resource-bundle>
+			<base-name>br.ufes.informatica.jurisproc.core.view.messages</base-name>
+			<var>msgsCore</var>
+		</resource-bundle>
+
 		<!-- Defines the default locale. -->
 		<locale-config>
 			<default-locale>en-US</default-locale>
