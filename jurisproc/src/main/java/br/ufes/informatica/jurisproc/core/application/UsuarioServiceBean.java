@@ -1,8 +1,13 @@
 package br.ufes.informatica.jurisproc.core.application;
 
+import java.nio.charset.StandardCharsets;
+import java.security.MessageDigest;
+
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
+
+import org.jboss.security.Base64Encoder;
 
 import br.ufes.informatica.jurisproc.core.domain.Usuario;
 import br.ufes.informatica.jurisproc.core.persistence.UsuarioDAO;
@@ -39,6 +44,18 @@ public class UsuarioServiceBean implements UsuarioService
 	@Override
 	public void registrar(Usuario usuario)
 	{
+		String senhaCriptografada = usuario.getSenha();
+		try
+		{
+			MessageDigest messageDigest = MessageDigest.getInstance("SHA-256");
+			byte []encoded = messageDigest.digest(senhaCriptografada.getBytes(StandardCharsets.UTF_8));
+			senhaCriptografada = Base64Encoder.encode(encoded);
+			
+			usuario.setSenha(senhaCriptografada);
+		} catch (Exception e)
+		{
+			e.printStackTrace();
+		}
 		usuarioDAO.incluir(usuario);
 	}
 
