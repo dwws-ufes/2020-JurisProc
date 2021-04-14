@@ -1,7 +1,5 @@
 package br.ufes.informatica.jurisproc.core.controller;
 
-import java.util.Date;
-
 import javax.enterprise.context.RequestScoped;
 import javax.faces.application.FacesMessage;
 import javax.inject.Inject;
