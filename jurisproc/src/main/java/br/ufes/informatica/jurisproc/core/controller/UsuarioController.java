@@ -1,27 +1,44 @@
 package br.ufes.informatica.jurisproc.core.controller;
 
-import javax.enterprise.inject.Model;
+import java.util.Date;
+
+import javax.enterprise.context.RequestScoped;
+import javax.faces.application.FacesMessage;
+import javax.inject.Inject;
+import javax.inject.Named;
 
 import org.picketbox.util.StringUtil;
 
 import br.ufes.inf.nemo.jbutler.ejb.controller.JSFController;
+import br.ufes.informatica.jurisproc.core.application.UsuarioService;
 import br.ufes.informatica.jurisproc.core.domain.Usuario;
+import br.ufes.informatica.jurisproc.infra.MessagesHelper;
 
-@Model
+@Named
+@RequestScoped
 public class UsuarioController extends JSFController
 {
+	/**
+	 * 
+	 */
 	private static final long serialVersionUID = 1L;
-
+	@Inject
+	private UsuarioService usuarioService;
 	private Usuario usuario = new Usuario();
 	private String repeteSenha;
+	@Inject
+	private MessagesHelper messagesHelper;
 
 	public String registrar()
 	{
 		System.out.println(usuario);
 		if ( StringUtil.isNullOrEmpty(repeteSenha) || !repeteSenha.equals(usuario.getSenha()) )
 		{
-			
+			messagesHelper.addFlash(new FacesMessage("As senhas não são iguais"));
+			return "index.xhtml";
 		}
+		usuario.setDataRegistro(new Date());
+		usuarioService.registrar(usuario);
 		return "/index.xhtml?faces-redirect=true";
 	}
 

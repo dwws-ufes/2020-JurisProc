@@ -36,8 +36,13 @@ public class UsuarioDAOJPA extends BaseJPADAO<Usuario> implements UsuarioDAO
 	@Override
 	public Usuario buscaPorEmailESenha(String email, String senha)
 	{
-		// FIXME: auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public void incluir(Usuario usuario)
+	{
+		entityManager.persist(usuario);		
 	}
 
 }
