@@ -5,6 +5,7 @@ import javax.enterprise.context.ApplicationScoped;
 import javax.mail.Message;
 import javax.mail.MessagingException;
 import javax.mail.Session;
+import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
@@ -23,6 +24,9 @@ public class MailSender
 			mimeMessage.setFrom(new InternetAddress(from));
 			mimeMessage.setSubject(subject);
 			mimeMessage.setContent(body, "text/html");
+			
+			Transport.send(mimeMessage);
+			
 		} catch (MessagingException e)
 		{
 			throw new RuntimeException(e);
