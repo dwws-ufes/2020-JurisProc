@@ -19,9 +19,10 @@
 	<ui:define name="body">
 		<adm:breadcrumb link="/core/registration/index"
 			title="#{msgsCore['login.title']}" />
-		<h:form>
-		<div>
-			<p:inputText value="#{loginController.usuario.email}" />
+		<h:form styleClass="">
+		<div class="form-group">
+				<!-- 		<p:outputLabel value="Email:" for="email"></p:outputLabel> -->
+				<p:inputText id="email" value="#{loginController.usuario.email}" />
 		</div>
 			<p:commandButton value="Enviar" icon="pi pi-check"
 				action="#{loginController.processaRecuperarSenha()}" />
