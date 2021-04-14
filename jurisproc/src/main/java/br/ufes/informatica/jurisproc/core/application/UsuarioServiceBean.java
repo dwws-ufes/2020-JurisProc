@@ -2,6 +2,7 @@ package br.ufes.informatica.jurisproc.core.application;
 
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
+import java.util.Date;
 
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
@@ -44,6 +45,7 @@ public class UsuarioServiceBean implements UsuarioService
 	@Override
 	public void registrar(Usuario usuario)
 	{
+		usuario.setDataRegistro(new Date());
 		String senhaCriptografada = usuario.getSenha();
 		try
 		{

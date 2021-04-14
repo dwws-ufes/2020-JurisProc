@@ -36,8 +36,7 @@ public class UsuarioController extends JSFController
 		{
 			messagesHelper.addFlash(new FacesMessage("As senhas não são iguais"));
 			return "index.xhtml";
-		}
-		usuario.setDataRegistro(new Date());
+		}		
 		usuarioService.registrar(usuario);
 		return "/index.xhtml?faces-redirect=true";
 	}
