@@ -133,6 +133,13 @@ public class Usuario extends PersistentObjectSupport implements Comparable<Usuar
 	public void setPedidosUniformizacao(Set<PedidoUniformizacao> pedidosUniformizacao)
 	{
 		this.pedidosUniformizacao = pedidosUniformizacao;
+	}	
+
+	@Override
+	public String toString()
+	{
+		return "Usuario [nome=" + nome + ", email=" + email + ", senha=" + senha + ", dataRegistro=" + dataRegistro
+				+ ", OAB=" + OAB + "]";
 	}
 
 	/** @see java.lang.Comparable#compareTo(java.lang.Object) */
