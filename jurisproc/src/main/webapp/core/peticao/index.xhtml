@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:adm="http://github.com/adminfaces"
+	template="/WEB-INF/templates/template.xhtml">
+
+	<ui:define name="title">
+		<h:outputText value="Cadastro Pedido Uniformização" />
+	</ui:define>
+
+	<ui:define name="description">
+		<h:outputText value="Realize seu cadastro de Pedido Uniformização" />
+	</ui:define>
+
+	<ui:define name="body">
+		<adm:breadcrumb link="/core/manageWorkshops/index"
+			title="Cadastro Pedido Uniformização" />
+		<h:form id="pedidoUniformizacaoForm">
+			<div class="card crud-demo">
+				<p:growl id="messages" showDetail="true" />
+				
+				<p:toolbar>
+					<p:toolbarGroup>
+						<p:commandButton value="Novo" icon="pi plus" action="#{pedidoUniformizacaoController.abreNovo()}">
+						
+						</p:commandButton>
+					
+					</p:toolbarGroup>				
+				</p:toolbar>
+				
+			</div>
+		</h:form>
+	</ui:define>
+</ui:composition>
