@@ -208,7 +208,7 @@ public class PedidoUniformizacao extends PersistentObjectSupport implements Comp
 	{
 		this.acordaoRetratacao = acordaoRetratacao;
 	}
-	
+
 	public Usuario getUsuario()
 	{
 		return usuario;
@@ -228,7 +228,7 @@ public class PedidoUniformizacao extends PersistentObjectSupport implements Comp
 	{
 		this.assuntos = assuntos;
 	}
-	
+
 	public Acordao getAcordao()
 	{
 		return acordao;
@@ -237,6 +237,16 @@ public class PedidoUniformizacao extends PersistentObjectSupport implements Comp
 	public void setAcordao(Acordao acordao)
 	{
 		this.acordao = acordao;
+	}
+
+	@Override
+	public String toString()
+	{
+		return "PedidoUniformizacao [caminhoPeticaoAnexo=" + caminhoPeticaoAnexo + ", numeroPeticao=" + numeroPeticao
+				+ ", dataAcordao=" + dataAcordao + ", dataPeticao=" + dataPeticao + ", paradigma=" + paradigma
+				+ ", direitoMaterial=" + direitoMaterial + ", copiaParadigma=" + copiaParadigma + ", temaRecurso="
+				+ temaRecurso + ", parteAutor=" + parteAutor + ", parteReu=" + parteReu + ", acordaoRetratacao="
+				+ acordaoRetratacao + ", usuario=" + usuario + ", assuntos=" + assuntos + ", acordao=" + acordao + "]";
 	}
 
 	/** @see java.lang.Comparable#compareTo(java.lang.Object) */

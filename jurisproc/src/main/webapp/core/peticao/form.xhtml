@@ -42,12 +42,12 @@
 				<p:inputNumber id="paradigma"
 					value="#{pedidoUniformizacaoController.pedido.paradigma}"
 					style="width: 100%;" />
-				<p:outputLabel for="direitoMaterial"
-					value="É direito Material?" />
-				<p:selectBooleanButton onLabel="Sim" offLabel="Não" style="width:6rem" value="#{pedidoUniformizacaoController.pedido.direitoMaterial}"/>
-				<p:outputLabel for="copiaParadigma"
-					value="É cópia paradigma" />
-				<p:selectBooleanButton onLabel="Sim" offLabel="Não" style="width:6rem" value="#{pedidoUniformizacaoController.pedido.copiaParadigma}"/>
+					<p:outputLabel for="direitoMaterial"
+					value="É direito material?" />
+					<p:selectBooleanButton id="direitoMaterial" onLabel="Sim" offLabel="Não" style="width:6rem" value="#{pedidoUniformizacaoController.pedido.direitoMaterial}"/>
+					<p:outputLabel for="copiaparadigma"
+					value="É cópia paradigma?" />
+					<p:selectBooleanButton id="copiaparadigma" onLabel="Sim" offLabel="Não" style="width:6rem" value="#{pedidoUniformizacaoController.pedido.copiaParadigma}"/>
 			</p:panelGrid>
 			<p:commandButton id="saveButton"
 				value="Salvar" icon="fa fa-save"
