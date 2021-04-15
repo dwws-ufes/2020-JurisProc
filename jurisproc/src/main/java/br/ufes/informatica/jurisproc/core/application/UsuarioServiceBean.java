@@ -2,6 +2,7 @@ package br.ufes.informatica.jurisproc.core.application;
 
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
+import java.util.Arrays;
 import java.util.Date;
 
 import javax.ejb.EJB;
@@ -23,6 +24,7 @@ public class UsuarioServiceBean implements UsuarioService
 	private UsuarioDAO usuarioDAO;
 	@Inject
 	private MailSender mailSender;
+	
 
 	@Override
 	public Boolean fazLogin(Usuario usuario)
@@ -46,6 +48,8 @@ public class UsuarioServiceBean implements UsuarioService
 	public void registrar(Usuario usuario)
 	{
 		usuario.setDataRegistro(new Date());
+		usuario.setRoles(Arrays.asList(usuarioDAO.buscaPapelPadrao()));
+		
 		String senhaCriptografada = usuario.getSenha();
 		try
 		{

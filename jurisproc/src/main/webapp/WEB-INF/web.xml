@@ -76,9 +76,13 @@
 		</web-resource-collection>
 		<auth-constraint>
 			<role-name>ADMIN</role-name>
+			<role-name>USUARIO_NORMAL</role-name>
 		</auth-constraint>
 	</security-constraint>
 	<security-role>
 		<role-name>ADMIN</role-name>
+	</security-role>
+	<security-role>
+		<role-name>USUARIO_NORMAL</role-name>
 	</security-role>
 </web-app>
