@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+form {
+	font-size: 0.8em;
+	padding: 10px;
+}
+
+label {
+	display: block;
+	font-weight: bold;
+}
+
+input {
+	border: 1px solid #CCC;
+	box-shadow: inset 2px 2px 2px #EEE;
+	font-size: 0.9em;
+	padding: 2px 5px;
+}
