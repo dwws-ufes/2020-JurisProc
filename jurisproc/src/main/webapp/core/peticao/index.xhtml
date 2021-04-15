@@ -18,22 +18,25 @@
 
     <ui:define name="body">
 		<adm:breadcrumb link="/core/registration/index" title="#{msgsCore['pedidoUniformizacao.title']}" /><h:form id="cadastroForm">
+		<div>
+		<h:outputLabel value="Título" />
+		<h:inputText value="#{pedidoUniformizacaoController.pedido.parteAutor}" />
+		</div>
 		
-			<p:fileUpload id="anexoPedidoUniformizacao" value="#{pedidoUniformizacaoController.anexoPedidoUniformizacao}" />
-			<p:inputNumber id="pedido.numeroPeticao" value="#{pedidoUniformizacaoController.pedido.numeroPeticao}" />
-			<p:inputNumber id="pedido.numeroProcesso" value="#{pedidoUniformizacaoController.pedido.numeroProcesso}" />
-			<p:inputNumber id="pedido.paradigma" value="#{pedidoUniformizacaoController.pedido.paradigma}" />
-			<p:checkbox id="pedido.direitoMaterial" value="#{pedidoUniformizacaoController.pedido.direitoMaterial}" />
-			<p:checkbox id="pedido.copiaParadigma" value="#{pedidoUniformizacaoController.pedido.copiaParadigma}" />
-			<p:selectOneMenu id="pedido.temaRecurso" value="#{pedidoUniformizacaoController.pedido.temaRecurso}" />
-			<p:inputText id="pedido.parteAutor" value="#{pedidoUniformizacaoController.pedido.parteAutor}" />
-			<p:inputText id="pedido.parteReu" value="#{pedidoUniformizacaoController.pedido.parteReu}" />
-			<p:selectOneMenu id="pedido.acordaoRetratacao" value="#{pedidoUniformizacaoController.pedido.acordaoRetratacao}" />
-			<p:datePicker id="pedido.dataAcordao" value="#{pedidoUniformizacaoController.pedido.dataAcordao}" />
-			<p:datePicker id="pedido.dataPeticao" value="#{pedidoUniformizacaoController.pedido.dataPeticao}" />
-			<h:inputHidden id="pedido.usuario.id" value="#{pedidoUniformizacaoController.pedido.usuario.id}" />
-			<p:selectManyMenu id="pedido.assunto" value="#{pedidoUniformizacaoController.pedido.assunto}" />
-			<p:selectOneMenu id="pedido.secaoJudiciaria" value="#{pedidoUniformizacaoController.pedido.secaoJudiciaria}" />
+<!-- 			<p:fileUpload id="anexoPedidoUniformizacao" value="#{pedidoUniformizacaoController.anexoPedidoUniformizacao}" /> -->
+<!-- 			<p:inputNumber id="numeroPeticao" value="#{pedidoUniformizacaoController.pedido.numeroPeticao}" /> -->
+<!-- 			<p:inputNumber id="paradigma" value="#{pedidoUniformizacaoController.pedido.paradigma}" /> -->
+<!-- 			<p:checkbox id="direitoMaterial" value="#{pedidoUniformizacaoController.pedido.direitoMaterial}" /> -->
+<!-- 			<p:checkbox id="copiaParadigma" value="#{pedidoUniformizacaoController.pedido.copiaParadigma}" /> -->
+<!-- 			<p:selectOneMenu id="temaRecurso" value="#{pedidoUniformizacaoController.pedido.temaRecurso}" /> -->
+<!-- 			<p:inputText id="parteAutor" value="#{pedidoUniformizacaoController.pedido.parteAutor}" /> -->
+<!-- 			<p:inputText id="parteReu" value="#{pedidoUniformizacaoController.pedido.parteReu}" /> -->
+<!-- 			<p:selectOneMenu id="acordaoRetratacao" value="#{pedidoUniformizacaoController.pedido.acordaoRetratacao}" /> -->
+<!-- 			<p:datePicker id="dataAcordao" value="#{pedidoUniformizacaoController.pedido.dataAcordao}" /> -->
+<!-- 			<p:datePicker id="dataPeticao" value="#{pedidoUniformizacaoController.pedido.dataPeticao}" /> -->
+<!-- 			<h:inputHidden id="usuarioId" value="#{pedidoUniformizacaoController.pedido.usuario.id}" /> -->
+<!-- 			<p:selectManyMenu id="assunto" value="#{pedidoUniformizacaoController.pedido.assunto}" /> -->
+<!-- 			<p:selectOneMenu id="secaoJudiciaria" value="#{pedidoUniformizacaoController.pedido.secaoJudiciaria}" /> -->
 		</h:form>
     
     </ui:define>
