@@ -32,32 +32,38 @@
 		<h:form id="entitiesForm">
 			<p:panelGrid columns="2" columnClasses="ui-grid-col-4,ui-grid-col-8"
 				layout="grid" styleClass="ui-panelgrid-blank">
-				<p:outputLabel for="numeroPeticao"
-					value="Número Petição" />
+				<p:outputLabel for="numeroPeticao" value="Número Petição" />
 				<p:inputNumber id="numeroPeticao"
 					value="#{pedidoUniformizacaoController.pedido.numeroPeticao}"
 					style="width: 100%;" />
-				<p:outputLabel for="paradigma"
-					value="Paradigma" />
+				<p:outputLabel for="paradigma" value="Paradigma" />
 				<p:inputNumber id="paradigma"
 					value="#{pedidoUniformizacaoController.pedido.paradigma}"
 					style="width: 100%;" />
-					<p:outputLabel for="direitoMaterial"
-					value="É direito material?" />
-					<p:selectBooleanButton id="direitoMaterial" onLabel="Sim" offLabel="Não" style="width:6rem" value="#{pedidoUniformizacaoController.pedido.direitoMaterial}"/>
-					<p:outputLabel for="copiaparadigma"
-					value="É cópia paradigma?" />
-					<p:selectBooleanButton id="copiaparadigma" onLabel="Sim" offLabel="Não" style="width:6rem" value="#{pedidoUniformizacaoController.pedido.copiaParadigma}"/>
+				<p:outputLabel for="direitoMaterial" value="É direito material?" />
+				<p:selectBooleanButton id="direitoMaterial" onLabel="Sim"
+					offLabel="Não" style="width:6rem"
+					value="#{pedidoUniformizacaoController.pedido.direitoMaterial}" />
+				<p:outputLabel for="copiaparadigma" value="É cópia paradigma?" />
+				<p:selectBooleanButton id="copiaparadigma" onLabel="Sim"
+					offLabel="Não" style="width:6rem"
+					value="#{pedidoUniformizacaoController.pedido.copiaParadigma}" />
+				<p:outputLabel for="parteAutor" value="Parte Autor" />
+				<p:inputText id="parteAutor"
+					value="#{pedidoUniformizacaoController.pedido.parteAutor}"
+					style="width: 100%;" />
+				<p:outputLabel for="parteReu" value="Parte Réu" />
+				<p:inputText id="parteReu"
+					value="#{pedidoUniformizacaoController.pedido.parteReu}"
+					style="width: 100%;" />
 			</p:panelGrid>
-			<p:commandButton id="saveButton"
-				value="Salvar" icon="fa fa-save"
+			<p:commandButton id="saveButton" value="Salvar" icon="fa fa-save"
 				action="#{pedidoUniformizacaoController.cadastraPedidoUniformizacao()}" />
 			<p:defaultCommand target="saveButton" />
-			<p:commandButton id="backButton"
-				value="Voltar"
+			<p:commandButton id="backButton" value="Voltar"
 				icon="fa fa-arrow-circle-left"
-				action="#{pedidoUniformizacaoController.cadastraPedidoUniformizacao()}" immediate="true"
-				 />
+				action="#{pedidoUniformizacaoController.cadastraPedidoUniformizacao()}"
+				immediate="true" />
 		</h:form>
 	</ui:define>
 </ui:composition>
