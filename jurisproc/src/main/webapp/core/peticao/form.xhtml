@@ -56,6 +56,16 @@
 				<p:inputText id="parteReu"
 					value="#{pedidoUniformizacaoController.pedido.parteReu}"
 					style="width: 100%;" />
+				<p:outputLabel for="dataAcordao" value="Data Acórdão" />
+				<p:calendar id="dataAcordao"
+					value="#{pedidoUniformizacaoController.pedido.dataAcordao}"
+					showOn="button" pattern="dd/MM/yyyy" mask="true"
+					style="width: 100%;" />
+				<p:outputLabel for="dataPeticao" value="Data Petição" />
+				<p:calendar id="dataPeticao"
+					value="#{pedidoUniformizacaoController.pedido.dataPeticao}"
+					showOn="button" pattern="dd/MM/yyyy" mask="true"
+					style="width: 100%;" />
 			</p:panelGrid>
 			<p:commandButton id="saveButton" value="Salvar" icon="fa fa-save"
 				action="#{pedidoUniformizacaoController.cadastraPedidoUniformizacao()}" />
