@@ -42,38 +42,22 @@
 				<p:inputNumber id="paradigma"
 					value="#{pedidoUniformizacaoController.pedido.paradigma}"
 					style="width: 100%;" />
-				<p:outputLabel for="acronymField"
-					value="#{msgsCore['manageWorkshops.field.acronym']}" />
-				<p:inputText id="acronymField"
-					value="#{manageWorkshopsController.selectedEntity.acronym}"
-					style="width: 100%;" />
-				<p:outputLabel for="submissionDeadlineField"
-					value="#{msgsCore['manageWorkshops.field.submissionDeadline']}" />
-				<p:calendar id="submissionDeadlineField"
-					value="#{manageWorkshopsController.selectedEntity.submissionDeadline}"
-					showOn="button" pattern="dd/MM/yyyy" mask="true"
-					style="width: 100%;" />
-				<p:outputLabel for="reviewDeadlineField"
-					value="#{msgsCore['manageWorkshops.field.reviewDeadline']}" />
-				<p:calendar id="reviewDeadlineField"
-					value="#{manageWorkshopsController.selectedEntity.reviewDeadline}"
-					showOn="button" pattern="dd/MM/yyyy" mask="true"
-					style="width: 100%;" />
+				<p:outputLabel for="direitoMaterial"
+					value="É direito Material?" />
+				<p:selectBooleanButton onLabel="Sim" offLabel="Não" style="width:6rem" value="#{pedidoUniformizacaoController.pedido.direitoMaterial}"/>
+				<p:outputLabel for="copiaParadigma"
+					value="É cópia paradigma" />
+				<p:selectBooleanButton onLabel="Sim" offLabel="Não" style="width:6rem" value="#{pedidoUniformizacaoController.pedido.copiaParadigma}"/>
 			</p:panelGrid>
-			<p:commandButton id="cancelButton"
-				value="#{msgs['jbutler.crud.button.cancel']}" icon="fa fa-close"
-				action="#{manageWorkshopsController.list}" immediate="true"
-				rendered="#{! manageWorkshopsController.readOnly}" />
 			<p:commandButton id="saveButton"
-				value="#{msgs['jbutler.crud.button.save']}" icon="fa fa-save"
-				action="#{manageWorkshopsController.save}"
-				rendered="#{! manageWorkshopsController.readOnly}" />
+				value="Salvar" icon="fa fa-save"
+				action="#{pedidoUniformizacaoController.cadastraPedidoUniformizacao()}" />
 			<p:defaultCommand target="saveButton" />
 			<p:commandButton id="backButton"
-				value="#{msgs['jbutler.crud.button.back']}"
+				value="Voltar"
 				icon="fa fa-arrow-circle-left"
-				action="#{manageWorkshopsController.list}" immediate="true"
-				rendered="#{manageWorkshopsController.readOnly}" />
+				action="#{pedidoUniformizacaoController.cadastraPedidoUniformizacao()}" immediate="true"
+				 />
 		</h:form>
 	</ui:define>
 </ui:composition>
