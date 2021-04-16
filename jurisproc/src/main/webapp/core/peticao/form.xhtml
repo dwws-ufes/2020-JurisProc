@@ -83,6 +83,8 @@
 					value="#{pedidoUniformizacaoController.pedido.dataPeticao}"
 					showOn="button" pattern="dd/MM/yyyy" mask="true"
 					style="width: 100%;" />
+				<p:outputLabel for="arquivoPeticao" value="Arquivo Petição" />
+				<h:inputFile id="arquivoPeticao" value="#{pedidoUniformizacaoController.anexoPedidoUniformizacao}"></h:inputFile>
 			</p:panelGrid>
 			
 			<p:commandButton id="saveButton" value="Salvar" icon="fa fa-save"
