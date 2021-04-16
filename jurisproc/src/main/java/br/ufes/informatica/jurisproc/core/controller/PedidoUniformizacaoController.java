@@ -19,6 +19,8 @@ import br.ufes.informatica.jurisproc.core.domain.PedidoUniformizacao;
 import br.ufes.informatica.jurisproc.core.domain.TemaRecurso;
 import br.ufes.informatica.jurisproc.core.persistence.AcordaoDAO;
 import br.ufes.informatica.jurisproc.core.persistence.AssuntoDAO;
+import br.ufes.informatica.jurisproc.core.persistence.PedidoUniformizacaoDAO;
+import br.ufes.informatica.jurisproc.core.persistence.PedidoUniformizacaoDAOJPA;
 
 @Named
 @RequestScoped
@@ -33,6 +35,8 @@ public class PedidoUniformizacaoController extends JSFController
 	private AssuntoDAO assuntoDAO;
 	@Inject
 	private AcordaoDAO acordaoDAO;
+	@Inject
+	private PedidoUniformizacaoDAO pedidoUniformizacaoDAO;
 	
 	private UploadedFile file;
 	private List<PedidoUniformizacao> registrosSelecionados;
@@ -47,6 +51,7 @@ public class PedidoUniformizacaoController extends JSFController
 	{
 		assuntos = assuntoDAO.retrieveAll();
 		acordaos = acordaoDAO.retrieveAll();
+		pedidosUnformizacoes = pedidoUniformizacaoDAO.retrieveAll();
 	}
 
 	public List<Acordao> getAcordaos()

@@ -66,10 +66,31 @@
 					<p:column selectionMode="multiple" exportable="false"></p:column>
 
 					<p:column headerText="Número Petição"
-						sortBy="#{product.numeroPeticao}"
-						filterBy="#{product.numeroPeticao}">
+						sortBy="#{product.numeroPeticao}">
 						<h:outputText value="#{product.numeroPeticao}" />
 					</p:column>
+
+					<p:column headerText="Paradigma" sortBy="#{product.paradigma}">
+						<h:outputText value="#{product.paradigma}" />
+					</p:column>
+
+					<p:column headerText="Tema Recurso" sortBy="#{product.temaRecurso}">
+						<h:outputText value="#{product.temaRecurso}" />
+					</p:column>
+
+					<p:column headerText="Data Petição" sortBy="#{product.temaRecurso}">
+						<h:outputText value="#{product.dataPeticao}">
+							<f:convertDateTime pattern="dd/MM/yyyy" />
+						</h:outputText>
+					</p:column>
+					
+					<p:column headerText="Data Acórdão" sortBy="#{product.dataAcordao}">
+						<h:outputText value="#{product.dataAcordao}">
+							<f:convertDateTime pattern="dd/MM/yyyy" />
+						</h:outputText>
+					</p:column>
+
+
 
 				</p:dataTable>
 
