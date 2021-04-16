@@ -40,6 +40,7 @@ public class PedidoUniformizacaoController extends JSFController
 	private PedidoUniformizacao pedido = new PedidoUniformizacao();
 	private List<Assunto> assuntos;
 	private List<Acordao> acordaos;
+	private List<PedidoUniformizacao> pedidosUnformizacoes;
 
 	@PostConstruct
 	public void carregaFormulario()
@@ -99,6 +100,26 @@ public class PedidoUniformizacaoController extends JSFController
 	public void setFile(UploadedFile file)
 	{
 		this.file = file;
+	}
+	
+	public List<PedidoUniformizacao> getRegistrosSelecionados()
+	{
+		return registrosSelecionados;
+	}
+
+	public void setRegistrosSelecionados(List<PedidoUniformizacao> registrosSelecionados)
+	{
+		this.registrosSelecionados = registrosSelecionados;
+	}
+
+	public List<PedidoUniformizacao> getPedidosUnformizacoes()
+	{
+		return pedidosUnformizacoes;
+	}
+
+	public void setPedidosUnformizacoes(List<PedidoUniformizacao> pedidosUnformizacoes)
+	{
+		this.pedidosUnformizacoes = pedidosUnformizacoes;
 	}
 
 	public String getDeleteButtonMessage()

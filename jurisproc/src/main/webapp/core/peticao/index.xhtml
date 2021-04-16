@@ -27,16 +27,23 @@
 						<p:commandButton value="Novo" icon="pi plus"
 							action="#{pedidoUniformizacaoController.abreNovo()}">
 						</p:commandButton>
-						<p:commandButton id="delete-products-button" icon="pi pi-trash" value="#{pedidoUniformizacaoController.deleteButtonMessage}"
-							styleClass="ui-button-danger" disabled="#{!pedidoUniformizacaoController.existeRegistroSelecionado()}" update="@this">
+						<p:commandButton id="delete-products-button" icon="pi pi-trash"
+							value="#{pedidoUniformizacaoController.deleteButtonMessage}"
+							styleClass="ui-button-danger"
+							disabled="#{!pedidoUniformizacaoController.existeRegistroSelecionado()}"
+							update="@this">
 							<p:confirm header="Confirmação"
 								message="Excluir o registro selecionado?"
 								icon="pi pi-exclamation-triangle"></p:confirm>
 						</p:commandButton>
 					</p:toolbarGroup>
 				</p:toolbar>
-				
-				<p:dataTable id="dt-products" widgetVar="dtProducts" var="product" value=""></p:dataTable>
+
+				<p:dataTable id="dt-products" widgetVar="dtProducts" var="product"
+					value="#{pedidoUniformizacaoController.pedidosUnformizacoes}"
+					reflow="true" styleClass="products-table"
+					selection="#{pedidoUniformizacaoController.registrosSelecionados}"
+					rowKey="#{product.id}" paginator="true" rows="10" rowSelectMode="add" paginatorPosition="bottom"></p:dataTable>
 
 
 			</div>
