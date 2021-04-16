@@ -48,6 +48,10 @@
 				<p:selectBooleanButton id="copiaparadigma" onLabel="Sim"
 					offLabel="Não" style="width:6rem"
 					value="#{pedidoUniformizacaoController.pedido.copiaParadigma}" />
+				<p:outputLabel for="temaRecurso" value="Tema Recurso" />
+				<p:selectOneListbox id="temaRecurso" value="#{pedidoUniformizacaoController.pedido.temaRecurso}">
+					<f:selectItems value="#{pedidoUniformizacaoController.temasRecursos}" var="c" itemValue="#{c}" itemLabel="#{c.name()}"></f:selectItems>
+				</p:selectOneListbox>
 				<p:outputLabel for="parteAutor" value="Parte Autor" />
 				<p:inputText id="parteAutor"
 					value="#{pedidoUniformizacaoController.pedido.parteAutor}"
