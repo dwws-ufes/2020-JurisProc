@@ -49,11 +49,23 @@ public class PedidoUniformizacaoServiceBean implements PedidoUniformizacaoServic
 	}
 
 	@Override
-	public void cadastraPedidoUniformizacao(PedidoUniformizacao pedidoUniformizacao, UploadedFile file)
+	public void cadastraPedidoUniformizacao(PedidoUniformizacao pedidoUniformizacao, UploadedFile file, Boolean isEdit)
 	{
-		pedidoUniformizacao.setCaminhoPeticaoAnexo(fileSaver.write("peticoes", file));
+		if ( file != null )
+		{
+			pedidoUniformizacao.setCaminhoPeticaoAnexo(fileSaver.write("peticoes", file));
+			
+		}
 		pedidoUniformizacao.setUsuario(currentUser.getUsuario());
-		pedidoUniformizacaoDAO.save(pedidoUniformizacao);
+		if ( !isEdit )
+		{
+			pedidoUniformizacaoDAO.save(pedidoUniformizacao);
+			
+		}
+		else
+		{
+			pedidoUniformizacaoDAO.merge(pedidoUniformizacao);			
+		}
 		
 	}
 

@@ -37,6 +37,8 @@ public class PedidoUniformizacaoController extends JSFController
 	@Inject
 	private PedidoUniformizacaoDAO pedidoUniformizacaoDAO;
 	
+	private Boolean isEdit = false;
+	
 	private UploadedFile file;
 	private List<PedidoUniformizacao> registrosSelecionados;
 	
@@ -65,7 +67,7 @@ public class PedidoUniformizacaoController extends JSFController
 
 	public String cadastraPedidoUniformizacao()
 	{
-		pedidoUniformizacaoService.cadastraPedidoUniformizacao(pedido, file);
+		pedidoUniformizacaoService.cadastraPedidoUniformizacao(pedido, file, isEdit);
 		return redirecionamentoPadrao();
 	}
 
@@ -77,14 +79,18 @@ public class PedidoUniformizacaoController extends JSFController
 
 	public String abreNovo()
 	{
+		file = null;
+		isEdit = false;
 		pedido = new PedidoUniformizacao();
 		return "/core/peticao/form.xhtml?faces-redirect=true";
 	}
 	
 	public String abreEditar(Long id)
 	{
+		file = null;
+		isEdit = true;
 		this.pedido = pedidoUniformizacaoDAO.retrieveById(id);
-		return "/core/peticao/form.xhtml";
+		return "/core/peticao/form.xhtml?faces-redirect=true";
 	}
 	
 	public String excluirRegistro(Long id)
