@@ -66,6 +66,11 @@ public class PedidoUniformizacaoController extends JSFController
 	public String cadastraPedidoUniformizacao()
 	{
 		pedidoUniformizacaoService.cadastraPedidoUniformizacao(pedido, file);
+		return redirecionamentoPadrao();
+	}
+
+	private String redirecionamentoPadrao()
+	{
 		pedidosUnformizacoes = pedidoUniformizacaoDAO.retrieveAll();
 		return "/core/peticao/index.xhtml?faces-redirect=true";
 	}
@@ -80,6 +85,13 @@ public class PedidoUniformizacaoController extends JSFController
 	{
 		this.pedido = pedidoUniformizacaoDAO.retrieveById(id);
 		return "/core/peticao/form.xhtml";
+	}
+	
+	public String excluirRegistro(Long id)
+	{
+		PedidoUniformizacao pedidoUniformizacao = pedidoUniformizacaoDAO.retrieveById(id);
+		pedidoUniformizacaoDAO.delete(pedidoUniformizacao);
+		return redirecionamentoPadrao();
 	}
 
 	public TemaRecurso[] getTemasRecursos()
