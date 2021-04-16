@@ -56,7 +56,7 @@ public class PedidoUniformizacaoController extends JSFController {
 	}
 
 	public String cadastraPedidoUniformizacao() {
-		System.out.println(pedido);
+		pedidoUniformizacaoService.cadastraPedidoUniformizacao(pedido);
 		return "/core/peticao/index.xhtml?faces-redirect=true";
 	}
 	

@@ -70,7 +70,8 @@
 			<description>
 			Urls que levam para paginas de administracao
 			</description>
-			<url-pattern>/core/manageWorkshops/*</url-pattern>
+			<url-pattern>/core/*</url-pattern>
+			<url-pattern>/index.xhtml</url-pattern>
 			<http-method>GET</http-method>
 			<http-method>POST</http-method>
 		</web-resource-collection>
