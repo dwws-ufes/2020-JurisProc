@@ -49,9 +49,9 @@
 					offLabel="Não" style="width:6rem"
 					value="#{pedidoUniformizacaoController.pedido.copiaParadigma}" />
 				<p:outputLabel for="temaRecurso" value="Tema Recurso" />
-				<p:selectOneListbox id="temaRecurso" value="#{pedidoUniformizacaoController.pedido.temaRecurso}">
+				<p:selectOneMenu id="temaRecurso" value="#{pedidoUniformizacaoController.pedido.temaRecurso}">
 					<f:selectItems value="#{pedidoUniformizacaoController.temasRecursos}" var="c" itemValue="#{c}" itemLabel="#{c.name()}"></f:selectItems>
-				</p:selectOneListbox>
+				</p:selectOneMenu>
 				<p:outputLabel for="parteAutor" value="Parte Autor" />
 				<p:inputText id="parteAutor"
 					value="#{pedidoUniformizacaoController.pedido.parteAutor}"
@@ -60,6 +60,10 @@
 				<p:inputText id="parteReu"
 					value="#{pedidoUniformizacaoController.pedido.parteReu}"
 					style="width: 100%;" />
+				<p:outputLabel for="enumOpcoes" value="Acordão Retratação?" />
+				<p:selectOneMenu id="enumOpcoes" value="#{pedidoUniformizacaoController.pedido.acordaoRetratacao}">
+					<f:selectItems value="#{pedidoUniformizacaoController.opcoes}" var="op" itemValue="#{op}" itemLabel="#{op.name()}"></f:selectItems>
+				</p:selectOneMenu>
 				<p:outputLabel for="dataAcordao" value="Data Acórdão" />
 				<p:calendar id="dataAcordao"
 					value="#{pedidoUniformizacaoController.pedido.dataAcordao}"
