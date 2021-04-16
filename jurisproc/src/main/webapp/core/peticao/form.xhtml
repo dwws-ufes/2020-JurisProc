@@ -29,7 +29,7 @@
 	</ui:define>
 
 	<ui:define name="body">
-		<h:form id="entitiesForm">
+		<h:form id="entitiesForm" enctype="multipart/form-data">
 			<p:panelGrid columns="2" columnClasses="ui-grid-col-4,ui-grid-col-8"
 				layout="grid" styleClass="ui-panelgrid-blank">
 				<p:outputLabel for="acordao" value="Acordao" />
@@ -84,7 +84,7 @@
 					showOn="button" pattern="dd/MM/yyyy" mask="true"
 					style="width: 100%;" />
 				<p:outputLabel for="arquivoPeticao" value="Arquivo Petição" />
-				<h:inputFile id="arquivoPeticao" value="#{pedidoUniformizacaoController.anexoPedidoUniformizacao}"></h:inputFile>
+				 <p:fileUpload value="#{pedidoUniformizacaoController.file}" mode="simple" skinSimple="true"/>
 			</p:panelGrid>
 			
 			<p:commandButton id="saveButton" value="Salvar" icon="fa fa-save"

@@ -7,6 +7,8 @@ import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.Part;
 
+import org.primefaces.model.UploadedFile;
+
 import com.amazonaws.AmazonClientException;
 import com.amazonaws.services.s3.AmazonS3Client;
 import com.amazonaws.services.s3.model.ObjectMetadata;
@@ -22,13 +24,30 @@ public class FileSaver
 	private static final String CONTENT_DISPOSITION = "content-disposition";
 	private static final String FILENAME_KEY = "filename=";
 	
-	public String write(String baseFolder, Part multipartFile)
+	public String write_old(String baseFolder, Part multipartFile)
 	{
 		String fileName = extractFilename(multipartFile.getHeader(CONTENT_DISPOSITION));
 		
 		try
 		{
 			s3.putObject("casadocodigo", fileName, multipartFile.getInputStream(), new ObjectMetadata());
+			
+			return "http://localhost:9444/jurisproc/"+fileName+"?noAuth=true";
+			
+		} catch (AmazonClientException | IOException e)
+		{
+			throw new RuntimeException(e);
+		}
+		
+	}
+	
+	public String write(String baseFolder, UploadedFile file)
+	{
+		String fileName = file.getFileName();
+		
+		try
+		{
+			s3.putObject("casadocodigo", fileName, file.getInputstream(), new ObjectMetadata());
 			
 			return "http://localhost:9444/jurisproc/"+fileName+"?noAuth=true";
 			

@@ -9,6 +9,8 @@ import javax.inject.Inject;
 import javax.inject.Named;
 import javax.servlet.http.Part;
 
+import org.primefaces.model.UploadedFile;
+
 import br.ufes.inf.nemo.jbutler.ejb.controller.JSFController;
 import br.ufes.informatica.jurisproc.core.application.PedidoUniformizacaoService;
 import br.ufes.informatica.jurisproc.core.domain.Acordao;
@@ -34,6 +36,7 @@ public class PedidoUniformizacaoController extends JSFController {
 	@Inject
 	private AcordaoDAO acordaoDAO;
 	private Part anexoPedidoUniformizacao;
+	private UploadedFile file;
 	private PedidoUniformizacao pedido = new PedidoUniformizacao();
 	private List<Assunto> assuntos;	
 	private List<Acordao> acordaos;
@@ -56,7 +59,7 @@ public class PedidoUniformizacaoController extends JSFController {
 	}
 
 	public String cadastraPedidoUniformizacao() {
-		pedidoUniformizacaoService.cadastraPedidoUniformizacao(pedido, anexoPedidoUniformizacao);
+		pedidoUniformizacaoService.cadastraPedidoUniformizacao(pedido, file);
 		return "/core/peticao/index.xhtml?faces-redirect=true";
 	}
 	
@@ -93,6 +96,16 @@ public class PedidoUniformizacaoController extends JSFController {
 	/** Setter for pedido. */
 	public void setPedido(PedidoUniformizacao pedido) {
 		this.pedido = pedido;
+	}
+
+	public UploadedFile getFile()
+	{
+		return file;
+	}
+
+	public void setFile(UploadedFile file)
+	{
+		this.file = file;
 	}
 	
 }
