@@ -7,7 +7,6 @@ import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
-import javax.servlet.http.Part;
 
 import org.primefaces.model.UploadedFile;
 
@@ -23,32 +22,32 @@ import br.ufes.informatica.jurisproc.core.persistence.AssuntoDAO;
 
 @Named
 @RequestScoped
-public class PedidoUniformizacaoController extends JSFController {
+public class PedidoUniformizacaoController extends JSFController
+{
 	/** Serialization id (using default value, change if necessary). */
 	private static final long serialVersionUID = 1L;
 
-	
-	
 	@EJB
 	private PedidoUniformizacaoService pedidoUniformizacaoService;
 	@Inject
 	private AssuntoDAO assuntoDAO;
 	@Inject
 	private AcordaoDAO acordaoDAO;
-	private Part summary;
-	private Part anexoPedidoUniformizacao;
-	private UploadedFile file;
-	private PedidoUniformizacao pedido = new PedidoUniformizacao();
-	private List<Assunto> assuntos;	
-	private List<Acordao> acordaos;
 	
+	private UploadedFile file;
+	private List<PedidoUniformizacao> registrosSelecionados;
+	
+	private PedidoUniformizacao pedido = new PedidoUniformizacao();
+	private List<Assunto> assuntos;
+	private List<Acordao> acordaos;
+
 	@PostConstruct
 	public void carregaFormulario()
 	{
 		assuntos = assuntoDAO.retrieveAll();
 		acordaos = acordaoDAO.retrieveAll();
 	}
-	
+
 	public List<Acordao> getAcordaos()
 	{
 		return acordaos;
@@ -57,55 +56,38 @@ public class PedidoUniformizacaoController extends JSFController {
 	public List<Assunto> getAssuntos()
 	{
 		return assuntos;
-	}	
-
-	public Part getSummary()
-	{
-		return summary;
 	}
 
-	public void setSummary(Part summary)
+	public String cadastraPedidoUniformizacao()
 	{
-		this.summary = summary;
-	}
-
-	public String cadastraPedidoUniformizacao() {
 		pedidoUniformizacaoService.cadastraPedidoUniformizacao(pedido, file);
 		return "/core/peticao/index.xhtml?faces-redirect=true";
 	}
-	
+
 	public String abreNovo()
 	{
 		return "/core/peticao/form.xhtml?faces-redirect=true";
 	}
-	
-	public TemaRecurso []getTemasRecursos()
+
+	public TemaRecurso[] getTemasRecursos()
 	{
 		return TemaRecurso.values();
 	}
-	
-	public Opcoes []getOpcoes()
+
+	public Opcoes[] getOpcoes()
 	{
 		return Opcoes.values();
 	}
-	
-	/** Getter for anexoPedidoUniformizacao. */
-	public Part getAnexoPedidoUniformizacao() {
-		return anexoPedidoUniformizacao;
-	}
 
-	/** Setter for anexoPedidoUniformizacao. */
-	public void setAnexoPedidoUniformizacao(Part anexoPedidoUniformizacao) {
-		this.anexoPedidoUniformizacao = anexoPedidoUniformizacao;
-	}
-	
 	/** Getter for pedido. */
-	public PedidoUniformizacao getPedido() {
+	public PedidoUniformizacao getPedido()
+	{
 		return pedido;
 	}
 
 	/** Setter for pedido. */
-	public void setPedido(PedidoUniformizacao pedido) {
+	public void setPedido(PedidoUniformizacao pedido)
+	{
 		this.pedido = pedido;
 	}
 
@@ -118,5 +100,22 @@ public class PedidoUniformizacaoController extends JSFController {
 	{
 		this.file = file;
 	}
-	
+
+	public String getDeleteButtonMessage()
+	{
+		if ( existeRegistroSelecionado() )
+		{
+			int size = this.registrosSelecionados.size();
+			return size > 1 ? size + " registros selecionados" : "1 registro selecionado";
+		}
+		
+		return "Excluir";
+
+	}
+
+	public boolean existeRegistroSelecionado()
+	{
+		return this.registrosSelecionados != null && !this.registrosSelecionados.isEmpty();
+	}
+
 }
