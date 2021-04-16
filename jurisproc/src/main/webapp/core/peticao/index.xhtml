@@ -18,7 +18,7 @@
 	<ui:define name="body">
 		<adm:breadcrumb link="/core/manageWorkshops/index"
 			title="Cadastro Pedido Uniformização" />
-		<h:form id="pedidoUniformizacaoForm">
+		<h:form id="form">
 			<div class="card crud-demo">
 				<p:growl id="messages" showDetail="true" />
 
@@ -43,7 +43,35 @@
 					value="#{pedidoUniformizacaoController.pedidosUnformizacoes}"
 					reflow="true" styleClass="products-table"
 					selection="#{pedidoUniformizacaoController.registrosSelecionados}"
-					rowKey="#{product.id}" paginator="true" rows="10" rowSelectMode="add" paginatorPosition="bottom"></p:dataTable>
+					rowKey="#{product.id}" paginator="true" rows="10"
+					rowSelectMode="add" paginatorPosition="bottom">
+					<f:facet name="header">
+						<div class="products-table-header">
+							<span class="font-weight: bold">Pedidos Uniformizações</span> <span
+								class="filter-container ui-input-icon-left"> <i
+								class="pi pi-search"></i> <p:inputText id="globalFilter"
+									onkeyup="PF('dtProducts').filter()" placeholder="Busca" />
+							</span>
+						</div>
+					</f:facet>
+
+					<p:ajax event="rowSelect" update=":form:delete-products-button" />
+					<p:ajax event="rowUnselect" update=":form:delete-products-button" />
+					<p:ajax event="rowSelectCheckbox"
+						update=":form:delete-products-button" />
+					<p:ajax event="rowUnselectCheckbox"
+						update=":form:delete-products-button" />
+					<p:ajax event="toggleSelect" update=":form:delete-products-button" />
+
+					<p:column selectionMode="multiple" exportable="false"></p:column>
+
+					<p:column headerText="Número Petição"
+						sortBy="#{product.numeroPeticao}"
+						filterBy="#{product.numeroPeticao}">
+						<h:outputText value="#{product.numeroPeticao}" />
+					</p:column>
+
+				</p:dataTable>
 
 
 			</div>
