@@ -92,7 +92,7 @@
 
 					<p:column exportable="false">
 						<p:commandButton icon="pi pi-pencil"
-							action="#{pedidoUniformizacaoController.abreEditar(product)}" value="Editar">
+							action="#{pedidoUniformizacaoController.abreEditar(product.id)}" ajax="false" value="Editar">
 						</p:commandButton>
 					</p:column>
 				</p:dataTable>

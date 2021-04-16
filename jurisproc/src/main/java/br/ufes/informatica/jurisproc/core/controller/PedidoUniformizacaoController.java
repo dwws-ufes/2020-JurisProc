@@ -4,7 +4,7 @@ import java.util.List;
 
 import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
-import javax.enterprise.context.RequestScoped;
+import javax.enterprise.context.SessionScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
@@ -22,7 +22,7 @@ import br.ufes.informatica.jurisproc.core.persistence.AssuntoDAO;
 import br.ufes.informatica.jurisproc.core.persistence.PedidoUniformizacaoDAO;
 
 @Named
-@RequestScoped
+@SessionScoped
 public class PedidoUniformizacaoController extends JSFController
 {
 	/** Serialization id (using default value, change if necessary). */
@@ -40,7 +40,7 @@ public class PedidoUniformizacaoController extends JSFController
 	private UploadedFile file;
 	private List<PedidoUniformizacao> registrosSelecionados;
 	
-	private PedidoUniformizacao pedido = new PedidoUniformizacao();
+	private PedidoUniformizacao pedido;
 	private List<Assunto> assuntos;
 	private List<Acordao> acordaos;
 	private List<PedidoUniformizacao> pedidosUnformizacoes;
@@ -66,6 +66,7 @@ public class PedidoUniformizacaoController extends JSFController
 	public String cadastraPedidoUniformizacao()
 	{
 		pedidoUniformizacaoService.cadastraPedidoUniformizacao(pedido, file);
+		pedidosUnformizacoes = pedidoUniformizacaoDAO.retrieveAll();
 		return "/core/peticao/index.xhtml?faces-redirect=true";
 	}
 
@@ -75,10 +76,10 @@ public class PedidoUniformizacaoController extends JSFController
 		return "/core/peticao/form.xhtml?faces-redirect=true";
 	}
 	
-	public String abreEditar(PedidoUniformizacao pedidoUniformizacao)
+	public String abreEditar(Long id)
 	{
-		this.pedido = pedidoUniformizacao;
-		return "/core/peticao/form.xhtml?faces-redirect=true";
+		this.pedido = pedidoUniformizacaoDAO.retrieveById(id);
+		return "/core/peticao/form.xhtml";
 	}
 
 	public TemaRecurso[] getTemasRecursos()
