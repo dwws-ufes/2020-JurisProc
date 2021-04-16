@@ -32,6 +32,10 @@
 		<h:form id="entitiesForm">
 			<p:panelGrid columns="2" columnClasses="ui-grid-col-4,ui-grid-col-8"
 				layout="grid" styleClass="ui-panelgrid-blank">
+				<p:outputLabel for="assunto" value="Assuntos"/>
+				<p:selectManyMenu id="assunto" value="#{pedidoUniformizacaoController.pedido.assuntos}" converter="entityConverter">
+					<f:selectItems value="#{pedidoUniformizacaoController.assuntos}" var="assunto" itemLabel="#{assunto.nome}" itemValue="#{assunto}"></f:selectItems>
+				</p:selectManyMenu>
 				<p:outputLabel for="numeroPeticao" value="Número Petição" />
 				<p:inputNumber id="numeroPeticao"
 					value="#{pedidoUniformizacaoController.pedido.numeroPeticao}"

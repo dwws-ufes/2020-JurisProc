@@ -59,6 +59,12 @@ public class Assunto extends PersistentObjectSupport implements Comparable<Assun
 	public void setPedidosUniformizacoes(Set<PedidoUniformizacao> pedidosUniformizacoes)
 	{
 		this.pedidosUniformizacoes = pedidosUniformizacoes;
+	}	
+
+	@Override
+	public String toString()
+	{
+		return "Assunto [nome=" + nome + ", competencia=" + competencia + "]";
 	}
 
 	/** @see java.lang.Comparable#compareTo(java.lang.Object) */

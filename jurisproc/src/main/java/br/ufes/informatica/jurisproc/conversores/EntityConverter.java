@@ -13,7 +13,7 @@ import javax.persistence.Id;
 
 import org.picketbox.util.StringUtil;
 
-@FacesConverter
+@FacesConverter("entityConverter")
 public class EntityConverter implements Converter<Object>
 {
 
@@ -46,7 +46,7 @@ public class EntityConverter implements Converter<Object>
 	{
 		try
 		{
-			Field field = value.getClass().getField(idField.getName());
+			Field field = value.getClass().getSuperclass().getDeclaredField(idField.getName());
 			field.setAccessible(true);
 			return field.get(value).toString();
 		} catch (IllegalArgumentException | IllegalAccessException | NoSuchFieldException | SecurityException e)
@@ -58,7 +58,7 @@ public class EntityConverter implements Converter<Object>
 
 	private Field findIdField(Object value)
 	{
-		Field idField = Arrays.stream(value.getClass().getFields())
+		Field idField = Arrays.stream(value.getClass().getSuperclass().getDeclaredFields())
 				.filter((field) -> field.getAnnotation(Id.class) != null).findFirst().get();
 		return idField;
 	}
