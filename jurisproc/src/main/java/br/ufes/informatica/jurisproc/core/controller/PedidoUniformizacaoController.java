@@ -40,7 +40,7 @@ public class PedidoUniformizacaoController extends JSFController
 	private UploadedFile file;
 	private List<PedidoUniformizacao> registrosSelecionados;
 	
-	private PedidoUniformizacao pedido;
+	private PedidoUniformizacao pedido = new PedidoUniformizacao();
 	private List<Assunto> assuntos;
 	private List<Acordao> acordaos;
 	private List<PedidoUniformizacao> pedidosUnformizacoes;
