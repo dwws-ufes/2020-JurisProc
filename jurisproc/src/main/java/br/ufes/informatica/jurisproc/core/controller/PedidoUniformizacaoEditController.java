@@ -1,16 +1,16 @@
 package br.ufes.informatica.jurisproc.core.controller;
 
+import java.io.Serializable;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
 import javax.ejb.EJB;
-import javax.enterprise.context.RequestScoped;
+import javax.faces.view.ViewScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
 
 import org.primefaces.model.UploadedFile;
 
-import br.ufes.inf.nemo.jbutler.ejb.controller.JSFController;
 import br.ufes.informatica.jurisproc.core.application.PedidoUniformizacaoService;
 import br.ufes.informatica.jurisproc.core.domain.Acordao;
 import br.ufes.informatica.jurisproc.core.domain.Assunto;
@@ -22,12 +22,14 @@ import br.ufes.informatica.jurisproc.core.persistence.AssuntoDAO;
 import br.ufes.informatica.jurisproc.core.persistence.PedidoUniformizacaoDAO;
 
 @Named
-@RequestScoped
-public class PedidoUniformizacaoEditController extends JSFController
+@ViewScoped
+public class PedidoUniformizacaoEditController implements Serializable
 {
-	/** Serialization id (using default value, change if necessary). */
-	private static final long serialVersionUID = 1L;
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -2729418535647258947L;
 	@EJB
 	private PedidoUniformizacaoService pedidoUniformizacaoService;
 	@Inject
@@ -37,12 +39,13 @@ public class PedidoUniformizacaoEditController extends JSFController
 	@Inject
 	private PedidoUniformizacaoDAO pedidoUniformizacaoDAO;
 	
-	private Boolean isEdit = false;
+	
+	private Long id;
+	private Boolean isEdit = true;
 	
 	private UploadedFile file;
-	private List<PedidoUniformizacao> registrosSelecionados;
 	
-	private PedidoUniformizacao pedido;
+	private PedidoUniformizacao pedido = new PedidoUniformizacao();
 	private List<Assunto> assuntos;
 	private List<Acordao> acordaos;
 	private List<PedidoUniformizacao> pedidosUnformizacoes;
@@ -52,7 +55,11 @@ public class PedidoUniformizacaoEditController extends JSFController
 	{
 		assuntos = assuntoDAO.retrieveAll();
 		acordaos = acordaoDAO.retrieveAll();
-		pedidosUnformizacoes = pedidoUniformizacaoDAO.retrieveAll();
+	}
+	
+	public void carregaRegistro()
+	{
+		pedido = pedidoUniformizacaoDAO.retrieveById(id);
 	}
 
 	public List<Acordao> getAcordaos()
@@ -65,10 +72,9 @@ public class PedidoUniformizacaoEditController extends JSFController
 		return assuntos;
 	}
 
-	public String cadastraPedidoUniformizacao()
+	public void cadastraPedidoUniformizacao()
 	{
-		pedidoUniformizacaoService.cadastraPedidoUniformizacao(pedido, file, isEdit);
-		return redirecionamentoPadrao();
+		System.out.println(pedido);
 	}
 
 	private String redirecionamentoPadrao()
@@ -132,16 +138,6 @@ public class PedidoUniformizacaoEditController extends JSFController
 		this.file = file;
 	}
 	
-	public List<PedidoUniformizacao> getRegistrosSelecionados()
-	{
-		return registrosSelecionados;
-	}
-
-	public void setRegistrosSelecionados(List<PedidoUniformizacao> registrosSelecionados)
-	{
-		this.registrosSelecionados = registrosSelecionados;
-	}
-
 	public List<PedidoUniformizacao> getPedidosUnformizacoes()
 	{
 		return pedidosUnformizacoes;
@@ -152,21 +148,14 @@ public class PedidoUniformizacaoEditController extends JSFController
 		this.pedidosUnformizacoes = pedidosUnformizacoes;
 	}
 
-	public String getDeleteButtonMessage()
+	public Long getId()
 	{
-		if ( existeRegistroSelecionado() )
-		{
-			int size = this.registrosSelecionados.size();
-			return size > 1 ? size + " registros selecionados" : "1 registro selecionado";
-		}
-		
-		return "Excluir";
-
+		return id;
 	}
 
-	public boolean existeRegistroSelecionado()
+	public void setId(Long id)
 	{
-		return this.registrosSelecionados != null && !this.registrosSelecionados.isEmpty();
+		this.id = id;
 	}
 
 }
