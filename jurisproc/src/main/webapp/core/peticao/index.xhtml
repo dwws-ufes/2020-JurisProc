@@ -83,15 +83,18 @@
 							<f:convertDateTime pattern="dd/MM/yyyy" />
 						</h:outputText>
 					</p:column>
-					
+
 					<p:column headerText="Data Acórdão" sortBy="#{product.dataAcordao}">
 						<h:outputText value="#{product.dataAcordao}">
 							<f:convertDateTime pattern="dd/MM/yyyy" />
 						</h:outputText>
 					</p:column>
 
-
-
+					<p:column exportable="false">
+						<p:commandButton icon="pi pi-pencil"
+							action="#{pedidoUniformizacaoController.abreEditar(product)}" value="Editar">
+						</p:commandButton>
+					</p:column>
 				</p:dataTable>
 
 

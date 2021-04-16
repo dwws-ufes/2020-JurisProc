@@ -20,7 +20,6 @@ import br.ufes.informatica.jurisproc.core.domain.TemaRecurso;
 import br.ufes.informatica.jurisproc.core.persistence.AcordaoDAO;
 import br.ufes.informatica.jurisproc.core.persistence.AssuntoDAO;
 import br.ufes.informatica.jurisproc.core.persistence.PedidoUniformizacaoDAO;
-import br.ufes.informatica.jurisproc.core.persistence.PedidoUniformizacaoDAOJPA;
 
 @Named
 @RequestScoped
@@ -41,7 +40,7 @@ public class PedidoUniformizacaoController extends JSFController
 	private UploadedFile file;
 	private List<PedidoUniformizacao> registrosSelecionados;
 	
-	private PedidoUniformizacao pedido = new PedidoUniformizacao();
+	private PedidoUniformizacao pedido;
 	private List<Assunto> assuntos;
 	private List<Acordao> acordaos;
 	private List<PedidoUniformizacao> pedidosUnformizacoes;
@@ -72,6 +71,13 @@ public class PedidoUniformizacaoController extends JSFController
 
 	public String abreNovo()
 	{
+		pedido = new PedidoUniformizacao();
+		return "/core/peticao/form.xhtml?faces-redirect=true";
+	}
+	
+	public String abreEditar(PedidoUniformizacao pedidoUniformizacao)
+	{
+		this.pedido = pedidoUniformizacao;
 		return "/core/peticao/form.xhtml?faces-redirect=true";
 	}
 
