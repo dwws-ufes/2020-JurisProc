@@ -30,7 +30,7 @@ public class FileSaver
 		
 		try
 		{
-			s3.putObject("casadocodigo", fileName, multipartFile.getInputStream(), new ObjectMetadata());
+			s3.putObject("jurisproc", fileName, multipartFile.getInputStream(), new ObjectMetadata());
 			
 			return "http://localhost:9444/jurisproc/"+fileName+"?noAuth=true";
 			
@@ -47,7 +47,7 @@ public class FileSaver
 		
 		try
 		{
-			s3.putObject("casadocodigo", fileName, file.getInputstream(), new ObjectMetadata());
+			s3.putObject("jurisproc", fileName, file.getInputstream(), new ObjectMetadata());
 			
 			return "http://localhost:9444/jurisproc/"+fileName+"?noAuth=true";
 			

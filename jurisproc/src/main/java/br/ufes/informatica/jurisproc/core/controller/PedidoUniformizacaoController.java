@@ -35,6 +35,7 @@ public class PedidoUniformizacaoController extends JSFController {
 	private AssuntoDAO assuntoDAO;
 	@Inject
 	private AcordaoDAO acordaoDAO;
+	private Part summary;
 	private Part anexoPedidoUniformizacao;
 	private UploadedFile file;
 	private PedidoUniformizacao pedido = new PedidoUniformizacao();
@@ -56,6 +57,16 @@ public class PedidoUniformizacaoController extends JSFController {
 	public List<Assunto> getAssuntos()
 	{
 		return assuntos;
+	}	
+
+	public Part getSummary()
+	{
+		return summary;
+	}
+
+	public void setSummary(Part summary)
+	{
+		this.summary = summary;
 	}
 
 	public String cadastraPedidoUniformizacao() {

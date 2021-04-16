@@ -33,13 +33,21 @@
 			<p:panelGrid columns="2" columnClasses="ui-grid-col-4,ui-grid-col-8"
 				layout="grid" styleClass="ui-panelgrid-blank">
 				<p:outputLabel for="acordao" value="Acordao" />
-					<p:selectOneMenu id="acordao" value="#{pedidoUniformizacaoController.pedido.acordao}" converter="entityConverter">
-						<f:selectItems value="#{pedidoUniformizacaoController.acordaos}" var="acordo" itemLabel="#{acordo.numeroProcesso}" itemValue="#{acordo}"></f:selectItems>
-					</p:selectOneMenu>
-				
-				<p:outputLabel for="assunto" value="Assuntos"/>
-				<p:selectManyMenu id="assunto" value="#{pedidoUniformizacaoController.pedido.assuntos}" converter="entityConverter">
-					<f:selectItems value="#{pedidoUniformizacaoController.assuntos}" var="assunto" itemLabel="#{assunto.nome} - #{assunto.competencia}" itemValue="#{assunto}"></f:selectItems>
+				<p:selectOneMenu id="acordao"
+					value="#{pedidoUniformizacaoController.pedido.acordao}"
+					converter="entityConverter">
+					<f:selectItems value="#{pedidoUniformizacaoController.acordaos}"
+						var="acordo" itemLabel="#{acordo.numeroProcesso}"
+						itemValue="#{acordo}"></f:selectItems>
+				</p:selectOneMenu>
+
+				<p:outputLabel for="assunto" value="Assuntos" />
+				<p:selectManyMenu id="assunto"
+					value="#{pedidoUniformizacaoController.pedido.assuntos}"
+					converter="entityConverter">
+					<f:selectItems value="#{pedidoUniformizacaoController.assuntos}"
+						var="assunto" itemLabel="#{assunto.nome} - #{assunto.competencia}"
+						itemValue="#{assunto}"></f:selectItems>
 				</p:selectManyMenu>
 				<p:outputLabel for="numeroPeticao" value="Número Petição" />
 				<p:inputNumber id="numeroPeticao"
@@ -58,8 +66,11 @@
 					offLabel="Não" style="width:6rem"
 					value="#{pedidoUniformizacaoController.pedido.copiaParadigma}" />
 				<p:outputLabel for="temaRecurso" value="Tema Recurso" />
-				<p:selectOneMenu id="temaRecurso" value="#{pedidoUniformizacaoController.pedido.temaRecurso}">
-					<f:selectItems value="#{pedidoUniformizacaoController.temasRecursos}" var="c" itemValue="#{c}" itemLabel="#{c.name()}"></f:selectItems>
+				<p:selectOneMenu id="temaRecurso"
+					value="#{pedidoUniformizacaoController.pedido.temaRecurso}">
+					<f:selectItems
+						value="#{pedidoUniformizacaoController.temasRecursos}" var="c"
+						itemValue="#{c}" itemLabel="#{c.name()}"></f:selectItems>
 				</p:selectOneMenu>
 				<p:outputLabel for="parteAutor" value="Parte Autor" />
 				<p:inputText id="parteAutor"
@@ -70,8 +81,10 @@
 					value="#{pedidoUniformizacaoController.pedido.parteReu}"
 					style="width: 100%;" />
 				<p:outputLabel for="enumOpcoes" value="Acordão Retratação?" />
-				<p:selectOneMenu id="enumOpcoes" value="#{pedidoUniformizacaoController.pedido.acordaoRetratacao}">
-					<f:selectItems value="#{pedidoUniformizacaoController.opcoes}" var="op" itemValue="#{op}" itemLabel="#{op.name()}"></f:selectItems>
+				<p:selectOneMenu id="enumOpcoes"
+					value="#{pedidoUniformizacaoController.pedido.acordaoRetratacao}">
+					<f:selectItems value="#{pedidoUniformizacaoController.opcoes}"
+						var="op" itemValue="#{op}" itemLabel="#{op.name()}"></f:selectItems>
 				</p:selectOneMenu>
 				<p:outputLabel for="dataAcordao" value="Data Acórdão" />
 				<p:calendar id="dataAcordao"
@@ -84,10 +97,12 @@
 					showOn="button" pattern="dd/MM/yyyy" mask="true"
 					style="width: 100%;" />
 				<p:outputLabel for="arquivoPeticao" value="Arquivo Petição" />
-				 <p:fileUpload value="#{pedidoUniformizacaoController.file}" mode="simple" skinSimple="true"/>
+				<p:fileUpload id="arquivoPeticao"
+					value="#{pedidoUniformizacaoController.file}" mode="simple"
+					skinSimple="true" />
 			</p:panelGrid>
-			
 			<p:commandButton id="saveButton" value="Salvar" icon="fa fa-save"
+				ajax="false"
 				action="#{pedidoUniformizacaoController.cadastraPedidoUniformizacao()}" />
 			<p:defaultCommand target="saveButton" />
 			<p:commandButton id="backButton" value="Voltar"
