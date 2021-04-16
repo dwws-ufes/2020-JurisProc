@@ -34,7 +34,7 @@
 				layout="grid" styleClass="ui-panelgrid-blank">
 				<p:outputLabel for="assunto" value="Assuntos"/>
 				<p:selectManyMenu id="assunto" value="#{pedidoUniformizacaoController.pedido.assuntos}" converter="entityConverter">
-					<f:selectItems value="#{pedidoUniformizacaoController.assuntos}" var="assunto" itemLabel="#{assunto.nome}" itemValue="#{assunto}"></f:selectItems>
+					<f:selectItems value="#{pedidoUniformizacaoController.assuntos}" var="assunto" itemLabel="#{assunto.nome} - #{assunto.competencia}" itemValue="#{assunto}"></f:selectItems>
 				</p:selectManyMenu>
 				<p:outputLabel for="numeroPeticao" value="Número Petição" />
 				<p:inputNumber id="numeroPeticao"

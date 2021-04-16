@@ -11,10 +11,12 @@ import javax.servlet.http.Part;
 
 import br.ufes.inf.nemo.jbutler.ejb.controller.JSFController;
 import br.ufes.informatica.jurisproc.core.application.PedidoUniformizacaoService;
+import br.ufes.informatica.jurisproc.core.domain.Acordao;
 import br.ufes.informatica.jurisproc.core.domain.Assunto;
 import br.ufes.informatica.jurisproc.core.domain.Opcoes;
 import br.ufes.informatica.jurisproc.core.domain.PedidoUniformizacao;
 import br.ufes.informatica.jurisproc.core.domain.TemaRecurso;
+import br.ufes.informatica.jurisproc.core.persistence.AcordaoDAO;
 import br.ufes.informatica.jurisproc.core.persistence.AssuntoDAO;
 
 @Named
@@ -29,19 +31,25 @@ public class PedidoUniformizacaoController extends JSFController {
 	private PedidoUniformizacaoService pedidoUniformizacaoService;
 	@Inject
 	private AssuntoDAO assuntoDAO;
-	
+	@Inject
+	private AcordaoDAO acordaoDAO;
 	private Part anexoPedidoUniformizacao;
 	private PedidoUniformizacao pedido = new PedidoUniformizacao();
 	private List<Assunto> assuntos;	
+	private List<Acordao> acordaos;
 	
 	@PostConstruct
 	public void carregaFormulario()
 	{
 		assuntos = assuntoDAO.retrieveAll();
-		
+		acordaos = acordaoDAO.retrieveAll();
+	}
+	
+	public List<Acordao> getAcordaos()
+	{
+		return acordaos;
 	}
 
-	
 	public List<Assunto> getAssuntos()
 	{
 		return assuntos;
