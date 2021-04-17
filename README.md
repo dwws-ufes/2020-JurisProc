@@ -1,6 +1,15 @@
 # 2020-JurisProc
 Trabalho para a edição 2020 do curso "Desenvolvimento Web e a Web Semântica".  
 
+<h3 align="center">JurisProc</h3>
+
+<div align="center">
+
+[![Status](https://img.shields.io/badge/status-active-success.svg)]()
+[![License](https://github.com/dwws-ufes/2020-JurisProc/blob/main/LICENSE)](/LICENSE)
+
+</div>
+
 O sistema JurisProc simula uma situação jurídica real e simula um portal que poderia ser utilizado por advogados ao protocolar um recurso específico, o Pedido de Uniformização, previsto na Lei n°10.259/2001, em seu artigo 14. Este é o recurso cabível contra o acórdão proferido por uma Turma Recursal e direcionado à Turma Nacional de Uniformização (TNU).  
 
 Documentação sobre a aplicação JurisPro e como implantá-la (how to deploy).
@@ -41,7 +50,7 @@ Estando tudo ok, já é possível usar o docker na máquina.
 
 
 ## 🎉 Considerações finais <a name = "consideracoes"></a>
-- Esse projeto foi desenvolvido para a disciplina de Mestrado em Informática na UFES, "Desenvolvimento Web e Web Semântica", 2020/2, ministrada pelo Prof. Vítor E. Silva Souza
+- Esse projeto foi desenvolvido para a disciplina de Mestrado em Informática na UFES, "Desenvolvimento Web e Web Semântica", ministrada pelo Prof. Vítor E. Silva Souza, 2020/2
 
 - O sistema JurisProc apresenta uma arquitetura baseada na arquitetura do FrameWeb ......
 
