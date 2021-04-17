@@ -1,2 +1,6 @@
 # 2020-JurisProc
-Assignment for the 2020 edition of the "Web Development and the Semantic Web" course.
+Trabalho para a edição 2020 do curso "Desenvolvimento Web e a Web Semântica".  
+
+Documentação de como implantar a aplicação JurisProc:
+
+
