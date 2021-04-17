@@ -89,13 +89,18 @@
 							<f:convertDateTime pattern="dd/MM/yyyy" />
 						</h:outputText>
 					</p:column>
+					<p:column headerText="Anexo petição">
+						<a href="#{product.caminhoPeticaoAnexo}" target="_blank">Anexo</a>
+					</p:column>
 
 					<p:column exportable="false">
 						<p:commandButton icon="pi pi-pencil"
-							action="#{pedidoUniformizacaoController.abreEditar(product.id)}" ajax="false" value="Editar">
+							action="#{pedidoUniformizacaoController.abreEditar(product.id)}"
+							ajax="false" value="Editar">
 						</p:commandButton>
 						<p:commandButton icon="pi pi-pencil"
-							action="#{pedidoUniformizacaoController.excluirRegistro(product.id)}" ajax="false" value="Excluir">
+							action="#{pedidoUniformizacaoController.excluirRegistro(product.id)}"
+							ajax="false" value="Excluir">
 						</p:commandButton>
 					</p:column>
 				</p:dataTable>
