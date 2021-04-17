@@ -90,6 +90,8 @@ public class PedidoUniformizacaoController extends JSFController
 		file = null;
 		isEdit = true;
 		this.pedido = pedidoUniformizacaoDAO.retrieveById(id);
+		assuntos = assuntoDAO.retrieveAll();
+		acordaos = acordaoDAO.retrieveAll();
 		return "/core/peticao/form.xhtml?faces-redirect=true";
 	}
 	

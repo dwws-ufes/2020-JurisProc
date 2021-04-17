@@ -2,6 +2,7 @@
 <ui:composition xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
 	xmlns:p="http://primefaces.org/ui" template="/admin.xhtml">
 
 	<ui:define name="head">
@@ -22,44 +23,52 @@
 					<i class="fa fa-home"></i>
 					<span><h:outputText value="#{msgs['menu.home']}" /></span>
 				</p:link></li>
-			<li class="header">Header</li>
-			<li><p:link outcome="/index" onclick="clearBreadCrumbs()">
-					<i class="fa fa-calendar"></i>
-					<span>Blank Link</span>
-				</p:link></li>
-			<li class="header"><h:outputText
-					value="#{msgsCore['core.menu.admin']}" /></li>
-			<li><p:link outcome="/core/manageWorkshops/index"
-					onclick="clearBreadCrumbs()">
-					<i class="fa fa-calendar"></i>
-					<span><h:outputText
-							value="#{msgsCore['core.menu.admin.manageWorkshops']}" /></span>
-				</p:link></li>
-			<li class="header"><h:outputText
-					value="Pedido Uniformização" /></li>
+			<c:if test="#{currentUser.temOPapel('ADMIN')}">
+				<li class="header">Header</li>
+				<li><p:link outcome="/index" onclick="clearBreadCrumbs()">
+						<i class="fa fa-calendar"></i>
+						<span>Blank Link</span>
+					</p:link></li>
+				<li class="header"><h:outputText
+						value="#{msgsCore['core.menu.admin']}" /></li>
+				<li><p:link outcome="/core/manageWorkshops/index"
+						onclick="clearBreadCrumbs()">
+						<i class="fa fa-calendar"></i>
+						<span><h:outputText
+								value="#{msgsCore['core.menu.admin.manageWorkshops']}" /></span>
+					</p:link></li>
+			</c:if>
+			<li class="header"><h:outputText value="Pedido Uniformização" /></li>
 			<li><p:link outcome="/core/peticao/index"
 					onclick="clearBreadCrumbs()">
 					<i class="fa fa-balance-scale"></i>
-					<span><h:outputText
-							value="Pedido Uniformização" /></span>
+					<span><h:outputText value="Pedido Uniformização" /></span>
 				</p:link></li>
-			<li class="header"><h:outputText
-					value="#{msgsCore['core.menu.menutestes']}" /></li>
-			<li><p:link outcome="/core/login/recupera_senha"
-					onclick="clearBreadCrumbs()">
-					<i class="fa fa-calendar"></i>
-					<span><h:outputText
-							value="#{msgsCore['core.menu.menutestes.recuperaSenha']}" /></span>
-				</p:link></li>
-			<li><p:link outcome="/core/usuario/index"
-					onclick="clearBreadCrumbs()">
-					<span><h:outputText value="Cadastra Usuário" /></span>
-				</p:link></li>
+			<c:if test="#{currentUser.temOPapel('ADMIN')}">
+				<li class="header"><h:outputText
+						value="#{msgsCore['core.menu.menutestes']}" /></li>
+				<li><p:link outcome="/core/login/recupera_senha"
+						onclick="clearBreadCrumbs()">
+						<i class="fa fa-calendar"></i>
+						<span><h:outputText
+								value="#{msgsCore['core.menu.menutestes.recuperaSenha']}" /></span>
+					</p:link></li>
+				<li><p:link outcome="/core/usuario/index"
+						onclick="clearBreadCrumbs()">
+						<span><h:outputText value="Cadastra Usuário" /></span>
+					</p:link></li>
+			</c:if>
 		</ul>
 	</ui:define>
 
 	<ui:define name="top-menu">
-		<div>Seja bem-vindo, #{currentUser.usuario.nome}, <h:form><h:commandLink style="color:red;" value="sair" action="#{currentUser.logout()}" /></h:form></div>
+		<div>
+			Seja bem-vindo, #{currentUser.usuario.nome},
+			<h:form>
+				<h:commandLink style="color:red;" value="sair"
+					action="#{currentUser.logout()}" />
+			</h:form>
+		</div>
 
 	</ui:define>
 

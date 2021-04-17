@@ -32,6 +32,11 @@ public class CurrentUser implements Serializable
 	{
 		return usuario;
 	}
+	
+	public boolean temOPapel(String nome)
+	{
+		return request.isUserInRole(nome);
+	}
 
 	@PostConstruct
 	private void carregaUsuario()
