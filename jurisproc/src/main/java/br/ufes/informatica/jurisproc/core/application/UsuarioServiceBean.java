@@ -46,7 +46,7 @@ public class UsuarioServiceBean implements UsuarioService
 			String uuid = UUID.randomUUID().toString();
 			usuario.setLinkResetaSenha(uuid);
 			usuario = usuarioDAO.merge(usuario);
-			String mailBody = "Link para recuperação de senha: " + request.getServletContext().getContextPath() + "/" + usuario.getLinkResetaSenha();
+			String mailBody = "Link para recuperação de senha: " + "http://localhost:8080" + request.getServletContext().getContextPath() + "/users/reseta_senha.xhtml?id=" + usuario.getLinkResetaSenha();
 			mailSender.send("recuperacao@jurisproc.ufes.br", email, "Recuperação de senha", mailBody);			
 		}
 	}

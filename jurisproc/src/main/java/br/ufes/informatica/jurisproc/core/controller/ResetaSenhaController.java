@@ -33,6 +33,7 @@ public class ResetaSenhaController implements Serializable
 	public void carregaResetaSenha()
 	{
 		usuario = usuarioDAO.buscaPorLinkResetaSenha(uuidResetaSenha);
+		usuario.setSenha(null);
 	}
 	
 	public String resetarSenha()
