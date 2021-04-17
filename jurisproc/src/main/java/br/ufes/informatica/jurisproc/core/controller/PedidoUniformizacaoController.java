@@ -34,7 +34,7 @@ public class PedidoUniformizacaoController extends JSFController
 	private AssuntoDAO assuntoDAO;
 	@Inject
 	private AcordaoDAO acordaoDAO;
-	@Inject
+	@EJB
 	private PedidoUniformizacaoDAO pedidoUniformizacaoDAO;
 	
 	private Boolean isEdit = false;
@@ -89,7 +89,7 @@ public class PedidoUniformizacaoController extends JSFController
 	{
 		file = null;
 		isEdit = true;
-		this.pedido = pedidoUniformizacaoDAO.retrieveById(id);
+		this.pedido = pedidoUniformizacaoDAO.buscaRegistroPorId(id);
 		return "/core/peticao/form.xhtml?faces-redirect=true";
 	}
 	

@@ -9,4 +9,6 @@ import br.ufes.informatica.jurisproc.core.domain.PedidoUniformizacao;
 @Local
 public interface PedidoUniformizacaoDAO extends BaseDAO<PedidoUniformizacao> {
 	
+	public PedidoUniformizacao buscaRegistroPorId(Long id);
+	
 }
