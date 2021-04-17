@@ -5,7 +5,7 @@ Trabalho para a edição 2020 do curso "Desenvolvimento Web e a Web Semântica".
 
 <div align="center">
 
-[![License](https://github.com/dwws-ufes/2020-JurisProc/blob/main/LICENSE)](/LICENSE)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
 </div>
 
