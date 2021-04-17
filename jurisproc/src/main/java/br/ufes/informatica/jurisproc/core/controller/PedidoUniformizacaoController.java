@@ -52,7 +52,7 @@ public class PedidoUniformizacaoController extends JSFController
 	{
 		assuntos = assuntoDAO.retrieveAll();
 		acordaos = acordaoDAO.retrieveAll();
-		pedidosUnformizacoes = pedidoUniformizacaoDAO.retrieveAll();
+		pedidosUnformizacoes = pedidoUniformizacaoDAO.buscaPorUsuario();
 	}
 
 	public List<Acordao> getAcordaos()
@@ -73,7 +73,7 @@ public class PedidoUniformizacaoController extends JSFController
 
 	private String redirecionamentoPadrao()
 	{
-		pedidosUnformizacoes = pedidoUniformizacaoDAO.retrieveAll();
+		pedidosUnformizacoes = pedidoUniformizacaoDAO.buscaPorUsuario();
 		return "/core/peticao/index.xhtml?faces-redirect=true";
 	}
 
