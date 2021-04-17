@@ -6,6 +6,9 @@ Documentação sobre a aplicação JurisPro e como implantá-la (how to deploy).
 ## 📝 Conteúdo
 
 - [Pré-requisitos](#pre-requisitos)
+- [Ferramentas necessãrias](#ferramentas)
+- [Autores](#autores)
+- [Considerações Finais](#consideracoes)
 
 
 ## Pré-requisitos <a name = "pre-requisitos"></a>:
@@ -20,7 +23,7 @@ Para testar se deu certo: sudo docker run hello-world
 
 Estando tudo ok, já é possível usar o docker na máquina.
 
-## ⛏️ Ferramentas necessárias:
+## ⛏️ Ferramentas necessárias <a name = "ferramentas"></a>:
 - JakartaEE
 - Eclipse
 - Maven
@@ -29,13 +32,13 @@ Estando tudo ok, já é possível usar o docker na máquina.
 - WildFly
 - Frameweb
 
-## ✍️ Autores:
+## ✍️ Autores <a name = "autores"></a>:
 - Melissa Zorzanelli
 - Pedro Hoppe
 
 
 
-## 🎉 Considerações finais
+## 🎉 Considerações finais <a name = "consideracoes"></a>
 - Esse projeto foi desenvolvido para a disciplina de Mestrado "Desenvolvimento Web e Web Semântica", 2020/2, ministrada pelo Prof. Vítor E. Silva Souza
 
 - O sistema JurisProc apresenta uma arquitetura baseada na arquitetura do FrameWeb ......
