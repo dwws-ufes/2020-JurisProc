@@ -1,0 +1,36 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Jurisproc - Login</title>
+<meta charset="utf-8"></meta>
+<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"></link>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<h2>Jurisproc - Login</h2>
+		<form method="POST"
+			action="${request.getContextPath()}/j_security_check">
+			<div class="form-group">
+				<label for="e-mail">E-mail</label> <input type="text"
+					name="j_username" value="${param.j_username}" id="e-mail" placeholder="Insira o e-mail" class="form-control" />
+			</div>
+			<div class="form-group">
+				<label for="password">Senha</label> <input type="password"
+					name="j_password" id="password" class="form-control" placeholder="Insira a senha" />
+			</div>
+			<div class="form-group">
+				<a href="${request.getContextPath()}/users/recupera_senha.xhtml" >Esqueceu sua senha?</a>
+				<a href="${request.getContextPath()}/users/cadastro_usuario.xhtml">Cadastrar novo usuário</a>
+			</div>
+			<input type="submit" value="Login" class="btn btn-primary" />
+		</form>
+	</div>
+</body>
+</html>

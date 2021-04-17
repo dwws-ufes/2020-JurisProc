@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Jurisproc - Cadastro de Usuário</title>
+	<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"></link>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</h:head>
+<h:body>
+	<h:messages />
+	<h:form id="cadastroForm">
+		<div class="form-group">
+			<p:outputLabel for="nome" value="Nome:"></p:outputLabel>
+			<p:inputText id="nome" value="#{usuarioController.usuario.nome}" styleClass="form-control" />
+		</div>
+		<div class="form-group">
+			<p:outputLabel for="email" value="Email:"></p:outputLabel>
+			<p:inputText id="email" value="#{usuarioController.usuario.email}" styleClass="form-control" />
+		</div>
+		<div class="form-group">
+			<p:outputLabel for="senha" value="Senha:"></p:outputLabel>
+			<p:password id="senha" value="#{usuarioController.usuario.senha}" styleClass="form-control" />
+		</div>
+		<div class="form-group">
+			<p:outputLabel for="repeteSenha" value="Confirme a senha:"></p:outputLabel>
+			<p:password id="repeteSenha" value="#{usuarioController.repeteSenha}" styleClass="form-control" />
+		</div>
+		<div class="form-group">
+			<p:outputLabel for="oab" value="OAB:"></p:outputLabel>
+			<p:inputText id="oab" value="#{usuarioController.usuario.OAB}" styleClass="form-control" />
+		</div>
+		<p:commandButton value="Cadastrar"
+			action="#{usuarioController.resetarSenha()}" styleClass="btn btn-primary"></p:commandButton>
+	</h:form>
+</h:body>
+</html>

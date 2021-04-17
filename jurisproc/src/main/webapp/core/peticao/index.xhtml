@@ -1,40 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui:composition xmlns="http://www.w3.org/1999/xhtml"
-    xmlns:ui="http://java.sun.com/jsf/facelets"
-    xmlns:f="http://java.sun.com/jsf/core"
-    xmlns:h="http://java.sun.com/jsf/html"
-    xmlns:p="http://primefaces.org/ui"
-    xmlns:adm="http://github.com/adminfaces"
-    template="/WEB-INF/templates/template.xhtml">
-	
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:adm="http://github.com/adminfaces"
+	template="/WEB-INF/templates/template.xhtml">
 
-    <ui:define name="title">
-        <h:outputText value="#{msgsCore['pedidoUniformizacao.title']}" />
-    </ui:define>
+	<ui:define name="title">
+		<h:outputText value="Cadastro Pedido Uniformização" />
+	</ui:define>
 
-    <ui:define name="description">
-        <h:outputText value="#{msgsCore['pedidoUniformizacao.title.description']}" />
-    </ui:define>
+	<ui:define name="description">
+		<h:outputText value="Realize seu cadastro de Pedido Uniformização" />
+	</ui:define>
 
-    <ui:define name="body">
-		<adm:breadcrumb link="/core/registration/index" title="#{msgsCore['pedidoUniformizacao.title']}" /><h:form id="cadastroForm">
-		
-			<p:fileUpload id="anexoPedidoUniformizacao" value="#{pedidoUniformizacaoController.anexoPedidoUniformizacao}" />
-			<p:inputNumber id="pedido.numeroPeticao" value="#{pedidoUniformizacaoController.pedido.numeroPeticao}" />
-			<p:inputNumber id="pedido.numeroProcesso" value="#{pedidoUniformizacaoController.pedido.numeroProcesso}" />
-			<p:inputNumber id="pedido.paradigma" value="#{pedidoUniformizacaoController.pedido.paradigma}" />
-			<p:checkbox id="pedido.direitoMaterial" value="#{pedidoUniformizacaoController.pedido.direitoMaterial}" />
-			<p:checkbox id="pedido.copiaParadigma" value="#{pedidoUniformizacaoController.pedido.copiaParadigma}" />
-			<p:selectOneMenu id="pedido.temaRecurso" value="#{pedidoUniformizacaoController.pedido.temaRecurso}" />
-			<p:inputText id="pedido.parteAutor" value="#{pedidoUniformizacaoController.pedido.parteAutor}" />
-			<p:inputText id="pedido.parteReu" value="#{pedidoUniformizacaoController.pedido.parteReu}" />
-			<p:selectOneMenu id="pedido.acordaoRetratacao" value="#{pedidoUniformizacaoController.pedido.acordaoRetratacao}" />
-			<p:datePicker id="pedido.dataAcordao" value="#{pedidoUniformizacaoController.pedido.dataAcordao}" />
-			<p:datePicker id="pedido.dataPeticao" value="#{pedidoUniformizacaoController.pedido.dataPeticao}" />
-			<h:inputHidden id="pedido.usuario.id" value="#{pedidoUniformizacaoController.pedido.usuario.id}" />
-			<p:selectManyMenu id="pedido.assunto" value="#{pedidoUniformizacaoController.pedido.assunto}" />
-			<p:selectOneMenu id="pedido.secaoJudiciaria" value="#{pedidoUniformizacaoController.pedido.secaoJudiciaria}" />
+	<ui:define name="body">
+		<adm:breadcrumb link="/core/manageWorkshops/index"
+			title="Cadastro Pedido Uniformização" />
+		<h:form id="form">
+			<div class="card crud-demo">
+				<p:growl id="messages" showDetail="true" />
+
+				<p:toolbar>
+					<p:toolbarGroup>
+						<p:commandButton value="Novo" icon="pi plus"
+							action="#{pedidoUniformizacaoController.abreNovo()}">
+						</p:commandButton>
+						<p:commandButton id="delete-products-button" icon="pi pi-trash"
+							value="#{pedidoUniformizacaoController.deleteButtonMessage}"
+							styleClass="ui-button-danger"
+							disabled="#{!pedidoUniformizacaoController.existeRegistroSelecionado()}"
+							update="@this">
+							<p:confirm header="Confirmação"
+								message="Excluir o registro selecionado?"
+								icon="pi pi-exclamation-triangle"></p:confirm>
+						</p:commandButton>
+					</p:toolbarGroup>
+				</p:toolbar>
+
+				<p:dataTable id="dt-products" widgetVar="dtProducts" var="product"
+					value="#{pedidoUniformizacaoController.pedidosUnformizacoes}"
+					reflow="true" styleClass="products-table"
+					selection="#{pedidoUniformizacaoController.registrosSelecionados}"
+					rowKey="#{product.id}" paginator="true" rows="10"
+					rowSelectMode="add" paginatorPosition="bottom">
+					<f:facet name="header">
+						<div class="products-table-header">
+							<span class="font-weight: bold">Pedidos Uniformizações</span> <span
+								class="filter-container ui-input-icon-left"> <i
+								class="pi pi-search"></i> <p:inputText id="globalFilter"
+									onkeyup="PF('dtProducts').filter()" placeholder="Busca" />
+							</span>
+						</div>
+					</f:facet>
+
+					<p:ajax event="rowSelect" update=":form:delete-products-button" />
+					<p:ajax event="rowUnselect" update=":form:delete-products-button" />
+					<p:ajax event="rowSelectCheckbox"
+						update=":form:delete-products-button" />
+					<p:ajax event="rowUnselectCheckbox"
+						update=":form:delete-products-button" />
+					<p:ajax event="toggleSelect" update=":form:delete-products-button" />
+
+					<p:column selectionMode="multiple" exportable="false"></p:column>
+
+					<p:column headerText="Número Petição"
+						sortBy="#{product.numeroPeticao}">
+						<h:outputText value="#{product.numeroPeticao}" />
+					</p:column>
+
+					<p:column headerText="Paradigma" sortBy="#{product.paradigma}">
+						<h:outputText value="#{product.paradigma}" />
+					</p:column>
+
+					<p:column headerText="Tema Recurso" sortBy="#{product.temaRecurso}">
+						<h:outputText value="#{product.temaRecurso}" />
+					</p:column>
+
+					<p:column headerText="Data Petição" sortBy="#{product.temaRecurso}">
+						<h:outputText value="#{product.dataPeticao}">
+							<f:convertDateTime pattern="dd/MM/yyyy" />
+						</h:outputText>
+					</p:column>
+
+					<p:column headerText="Data Acórdão" sortBy="#{product.dataAcordao}">
+						<h:outputText value="#{product.dataAcordao}">
+							<f:convertDateTime pattern="dd/MM/yyyy" />
+						</h:outputText>
+					</p:column>
+
+					<p:column exportable="false">
+						<p:commandButton icon="pi pi-pencil"
+							action="#{pedidoUniformizacaoController.abreEditar(product.id)}" ajax="false" value="Editar">
+						</p:commandButton>
+						<p:commandButton icon="pi pi-pencil"
+							action="#{pedidoUniformizacaoController.excluirRegistro(product.id)}" ajax="false" value="Excluir">
+						</p:commandButton>
+					</p:column>
+				</p:dataTable>
+
+
+			</div>
 		</h:form>
-    
-    </ui:define>
+	</ui:define>
 </ui:composition>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:adm="http://github.com/adminfaces"
+	template="/WEB-INF/templates/template.xhtml">
+	<f:metadata>
+		<f:viewParam id="id" name="id" value="#{pedidoUniformizacaoEditController.id}" />
+		<f:viewAction action="#{pedidoUniformizacaoEditController.carregaRegistro()}" />
+	</f:metadata>
+
+	<ui:define name="title">
+		<h:outputText value="#{msgsCore['manageWorkshops.title.create']}"
+			rendered="#{(! manageWorkshopsController.readOnly) and (manageWorkshopsController.selectedEntity.id == null)}" />
+		<h:outputText value="#{msgsCore['manageWorkshops.title.update']}"
+			rendered="#{(! manageWorkshopsController.readOnly) and (manageWorkshopsController.selectedEntity.id != null)}" />
+		<h:outputText value="#{msgsCore['manageWorkshops.title.retrieve']}"
+			rendered="#{manageWorkshopsController.readOnly}" />
+	</ui:define>
+
+	<ui:define name="description">
+		<h:outputText
+			value="#{msgsCore['manageWorkshops.title.create.description']}"
+			rendered="#{(! manageWorkshopsController.readOnly) and (manageWorkshopsController.selectedEntity.id == null)}" />
+		<h:outputText
+			value="#{msgsCore['manageWorkshops.title.update.description']}"
+			rendered="#{(! manageWorkshopsController.readOnly) and (manageWorkshopsController.selectedEntity.id != null)}" />
+		<h:outputText
+			value="#{msgsCore['manageWorkshops.title.retrieve.description']}"
+			rendered="#{manageWorkshopsController.readOnly}" />
+	</ui:define>
+
+	<ui:define name="body">
+		<h:form id="entitiesForm" enctype="multipart/form-data">
+			<p:panelGrid columns="2" columnClasses="ui-grid-col-4,ui-grid-col-8"
+				layout="grid" styleClass="ui-panelgrid-blank">
+				<p:outputLabel for="acordao" value="Acordao" />
+				<p:selectOneMenu id="acordao"
+					value="#{pedidoUniformizacaoEditController.pedido.acordao}"
+					converter="entityConverter">
+					<f:selectItems value="#{pedidoUniformizacaoEditController.acordaos}"
+						var="acordo" itemLabel="#{acordo.numeroProcesso}"
+						itemValue="#{acordo}"></f:selectItems>
+				</p:selectOneMenu>
+
+				<p:outputLabel for="assunto" value="Assuntos" />
+				<p:selectManyMenu id="assunto"
+					value="#{pedidoUniformizacaoEditController.pedido.assuntos}"
+					converter="entityConverter">
+					<f:selectItems value="#{pedidoUniformizacaoEditController.assuntos}"
+						var="assunto" itemLabel="#{assunto.nome} - #{assunto.competencia}"
+						itemValue="#{assunto}"></f:selectItems>
+				</p:selectManyMenu>
+				<p:outputLabel for="numeroPeticao" value="Número Petição" />
+				<p:inputNumber id="numeroPeticao"
+					value="#{pedidoUniformizacaoEditController.pedido.numeroPeticao}"
+					style="width: 100%;" />
+				<p:outputLabel for="paradigma" value="Paradigma" />
+				<p:inputNumber id="paradigma"
+					value="#{pedidoUniformizacaoEditController.pedido.paradigma}"
+					style="width: 100%;" />
+				<p:outputLabel for="direitoMaterial" value="É direito material?" />
+				<p:selectBooleanButton id="direitoMaterial" onLabel="Sim"
+					offLabel="Não" style="width:6rem"
+					value="#{pedidoUniformizacaoEditController.pedido.direitoMaterial}" />
+				<p:outputLabel for="copiaparadigma" value="É cópia paradigma?" />
+				<p:selectBooleanButton id="copiaparadigma" onLabel="Sim"
+					offLabel="Não" style="width:6rem"
+					value="#{pedidoUniformizacaoEditController.pedido.copiaParadigma}" />
+				<p:outputLabel for="temaRecurso" value="Tema Recurso" />
+				<p:selectOneMenu id="temaRecurso"
+					value="#{pedidoUniformizacaoEditController.pedido.temaRecurso}">
+					<f:selectItems
+						value="#{pedidoUniformizacaoEditController.temasRecursos}" var="c"
+						itemValue="#{c}" itemLabel="#{c.name()}"></f:selectItems>
+				</p:selectOneMenu>
+				<p:outputLabel for="parteAutor" value="Parte Autor" />
+				<p:inputText id="parteAutor"
+					value="#{pedidoUniformizacaoEditController.pedido.parteAutor}"
+					style="width: 100%;" />
+				<p:outputLabel for="parteReu" value="Parte Réu" />
+				<p:inputText id="parteReu"
+					value="#{pedidoUniformizacaoEditController.pedido.parteReu}"
+					style="width: 100%;" />
+				<p:outputLabel for="enumOpcoes" value="Acordão Retratação?" />
+				<p:selectOneMenu id="enumOpcoes"
+					value="#{pedidoUniformizacaoEditController.pedido.acordaoRetratacao}">
+					<f:selectItems value="#{pedidoUniformizacaoEditController.opcoes}"
+						var="op" itemValue="#{op}" itemLabel="#{op.name()}"></f:selectItems>
+				</p:selectOneMenu>
+				<p:outputLabel for="dataAcordao" value="Data Acórdão" />
+				<p:calendar id="dataAcordao"
+					value="#{pedidoUniformizacaoEditController.pedido.dataAcordao}"
+					showOn="button" pattern="dd/MM/yyyy" mask="true"
+					style="width: 100%;" />
+				<p:outputLabel for="dataPeticao" value="Data Petição" />
+				<p:calendar id="dataPeticao"
+					value="#{pedidoUniformizacaoEditController.pedido.dataPeticao}"
+					showOn="button" pattern="dd/MM/yyyy" mask="true"
+					style="width: 100%;" />
+				<p:outputLabel for="arquivoPeticao" value="Arquivo Petição" />
+				<p:fileUpload id="arquivoPeticao"
+					value="#{pedidoUniformizacaoEditController.file}" mode="simple"
+					skinSimple="true" />
+			</p:panelGrid>
+			<p:commandButton id="saveButton" value="Salvar" icon="fa fa-save"
+				ajax="false"
+				action="#{pedidoUniformizacaoEditController.cadastraPedidoUniformizacao()}" />
+			<p:defaultCommand target="saveButton" />
+			<p:commandButton id="backButton" value="Voltar"
+				icon="fa fa-arrow-circle-left"
+				action="#{pedidoUniformizacaoEditController.cadastraPedidoUniformizacao()}"
+				immediate="true" />
+		</h:form>
+	</ui:define>
+</ui:composition>
