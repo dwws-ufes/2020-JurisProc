@@ -9,6 +9,7 @@ import java.util.UUID;
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
+import javax.servlet.http.HttpServletRequest;
 
 import org.jboss.security.Base64Encoder;
 
@@ -25,6 +26,8 @@ public class UsuarioServiceBean implements UsuarioService
 	private UsuarioDAO usuarioDAO;
 	@Inject
 	private MailSender mailSender;
+	@Inject
+	private HttpServletRequest request;
 	
 
 	@Override
@@ -43,7 +46,7 @@ public class UsuarioServiceBean implements UsuarioService
 			String uuid = UUID.randomUUID().toString();
 			usuario.setLinkResetaSenha(uuid);
 			usuario = usuarioDAO.merge(usuario);
-			String mailBody = "Link para recuperação de senha: " + usuario.getLinkResetaSenha();
+			String mailBody = "Link para recuperação de senha: " + request.getServletContext().getContextPath() + "/" + usuario.getLinkResetaSenha();
 			mailSender.send("recuperacao@jurisproc.ufes.br", email, "Recuperação de senha", mailBody);			
 		}
 	}
