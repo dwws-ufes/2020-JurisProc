@@ -99,6 +99,11 @@ public class PedidoUniformizacaoController extends JSFController
 		pedidoUniformizacaoDAO.delete(pedidoUniformizacao);
 		return redirecionamentoPadrao();
 	}
+	
+	public String voltarLista()
+	{
+		return "/core/peticao/index.xhtml?faces-redirect=true";
+	}
 
 	public TemaRecurso[] getTemasRecursos()
 	{
