@@ -16,7 +16,8 @@ Documentação sobre a aplicação JurisPro e como implantá-la (how to deploy).
 ## 📝 Conteúdo
 
 - [Pré-requisitos](#pre-requisitos)
-- [Ferramentas necessãrias](#ferramentas)
+- [Ferramentas necessárias](#ferramentas)
+- [Implantação](#implantacao)
 - [Autores](#autores)
 - [Considerações Finais](#consideracoes)
 
@@ -41,6 +42,8 @@ Estando tudo ok, já é possível usar o docker na máquina.
 - JButler
 - WildFly
 - Frameweb
+
+## 🚀Implantação <a name = "implantacao"></a>: 
 
 ## ✍️ Autores <a name = "autores"></a>:
 - [Melissa Zorzanelli](http://lattes.cnpq.br/5734353552551908)
