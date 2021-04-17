@@ -11,8 +11,8 @@ Documentação sobre a aplicação JurisPro e como implantá-la (how to deploy).
 
 
 ## Autores:
-Melissa Zorzanelli
-Pedro Hoppe
+- Melissa Zorzanelli
+- Pedro Hoppe
 
 
 
