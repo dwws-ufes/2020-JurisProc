@@ -43,8 +43,8 @@ Estando tudo ok, já é possível usar o docker na máquina.
 - Frameweb
 
 ## ✍️ Autores <a name = "autores"></a>:
-- Melissa Zorzanelli
-- Pedro Hoppe
+- [Melissa Zorzanelli](http://lattes.cnpq.br/5734353552551908)
+- [Pedro Hoppe](http://lattes.cnpq.br/4031843038047078)
 
 
 
