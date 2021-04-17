@@ -5,10 +5,26 @@ Documentação sobre a aplicação JurisPro e como implantá-la (how to deploy).
 
 ## Pré-requisitos:
 
+- Docker
 
+Para executar este aplicativo localmente é preciso ter o Docker instalado na máquina, caso não tenha instalado, você poderá instalar com esse comando (no linux): 
+sudo apt install docker.io
+
+Após, para o Docker iniciar sempre com a máquina, utilize este comando: sudo systemctl enable --now docker
+
+Para testar se deu certo: sudo docker run hello-world
+
+Estando tudo ok, já é possível usar o docker na máquina.
 
 ## Ferramentas:
 
+- JakartaEE
+- Eclipse
+- Maven
+- MySQL
+- JButler
+- WildFly
+- Frameweb
 
 ## Autores:
 - Melissa Zorzanelli
