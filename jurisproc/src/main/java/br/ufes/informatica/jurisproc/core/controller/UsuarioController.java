@@ -27,7 +27,7 @@ public class UsuarioController extends JSFController
 	@Inject
 	private MessagesHelper messagesHelper;
 
-	public String registrar()
+	public String resetarSenha()
 	{
 		System.out.println(usuario);
 		if ( StringUtil.isNullOrEmpty(repeteSenha) || !repeteSenha.equals(usuario.getSenha()) )
