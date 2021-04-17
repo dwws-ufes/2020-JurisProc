@@ -29,6 +29,18 @@ public class ResetaSenhaController implements Serializable
 		usuario = usuarioDAO.buscaPorLinkResetaSenha(uuidResetaSenha);
 	}
 	
+	public String resetarSenha()
+	{
+		if ( !usuario.getSenha().equals(repeteSenha) ) 
+		{
+			return "/users/reseta_senha.xhtml";
+		}
+		
+		usuario.setLinkResetaSenha(null);
+		usuarioDAO.merge(usuario);		
+		return "/users/login.xhtml?faces-redirect=true";
+	}
+	
 	public Usuario getUsuario()
 	{
 		return usuario;
