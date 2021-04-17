@@ -40,9 +40,7 @@ public class PedidoUniformizacaoEditController implements Serializable
 	private PedidoUniformizacaoDAO pedidoUniformizacaoDAO;
 	
 	
-	private Long id;
-	private Boolean isEdit = true;
-	
+	private Long id;	
 	private UploadedFile file;
 	
 	private PedidoUniformizacao pedido = new PedidoUniformizacao();
@@ -86,7 +84,6 @@ public class PedidoUniformizacaoEditController implements Serializable
 	public String abreNovo()
 	{
 		file = null;
-		isEdit = false;
 		pedido = new PedidoUniformizacao();
 		return "/core/peticao/form.xhtml?faces-redirect=true";
 	}
@@ -94,7 +91,6 @@ public class PedidoUniformizacaoEditController implements Serializable
 	public String abreEditar(Long id)
 	{
 		file = null;
-		isEdit = true;
 		this.pedido = pedidoUniformizacaoDAO.retrieveById(id);
 		return "/core/peticao/form.xhtml?faces-redirect=true";
 	}
