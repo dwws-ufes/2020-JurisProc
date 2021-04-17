@@ -51,5 +51,5 @@ Estando tudo ok, já é possível usar o docker na máquina.
 ## 🎉 Considerações finais <a name = "consideracoes"></a>
 - Esse projeto foi desenvolvido para a disciplina de Mestrado em Informática na UFES, "Desenvolvimento Web e Web Semântica", ministrada pelo Prof. Vítor E. Silva Souza, 2020/2
 
-- O sistema JurisProc apresenta uma arquitetura baseada na arquitetura do [FrameWeb](#https://nemo.inf.ufes.br/projetos/frameweb/)
+- O sistema JurisProc apresenta uma arquitetura baseada na arquitetura do [FrameWeb](# https://nemo.inf.ufes.br/projetos/frameweb/)
 
