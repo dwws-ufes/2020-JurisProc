@@ -4,8 +4,8 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core">
 	<f:metadata>
-	<f:viewParam id="id" name="id" value="#{productDetailBean.id}" />
-	<f:viewAction action="#{productDetailBean.loadBook()}" />
+	<f:viewParam id="id" name="id" value="##{resetaSenhaController.uuidResetaSenha}" />
+	<f:viewAction action="#{resetaSenhaController.carregaResetaSenha()}" />
 </f:metadata>
 <h:head>
 	<title>Resetar Senha</title>
@@ -15,11 +15,11 @@
 	<h:form>
 		<div>
 			<h:outputLabel value="Senha:" />
-			<h:inputText />
+			<h:inputText value="#{resetaSenhaController.usuario.senha}" />
 		</div>
 		<div>
 			<h:outputLabel value="Repetir senha:" />
-			<h:inputText />
+			<h:inputText value="#{resetaSenhaController.repeteSenha}" />
 		</div>
 		<h:commandButton></h:commandButton>
 		</h:form>

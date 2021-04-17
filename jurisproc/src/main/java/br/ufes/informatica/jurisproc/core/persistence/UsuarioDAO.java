@@ -20,4 +20,6 @@ public interface UsuarioDAO extends BaseDAO<Usuario> {
 	
 	public SystemRole buscaPapelPadrao();
 	
+	public Usuario buscaPorLinkResetaSenha(String uuidResetaSenha);
+	
 }

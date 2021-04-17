@@ -52,4 +52,10 @@ public class UsuarioDAOJPA extends BaseJPADAO<Usuario> implements UsuarioDAO
 		return entityManager.createQuery("FROM SystemRole r WHERE r.nome = :nome", SystemRole.class).setParameter("nome", "USUARIO_NORMAL").getSingleResult();
 	}
 
+	@Override
+	public Usuario buscaPorLinkResetaSenha(String uuidResetaSenha)
+	{
+		return entityManager.createQuery("FROM Usuario u WHERE u.linkResetaSenha = :ls", Usuario.class).setParameter("ls", uuidResetaSenha).getResultList().stream().findFirst().orElse(null);
+	}
+
 }
