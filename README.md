@@ -11,7 +11,7 @@ Documentação sobre a aplicação JurisPro e como implantá-la (how to deploy).
 - [Considerações Finais](#consideracoes)
 
 
-## Pré-requisitos <a name = "pre-requisitos"></a>:
+## 🛠️ Pré-requisitos <a name = "pre-requisitos"></a>:
 - Docker
 
 Para executar este aplicativo localmente é preciso ter o Docker instalado na máquina, caso não tenha instalado, você poderá instalar com esse comando (no linux): 
