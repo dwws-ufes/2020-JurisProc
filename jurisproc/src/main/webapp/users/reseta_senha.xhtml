@@ -3,10 +3,15 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core">
+	<f:metadata>
+	<f:viewParam id="id" name="id" value="#{productDetailBean.id}" />
+	<f:viewAction action="#{productDetailBean.loadBook()}" />
+</f:metadata>
 <h:head>
 	<title>Resetar Senha</title>
 </h:head>
 <h:body>
+
 	<h:form>
 		<div>
 			<h:outputLabel value="Senha:" />

@@ -49,6 +49,8 @@ public class Usuario extends PersistentObjectSupport implements Comparable<Usuar
 	@Size(max = 10)
 	@Column(unique = true)
 	private String OAB;
+	
+	private String linkResetaSenha;
 
 	@ManyToMany(fetch = FetchType.EAGER)
 	private List<SystemRole> roles = new ArrayList<>();
@@ -150,5 +152,15 @@ public class Usuario extends PersistentObjectSupport implements Comparable<Usuar
 	{
 		// FIXME: auto-generated method stub
 		return super.compareTo(o);
+	}
+
+	public String getLinkResetaSenha()
+	{
+		return linkResetaSenha;
+	}
+
+	public void setLinkResetaSenha(String linkResetaSenha)
+	{
+		this.linkResetaSenha = linkResetaSenha;
 	}
 }
