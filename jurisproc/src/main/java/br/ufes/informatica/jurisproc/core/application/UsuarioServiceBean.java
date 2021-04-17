@@ -4,6 +4,7 @@ import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.UUID;
 
 import javax.ejb.EJB;
 import javax.ejb.Stateless;
@@ -39,7 +40,10 @@ public class UsuarioServiceBean implements UsuarioService
 		Usuario usuario = usuarioDAO.buscaPorEmail(email);
 		if ( usuario != null )
 		{
-			String mailBody = "A senha de seu login: " + usuario.getSenha();
+			String uuid = UUID.randomUUID().toString();
+			usuario.setLinkResetaSenha(uuid);
+			usuario = usuarioDAO.merge(usuario);
+			String mailBody = "Link para recuperação de senha: " + usuario.getLinkResetaSenha();
 			mailSender.send("recuperacao@jurisproc.ufes.br", email, "Recuperação de senha", mailBody);			
 		}
 	}
