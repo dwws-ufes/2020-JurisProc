@@ -13,7 +13,7 @@
     </ui:define>
 
 	<ui:define name="logo-mini">
-        OWS
+        JP
     </ui:define>
 
 	<ui:define name="menu">
@@ -59,7 +59,7 @@
 	</ui:define>
 
 	<ui:define name="top-menu">
-		<div>Seja bem-vindo, #{currentUser.usuario.nome}</div>
+		<div>Seja bem-vindo, #{currentUser.usuario.nome}, <h:form><h:commandLink style="color:red;" value="sair" action="#{currentUser.logout()}" /></h:form></div>
 
 	</ui:define>
 
