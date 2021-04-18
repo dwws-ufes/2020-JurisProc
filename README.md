@@ -74,9 +74,11 @@ git clone https://github.com/dwws-ufes/2020-JurisProc.git
  </datasource>
 ```
 3 - Adicione dentro de: subsystem xmlns="urn:jboss:domain:security:2.0"
-            	 security-domains
+            	
 ```XML
-		    <security-domain name="database-login" cache-type="default">
+<security-domains>
+	...
+<security-domain name="database-login" cache-type="default">
                     <authentication>
                         <login-module code="Database" flag="required">
                             <module-option name="dsJndiName" value="java:jboss/datasources/Jurisproc"/>
@@ -87,6 +89,8 @@ git clone https://github.com/dwws-ufes/2020-JurisProc.git
                         </login-module>
                     </authentication>
                 </security-domain>
+	...
+	</security-domains>
 		    
 ```
 2 - Faça a importação do projeto no Eclipse;
