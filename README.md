@@ -58,17 +58,22 @@ git clone https://github.com/dwws-ufes/2020-JurisProc.git
 - Configure o datasource no WildFly o arquivo`standalone-full.xml`
 
 ```XML
- <datasource jta="true" jndi-name="java:/jboss/datasources/doeLivros" pool-name="doeLivrosPool" enabled="true" use-java-context="true">
-	<connection-url>jdbc:mysql://localhost:3306/doeLivros</connection-url>
-	<driver>mysql</driver>
-	<security>
-	    <user-name>dwws</user-name>
-	    <password>dwws</password>
-	</security>
+ <datasource jndi-name="java:jboss/datasources/Jurisproc" pool-name="JurisprocPool">
+                    <connection-url>jdbc:mysql://localhost:3306/jurisproc</connection-url>
+                    <driver-class>com.mysql.cj.jdbc.Driver</driver-class>
+                    <driver>mysql</driver>
+                    <security>
+                        <user-name>dwws</user-name>
+                        <password>dwws</password>
+                    </security>
+                    <validation>
+			     <valid-connection-checker class-name="org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLValidConnectionChecker"/>
+                        <background-validation>true</background-validation>
+                        <exception-sorter class-name="org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLExceptionSorter"/>
+                    </validation>
+              
  </datasource>
 ```
-
-
 
 2 - Faça a importação do projeto no Eclipse;
 ```
