@@ -31,7 +31,7 @@
 				<p:outputLabel for="assunto" value="Assuntos" />
 				<p:selectManyMenu id="assunto"
 					value="#{pedidoUniformizacaoController.pedido.assuntos}"
-					converter="entityConverter">
+					converter="entityConverter" style="width: 100%">
 					<f:selectItems value="#{pedidoUniformizacaoController.assuntos}"
 						var="assunto" itemLabel="#{assunto.nome} - #{assunto.competencia}"
 						itemValue="#{assunto}"></f:selectItems>
