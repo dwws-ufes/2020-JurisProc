@@ -39,16 +39,16 @@
 				<p:outputLabel for="numeroPeticao" value="Número Petição" />
 				<p:inputNumber id="numeroPeticao"
 					value="#{pedidoUniformizacaoController.pedido.numeroPeticao}"
-					style="width: 100%;" />
+					style="width: 100%;" decimalPlaces="0" />
 				<p:outputLabel for="paradigma" value="Paradigma" />
 				<p:inputNumber id="paradigma"
 					value="#{pedidoUniformizacaoController.pedido.paradigma}"
-					style="width: 100%;" />
+					style="width: 100%;" decimalPlaces="0" />
 				<p:outputLabel for="direitoMaterial" value="É direito material?" />
 				<p:selectBooleanButton id="direitoMaterial" onLabel="Sim"
 					offLabel="Não" style="width:6rem"
 					value="#{pedidoUniformizacaoController.pedido.direitoMaterial}" />
-				<p:outputLabel for="copiaparadigma" value="É cópia paradigma?" />
+				<p:outputLabel for="copiaparadigma" value="Foi adicionada cópia do paradigma?" />
 				<p:selectBooleanButton id="copiaparadigma" onLabel="Sim"
 					offLabel="Não" style="width:6rem"
 					value="#{pedidoUniformizacaoController.pedido.copiaParadigma}" />
@@ -82,7 +82,7 @@
 				<p:calendar id="dataPeticao"
 					value="#{pedidoUniformizacaoController.pedido.dataPeticao}"
 					showOn="button" pattern="dd/MM/yyyy" mask="true"
-					style="width: 100%;" />
+					style="width: 100%;" disabled="true" />
 				<p:outputLabel for="arquivoPeticao" value="Arquivo Petição" />
 				<p:fileUpload id="arquivoPeticao"
 					value="#{pedidoUniformizacaoController.file}" mode="simple"

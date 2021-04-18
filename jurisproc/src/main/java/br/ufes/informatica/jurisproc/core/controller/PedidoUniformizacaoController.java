@@ -1,5 +1,6 @@
 package br.ufes.informatica.jurisproc.core.controller;
 
+import java.util.Date;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
@@ -82,6 +83,7 @@ public class PedidoUniformizacaoController extends JSFController
 		file = null;
 		isEdit = false;
 		pedido = new PedidoUniformizacao();
+		pedido.setDataPeticao(new Date());
 		return "/core/peticao/form.xhtml?faces-redirect=true";
 	}
 	
