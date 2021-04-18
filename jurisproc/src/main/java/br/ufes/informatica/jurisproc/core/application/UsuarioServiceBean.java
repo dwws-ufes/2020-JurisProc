@@ -57,6 +57,12 @@ public class UsuarioServiceBean implements UsuarioService
 		usuario.setDataRegistro(new Date());
 		usuario.setRoles(Arrays.asList(usuarioDAO.buscaPapelPadrao()));
 		
+		criptografaSenha(usuario);
+		usuarioDAO.incluir(usuario);
+	}
+
+	private void criptografaSenha(Usuario usuario)
+	{
 		String senhaCriptografada = usuario.getSenha();
 		try
 		{
@@ -69,7 +75,23 @@ public class UsuarioServiceBean implements UsuarioService
 		{
 			e.printStackTrace();
 		}
-		usuarioDAO.incluir(usuario);
+	}
+	
+	@Override
+	public String criptografaSenhaPublico(String senha)
+	{
+		String senhaCriptografada = senha;
+		try
+		{
+			MessageDigest messageDigest = MessageDigest.getInstance("SHA-256");
+			byte []encoded = messageDigest.digest(senhaCriptografada.getBytes(StandardCharsets.UTF_8));
+			senhaCriptografada = Base64Encoder.encode(encoded);
+			
+			return senhaCriptografada;			
+		} catch (Exception e)
+		{
+			throw new RuntimeException(e);
+		}
 	}
 
 }
