@@ -95,22 +95,22 @@ git clone https://github.com/dwws-ufes/2020-JurisProc.git
 ```
 4 - Faça a importação do projeto no Eclipse;
 ```
-bundle install
+
 ```
 
-5 - Execute os códigos de migração;
+5 - Execute os scripts do arquivo "inserts.sql" no banco jurisproc;
 ```
-rake db:migrate
+
 ```
 
 6 - Execute a semeação de dados;
 ```
-rails db:seed
+
 ```
 
 7 - Execute o servidor.
 ```
-rails server
+
 ```
 
 ## ✍️ Autores <a name = "autores"></a>:
