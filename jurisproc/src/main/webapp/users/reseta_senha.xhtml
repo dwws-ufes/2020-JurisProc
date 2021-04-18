@@ -15,11 +15,11 @@
 	<h:form>
 		<div>
 			<h:outputLabel value="Senha:" />
-			<h:inputText value="#{resetaSenhaController.usuario.senha}" />
+			<h:inputSecret value="#{resetaSenhaController.usuario.senha}" />
 		</div>
 		<div>
 			<h:outputLabel value="Repetir senha:" />
-			<h:inputText value="#{resetaSenhaController.repeteSenha}" />
+			<h:inputSecret value="#{resetaSenhaController.repeteSenha}" />
 		</div>
 		<h:commandButton value="Alterar" action="#{resetaSenhaController.resetarSenha()}"></h:commandButton>
 		</h:form>

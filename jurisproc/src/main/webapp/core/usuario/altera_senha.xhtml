@@ -40,7 +40,7 @@
 				<p:outputLabel for="oab" value="OAB:"></p:outputLabel>
 				<p:inputText id="oab" value="#{currentUser.usuario.OAB}" />
 			</div>
-			<p:commandButton value="Cadastrar" action="#{usuarioController.resetarSenha()}"></p:commandButton>
+			<p:commandButton value="Cadastrar" action="#{currentUser.alteraSenha()}"></p:commandButton>
 		</h:form>
 	</ui:define>
 </ui:composition>

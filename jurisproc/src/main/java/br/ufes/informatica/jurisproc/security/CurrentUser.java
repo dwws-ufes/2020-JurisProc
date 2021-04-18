@@ -27,6 +27,9 @@ public class CurrentUser implements Serializable
 	@Inject
 	private UsuarioDAO usuarioDAO;
 	private Usuario usuario;
+	
+	private String senha;
+	private String repeteSenha;
 
 	public Usuario getUsuario()
 	{
@@ -47,6 +50,17 @@ public class CurrentUser implements Serializable
 			this.usuario = usuarioDAO.buscaPorEmail(principal.getName());
 		}
 	}
+	
+	public String alteraSenha()
+	{
+		if ( !senha.equals(repeteSenha) )
+		{
+			this.senha = null;
+			this.repeteSenha = null;
+			return "/usuario/altera_senha.xhtml";
+		}
+		return "/index.xhtml?faces-redirect=true";
+	}
 
 	public String logout()
 	{
@@ -54,4 +68,23 @@ public class CurrentUser implements Serializable
 		return "/users/login.xhtml?faces-redirect=true";
 	}
 
+	public String getSenha()
+	{
+		return senha;
+	}
+
+	public void setSenha(String senha)
+	{
+		this.senha = senha;
+	}
+
+	public String getRepeteSenha()
+	{
+		return repeteSenha;
+	}
+
+	public void setRepeteSenha(String repeteSenha)
+	{
+		this.repeteSenha = repeteSenha;
+	}
 }
