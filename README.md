@@ -45,6 +45,74 @@ Estando tudo ok, já é possível usar o docker na máquina.
 
 ## 🚀Implantação <a name = "implantacao"></a>: 
 
+1 - Clone o projeto para o seu computador;
+```
+git clone https://github.com/dwws-ufes/2020-JurisProc.git
+```
+
+2 - É necessário instalar o seguinte:
+- [Eclipse 2020-12](http://www.eclipse.org/);
+- [WildFly 22](http://wildfly.org) e crie uma configuração de servidor dentro do Eclipse;
+- [MySQL 8.0](http://www.mysql.com/products/community/) e crie um schema chamado `jurisproc` e usuário chamado `dwws` com a senha `dwws` e acesso total ao banco de dados homônimo;
+- Configure [the MySQL JDBC driver](http://dev.mysql.com/downloads/connector/j/) no WildFly;
+- Configure o datasource no WildFly o arquivo`standalone-full.xml`
+
+```XML
+ <datasource jndi-name="java:jboss/datasources/Jurisproc" pool-name="JurisprocPool">
+            <connection-url>jdbc:mysql://localhost:3306/jurisproc</connection-url>
+              <driver-class>com.mysql.cj.jdbc.Driver</driver-class>
+               <driver>mysql</driver>
+                    <security>
+                        <user-name>dwws</user-name>
+                        <password>dwws</password>
+                    </security>
+                    <validation>
+			<valid-connection-checker class-name="org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLValidConnectionChecker"/>
+                        <background-validation>true</background-validation>
+                        <exception-sorter class-name="org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLExceptionSorter"/>
+                    </validation>          
+ </datasource>
+```
+3 - Adicione dentro de: subsystem xmlns="urn:jboss:domain:security:2.0"
+            	
+```XML
+<security-domains>
+	...
+<security-domain name="database-login" cache-type="default">
+                    <authentication>
+                        <login-module code="Database" flag="required">
+                            <module-option name="dsJndiName" value="java:jboss/datasources/Jurisproc"/>
+                            <module-option name="principalsQuery" value="select senha from Usuario where email=?"/>
+                           <module-option name="rolesQuery" value="select roles_nome,'Roles' from Usuario_SystemRole as user_roles inner join Usuario as su on su.id = user_roles.Usuario_id where su.email = ?"/>
+                            <module-option name="hashAlgorithm" value="SHA-256"/>
+                            <module-option name="hashEncoding" value="base64"/>
+                        </login-module>
+                    </authentication>
+                </security-domain>
+	...
+	</security-domains>
+		    
+```
+4 - Faça a importação do projeto no Eclipse;
+```
+
+```
+
+5 - Execute os scripts do arquivo "inserts.sql" no banco jurisproc;
+```
+
+```
+
+6 - Execute a semeação de dados;
+```
+
+```
+
+7 - Execute o servidor.
+```
+
+```
+
 ## ✍️ Autores <a name = "autores"></a>:
 - [Melissa Zorzanelli](http://lattes.cnpq.br/5734353552551908)
 - [Pedro Hoppe](http://lattes.cnpq.br/4031843038047078)
