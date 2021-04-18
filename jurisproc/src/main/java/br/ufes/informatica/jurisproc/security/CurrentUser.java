@@ -65,6 +65,7 @@ public class CurrentUser implements Serializable
 			buscaUsuarioLogado();
 			return "/core/usuario/altera_senha.xhtml";
 		}
+		usuarioDAO.incluir(usuario);
 		return "/index.xhtml?faces-redirect=true";
 	}
 
