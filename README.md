@@ -95,9 +95,11 @@ git clone https://github.com/dwws-ufes/2020-JurisProc.git
 ```
 4 - Faça a importação do projeto no Eclipse;
 
-5 - Execute os scripts do arquivo "inserts.sql" no banco jurisproc;
+5 - Execute o servidor e verifique  se as tabelas de banco foram geradas;
 
-6 - Execute o servidor e use a aplicação.
+6 - Execute os scripts do arquivo "inserts.sql" no banco jurisproc;
+
+7 - Execute a aplicação.
 
 
 
