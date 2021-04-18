@@ -93,28 +93,25 @@ git clone https://github.com/dwws-ufes/2020-JurisProc.git
 	</security-domains>
 		    
 ```
-2 - Faça a importação do projeto no Eclipse;
+4 - Faça a importação do projeto no Eclipse;
 ```
 bundle install
 ```
 
-3 - Execute os códigos de migração;
+5 - Execute os códigos de migração;
 ```
 rake db:migrate
 ```
 
-4 - Execute a semeação de dados;
+6 - Execute a semeação de dados;
 ```
 rails db:seed
 ```
 
-5 - Execute o servidor.
+7 - Execute o servidor.
 ```
 rails server
 ```
-
-1. Baixar o projeto através do console com git clone: 
-2. (
 
 ## ✍️ Autores <a name = "autores"></a>:
 - [Melissa Zorzanelli](http://lattes.cnpq.br/5734353552551908)
