@@ -44,6 +44,11 @@ public class CurrentUser implements Serializable
 	@PostConstruct
 	private void carregaUsuario()
 	{
+		buscaUsuarioLogado();
+	}
+
+	private void buscaUsuarioLogado()
+	{
 		Principal principal = request.getUserPrincipal();
 		if (principal != null)
 		{
@@ -57,6 +62,7 @@ public class CurrentUser implements Serializable
 		{
 			this.senha = null;
 			this.repeteSenha = null;
+			buscaUsuarioLogado();
 			return "/usuario/altera_senha.xhtml";
 		}
 		return "/index.xhtml?faces-redirect=true";
