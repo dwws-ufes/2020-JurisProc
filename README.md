@@ -73,8 +73,8 @@ git clone https://github.com/dwws-ufes/2020-JurisProc.git
                     </validation>          
  </datasource>
 ```
-3 - Adicione dentro de <subsystem xmlns="urn:jboss:domain:security:2.0">
-            <security-domains>
+3 - Adicione dentro de ´<subsystem xmlns="urn:jboss:domain:security:2.0">
+            <security-domains>´
 ```XML
 		    <security-domain name="database-login" cache-type="default">
                     <authentication>
