@@ -50,7 +50,27 @@ Estando tudo ok, já é possível usar o docker na máquina.
 git clone https://github.com/dwws-ufes/2020-JurisProc.git
 ```
 
-2 - Dentro da raíz do projeto, execute o "bundle install" para instalar as dependências(gemas) do projeto;
+2. É necessário instalar o seguinte:
+- [Eclipse 2020-12](http://www.eclipse.org/);
+- [WildFly 22](http://wildfly.org) e crie uma configuração de servidor dentro do Eclipse;
+- [MySQL 8.0](http://www.mysql.com/products/community/) e crie um schema chamado `jurisproc` e usuário chamado `dwws` com a senha `dwws` e acesso total ao banco de dados homônimo;
+- Configure [the MySQL JDBC driver](http://dev.mysql.com/downloads/connector/j/) no WildFly;
+- Configure o datasource no WildFly o arquivo`standalone-full.xml`
+
+```XML
+ <datasource jta="true" jndi-name="java:/jboss/datasources/doeLivros" pool-name="doeLivrosPool" enabled="true" use-java-context="true">
+	<connection-url>jdbc:mysql://localhost:3306/doeLivros</connection-url>
+	<driver>mysql</driver>
+	<security>
+	    <user-name>dwws</user-name>
+	    <password>dwws</password>
+	</security>
+ </datasource>
+```
+
+
+
+2 - Faça a importação do projeto no Eclipse;
 ```
 bundle install
 ```
