@@ -34,6 +34,21 @@ Para testar se deu certo: sudo docker run hello-world
 
 Estando tudo ok, já é possível usar o docker na máquina.
 
+- [Servidor S3](https://s3ninja.net/)
+
+Com o Docker instalado, execute os seguintes passos:
+
+1 - Crie um volume para o S3:
+```
+docker volume create ninjas3_data
+
+```
+2 - Execute a imagem do S3 Ninja (simulador de um servicor s3)
+```
+docker run --name s3ninja -d -p 9444:9000 -v ninjas3_data:/home/sirius/data scireum/s3-ninja:7.0
+
+```
+
 ## ⛏️ Ferramentas necessárias <a name = "ferramentas"></a>:
 - JakartaEE
 - Eclipse
