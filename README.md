@@ -97,8 +97,7 @@ git clone https://github.com/dwws-ufes/2020-JurisProc.git
 
 5 - Execute os scripts do arquivo "inserts.sql" no banco jurisproc;
 
-6 - Execute o servidor;
-
+6 - Execute o servidor e use a aplicação.
 
 
 
