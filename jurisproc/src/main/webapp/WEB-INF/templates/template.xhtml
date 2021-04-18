@@ -24,13 +24,8 @@
 					<span><h:outputText value="#{msgs['menu.home']}" /></span>
 				</p:link></li>
 			<c:if test="#{currentUser.temOPapel('ADMIN')}">
-				<li class="header">Header</li>
-				<li><p:link outcome="/index" onclick="clearBreadCrumbs()">
-						<i class="fa fa-calendar"></i>
-						<span>Blank Link</span>
-					</p:link></li>
-				<li class="header"><h:outputText
-						value="#{msgsCore['core.menu.admin']}" /></li>
+				<li class="header" style="background-color: #3399FF;"><strong><h:outputText
+						value="#{msgsCore['core.menu.admin']}" style="color: white;" /></strong></li>
 				<li><p:link outcome="/core/manageWorkshops/index"
 						onclick="clearBreadCrumbs()">
 						<i class="fa fa-calendar"></i>
@@ -38,15 +33,16 @@
 								value="#{msgsCore['core.menu.admin.manageWorkshops']}" /></span>
 					</p:link></li>
 			</c:if>
-			<li class="header"><h:outputText value="Pedido Uniformização" /></li>
+			<li class="header" style="background-color: #3399FF"><strong><h:outputText
+						style="color: white;" value="Pedido Uniformização" /></strong></li>
 			<li><p:link outcome="/core/peticao/index"
 					onclick="clearBreadCrumbs()">
 					<i class="fa fa-balance-scale"></i>
 					<span><h:outputText value="Pedido Uniformização" /></span>
 				</p:link></li>
 			<c:if test="#{currentUser.temOPapel('ADMIN')}">
-				<li class="header"><h:outputText
-						value="#{msgsCore['core.menu.menutestes']}" /></li>
+				<li class="header" style="background-color: #3399FF;"><strong><h:outputText
+							value="#{msgsCore['core.menu.menutestes']}" style="color: white;" /></strong></li>
 				<li><p:link outcome="/core/login/recupera_senha"
 						onclick="clearBreadCrumbs()">
 						<i class="fa fa-calendar"></i>
@@ -58,7 +54,8 @@
 						<span><h:outputText value="Cadastra Usuário" /></span>
 					</p:link></li>
 			</c:if>
-			<li class="header"><h:outputText value="Dados Cadastrais" /></li>
+			<li class="header" style="background-color: #3399FF;"><strong><h:outputText
+						value="Dados Cadastrais" style="color: white;" /></strong></li>
 			<li><p:link outcome="/core/usuario/altera_dados_cadastrais"
 					onclick="clearBreadCrumbs()">
 					<span><h:outputText value="Atualizar dados cadastrais" /></span>
