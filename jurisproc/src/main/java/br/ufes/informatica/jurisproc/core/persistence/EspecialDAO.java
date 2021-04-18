@@ -34,7 +34,7 @@ public class EspecialDAO
 
 	public List<PedidoUniformizacao> carregaPedidosPorUsuario()
 	{
-		return manager.createQuery("FROM PedidoUniformizacao p JOIN FETCH p.acordao ac JOIN FETCH p.assuntos as WHERE p.usuario.id =:id_usu", PedidoUniformizacao.class)
+		return manager.createQuery("SELECT distinct(p) FROM PedidoUniformizacao p JOIN FETCH p.acordao ac JOIN FETCH p.assuntos assu WHERE p.usuario.id =:id_usu", PedidoUniformizacao.class)
 				.setParameter("id_usu", currentUser.getUsuario().getId()).getResultList();
 	}
 	

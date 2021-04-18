@@ -20,7 +20,10 @@ import br.ufes.informatica.jurisproc.core.domain.PedidoUniformizacao;
 import br.ufes.informatica.jurisproc.core.domain.TemaRecurso;
 import br.ufes.informatica.jurisproc.core.persistence.AcordaoDAO;
 import br.ufes.informatica.jurisproc.core.persistence.AssuntoDAO;
+import br.ufes.informatica.jurisproc.core.persistence.EspecialDAO;
 import br.ufes.informatica.jurisproc.core.persistence.PedidoUniformizacaoDAO;
+import br.ufes.informatica.jurisproc.infra.FileSaver;
+import br.ufes.informatica.jurisproc.security.CurrentUser;
 
 @Named
 @SessionScoped
@@ -32,11 +35,14 @@ public class PedidoUniformizacaoController extends JSFController
 	@EJB
 	private PedidoUniformizacaoService pedidoUniformizacaoService;
 	@Inject
-	private AssuntoDAO assuntoDAO;
-	@Inject
-	private AcordaoDAO acordaoDAO;
-	@Inject
 	private PedidoUniformizacaoDAO pedidoUniformizacaoDAO;
+	@Inject
+	private EspecialDAO especialDAO;
+	@Inject
+	private CurrentUser currentUser;
+	
+	@Inject
+	private FileSaver fileSaver;
 	
 	private Boolean isEdit = false;
 	
@@ -51,9 +57,9 @@ public class PedidoUniformizacaoController extends JSFController
 	@PostConstruct
 	public void carregaFormulario()
 	{
-		assuntos = assuntoDAO.retrieveAll();
-		acordaos = acordaoDAO.retrieveAll();
-		pedidosUnformizacoes = pedidoUniformizacaoDAO.buscaPorUsuario();
+		assuntos = especialDAO.carregaAssuntos();
+		acordaos = especialDAO.carregaAcordaos();
+		pedidosUnformizacoes = especialDAO.carregaPedidosPorUsuario();
 	}
 
 	public List<Acordao> getAcordaos()
@@ -68,13 +74,13 @@ public class PedidoUniformizacaoController extends JSFController
 
 	public String cadastraPedidoUniformizacao()
 	{
-		pedidoUniformizacaoService.cadastraPedidoUniformizacao(pedido, file, isEdit);
+		cadastraPedidoUniformizacao(pedido, file, isEdit);
 		return redirecionamentoPadrao();
 	}
 
 	private String redirecionamentoPadrao()
 	{
-		pedidosUnformizacoes = pedidoUniformizacaoDAO.buscaPorUsuario();
+		pedidosUnformizacoes = especialDAO.carregaPedidosPorUsuario();
 		return "/core/peticao/index.xhtml?faces-redirect=true";
 	}
 
@@ -91,15 +97,15 @@ public class PedidoUniformizacaoController extends JSFController
 	{
 		file = null;
 		isEdit = true;
-		this.pedido = pedidoUniformizacaoDAO.retrieveById(id);
-		assuntos = assuntoDAO.retrieveAll();
-		acordaos = acordaoDAO.retrieveAll();
+		this.pedido = especialDAO.buscaPorId(id);
+		assuntos = especialDAO.carregaAssuntos();
+		acordaos = especialDAO.carregaAcordaos();
 		return "/core/peticao/form.xhtml?faces-redirect=true";
 	}
 	
 	public String excluirRegistro(Long id)
 	{
-		PedidoUniformizacao pedidoUniformizacao = pedidoUniformizacaoDAO.retrieveById(id);
+		PedidoUniformizacao pedidoUniformizacao = especialDAO.buscaPorId(id);
 		pedidoUniformizacaoDAO.delete(pedidoUniformizacao);
 		return redirecionamentoPadrao();
 	}
@@ -176,6 +182,26 @@ public class PedidoUniformizacaoController extends JSFController
 	public boolean existeRegistroSelecionado()
 	{
 		return this.registrosSelecionados != null && !this.registrosSelecionados.isEmpty();
+	}
+	
+	private void cadastraPedidoUniformizacao(PedidoUniformizacao pedidoUniformizacao, UploadedFile file, Boolean isEdit)
+	{
+		if ( file != null )
+		{
+			pedidoUniformizacao.setCaminhoPeticaoAnexo(fileSaver.write("peticoes", file));
+			
+		}
+		pedidoUniformizacao.setUsuario(currentUser.getUsuario());
+		if ( !isEdit )
+		{
+			especialDAO.salvarPedido(pedidoUniformizacao);
+			
+		}
+		else
+		{
+			especialDAO.salvarPedido(pedidoUniformizacao);			
+		}
+		
 	}
 
 }
