@@ -11,6 +11,7 @@ import javax.inject.Named;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import br.ufes.informatica.jurisproc.core.application.UsuarioService;
 import br.ufes.informatica.jurisproc.core.domain.Usuario;
 import br.ufes.informatica.jurisproc.core.persistence.UsuarioDAO;
 
@@ -26,7 +27,11 @@ public class CurrentUser implements Serializable
 	private HttpServletRequest request;
 	@Inject
 	private UsuarioDAO usuarioDAO;
+	@Inject
+	private UsuarioService usuarioService;
+	
 	private Usuario usuario;
+	
 	
 	private String senha;
 	private String repeteSenha;
@@ -65,7 +70,8 @@ public class CurrentUser implements Serializable
 			buscaUsuarioLogado();
 			return "/core/usuario/altera_senha.xhtml";
 		}
-		usuarioDAO.incluir(usuario);
+		usuario.setSenha(usuarioService.criptografaSenhaPublico(senha));
+		usuarioDAO.merge(usuario);
 		return "/index.xhtml?faces-redirect=true";
 	}
 
