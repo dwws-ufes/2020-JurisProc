@@ -45,7 +45,32 @@ Estando tudo ok, já é possível usar o docker na máquina.
 
 ## 🚀Implantação <a name = "implantacao"></a>: 
 
-1. Baixar o projeto com [git clone](https://github.com/dwws-ufes/2020-JurisProc): git clone https://github.com/dwws-ufes/2020-JurisProc.git
+1 - Clone o projeto para o seu computador;
+```
+git clone https://github.com/dwws-ufes/2020-JurisProc.git
+```
+
+2 - Dentro da raíz do projeto, execute o "bundle install" para instalar as dependências(gemas) do projeto;
+```
+bundle install
+```
+
+3 - Execute os códigos de migração;
+```
+rake db:migrate
+```
+
+4 - Execute a semeação de dados;
+```
+rails db:seed
+```
+
+5 - Execute o servidor.
+```
+rails server
+```
+
+1. Baixar o projeto através do console com git clone: 
 2. (
 
 ## ✍️ Autores <a name = "autores"></a>:
