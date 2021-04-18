@@ -45,6 +45,9 @@ Estando tudo ok, já é possível usar o docker na máquina.
 
 ## 🚀Implantação <a name = "implantacao"></a>: 
 
+1. Baixar o projeto com [git clone](https://github.com/dwws-ufes/2020-JurisProc): git clone https://github.com/dwws-ufes/2020-JurisProc.git
+2. (
+
 ## ✍️ Autores <a name = "autores"></a>:
 - [Melissa Zorzanelli](http://lattes.cnpq.br/5734353552551908)
 - [Pedro Hoppe](http://lattes.cnpq.br/4031843038047078)
