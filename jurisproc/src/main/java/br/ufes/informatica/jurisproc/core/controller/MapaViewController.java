@@ -36,12 +36,14 @@ public class MapaViewController
 		simpleModel.addOverlay(new Marker(coord2, "Ataturk Parki"));
 		simpleModel.addOverlay(new Marker(coord3, "Karaalioglu Parki"));
 		simpleModel.addOverlay(new Marker(coord4, "Kaleici"));
+		
+		adicionaNoMapa();
 
 	}
 	
-	public void adicionaNoMapa()
+	private void adicionaNoMapa()
 	{
-		String nome = dadoInserido;
+		String nome = "Cariacica";
 		if ( nome != null && nome.length() > 3)
 		{
 			String query = "PREFIX dbo: <http://dbpedia.org/ontology/>\n" +
@@ -63,6 +65,7 @@ public class MapaViewController
 			{
 				QuerySolution querySolution = results.next();
 				Literal literal = querySolution.getLiteral("desc");
+				System.out.println(literal.getValue());
 			}
 			
 		}

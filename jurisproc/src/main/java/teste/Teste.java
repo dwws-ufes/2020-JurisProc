@@ -20,25 +20,24 @@ public class Teste
 
 		Model model = ModelFactory.createDefaultModel();
 
-		Resource johnSmith = model.createResource(personURI).addProperty(VCARD.FN, fullName).addProperty(VCARD.N,
+		model.createResource(personURI).addProperty(VCARD.FN, fullName).addProperty(VCARD.N,
 				model.createResource().addProperty(VCARD.Given, givenName).addProperty(VCARD.Family, familyName));
-		
+
 		StmtIterator iter = model.listStatements();
-		
-		while ( iter.hasNext() )
+
+		while (iter.hasNext())
 		{
 			Statement stmt = iter.nextStatement();
 			Resource subject = stmt.getSubject();
 			Property predicate = stmt.getPredicate();
 			RDFNode object = stmt.getObject();
-			
+
 			System.out.println(subject.toString());
 			System.out.println(" " + predicate.toString() + " ");
-			if ( object instanceof Resource )
+			if (object instanceof Resource)
 			{
 				System.out.print(object.toString());
-			}
-			else
+			} else
 			{
 				System.out.println(" \"" + object.toString() + "\"");
 			}
