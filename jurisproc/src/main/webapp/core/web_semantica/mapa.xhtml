@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:adm="http://github.com/adminfaces"
+	template="/WEB-INF/templates/template.xhtml">
+
+	<ui:define name="title">
+		<h:outputText value="#{msgsCore['manageWorkshops.title']}" />
+	</ui:define>
+
+	<ui:define name="description">
+		<h:outputText value="#{msgsCore['manageWorkshops.title.description']}" />
+	</ui:define>
+
+	<ui:define name="body">
+		<script type="text/javascript"
+			src="https://maps.google.com/maps/api/js?sensor=false"></script>
+		<div class="card">
+			<p:gmap center="36.890257,30.707417" zoom="13" type="HYBRID"
+				style="width:100%;height:400px"
+				model="#{mapaViewController.simpleModel}" />
+		</div>
+	</ui:define>
+</ui:composition>
