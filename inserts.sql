@@ -69,3 +69,16 @@ INSERT INTO jurisproc.Assunto
 (id, uuid, version, competencia, nome)
 VALUES(11, '5a2d17fa-7f22-4654-ac0a-fbae2a2b9df3', 0, 'Direito Consumidor', 'Práticas Abusivas');
 
+--Seções Judiciárias
+INSERT INTO jurisproc.SecaoJudiciaria (id, uuid, version, latitude, longitude, nome, secaoAdmissibilidade, tribunalResponsavel) VALUES(1, '58e6b065-b42c-4a6e-95d1-773a398c4499', 0, NULL, NULL, 'Vitória-ES', 1, 1);
+INSERT INTO jurisproc.SecaoJudiciaria (id, uuid, version, latitude, longitude, nome, secaoAdmissibilidade, tribunalResponsavel) VALUES(2, 'c18fabec-d6c4-45c9-ba78-71f5fd139164', 0, NULL, NULL, 'São Paulo', 1, 2);
+INSERT INTO jurisproc.SecaoJudiciaria (id, uuid, version, latitude, longitude, nome, secaoAdmissibilidade, tribunalResponsavel) VALUES(3, '5c3f2706-c142-4d4c-81bc-67494f60c318', 0, NULL, NULL, 'Rio de Janeiro', 2, 1);
+INSERT INTO jurisproc.SecaoJudiciaria (id, uuid, version, latitude, longitude, nome, secaoAdmissibilidade, tribunalResponsavel) VALUES(4, '513dd310-71ad-4b57-a269-64ade3da2265', 0, NULL, NULL, 'Cutitiba', 1, 3);
+INSERT INTO jurisproc.SecaoJudiciaria (id, uuid, version, latitude, longitude, nome, secaoAdmissibilidade, tribunalResponsavel) VALUES(5, '6ae9f709-9503-4135-ac66-53d045f386f0', 0, NULL, NULL, 'Campo Grande', 1, 2);
+INSERT INTO jurisproc.SecaoJudiciaria (id, uuid, version, latitude, longitude, nome, secaoAdmissibilidade, tribunalResponsavel) VALUES(6, 'b04f813c-f13d-48f2-9977-eca688722c34', 0, NULL, NULL, 'Brasília', 1, 0);
+INSERT INTO jurisproc.SecaoJudiciaria (id, uuid, version, latitude, longitude, nome, secaoAdmissibilidade, tribunalResponsavel) VALUES(7, 'd5a6707c-a158-418f-97ed-799993e0315e', 0, NULL, NULL, 'Porto Alegre', 1, 3);
+INSERT INTO jurisproc.SecaoJudiciaria (id, uuid, version, latitude, longitude, nome, secaoAdmissibilidade, tribunalResponsavel) VALUES(8, '5bb2f472-6eed-453b-baae-6a8b24a9f945', 0, NULL, NULL, 'São Mateus', 1, 1);
+INSERT INTO jurisproc.SecaoJudiciaria (id, uuid, version, latitude, longitude, nome, secaoAdmissibilidade, tribunalResponsavel) VALUES(9, '4e793a43-540d-46ca-909d-768c263822ea', 0, NULL, NULL, 'Salvador', 1, 0);
+INSERT INTO jurisproc.SecaoJudiciaria (id, uuid, version, latitude, longitude, nome, secaoAdmissibilidade, tribunalResponsavel) VALUES(10, 'd5272193-cce4-4f86-9bd7-a2e2a0da73b8', 0, NULL, NULL, 'Recife', 1, 4);
+
+
