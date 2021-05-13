@@ -50,9 +50,10 @@ public class MapaViewController
 				QuerySolution querySolution = results.next();
 				Literal literalLat = querySolution.getLiteral("lat");
 				Literal literalLong = querySolution.getLiteral("long");
-				
-				LatLng coordenada = new LatLng(Double.parseDouble(literalLat.getValue().toString()), Double.parseDouble(literalLong.getValue().toString()));
-				
+
+				LatLng coordenada = new LatLng(Double.parseDouble(literalLat.getValue().toString()),
+						Double.parseDouble(literalLong.getValue().toString()));
+
 				simpleModel.addOverlay(new Marker(coordenada, j.getNome()));
 			}
 		}
