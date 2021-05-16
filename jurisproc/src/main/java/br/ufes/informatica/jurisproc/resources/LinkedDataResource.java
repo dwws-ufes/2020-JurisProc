@@ -23,7 +23,7 @@ public class LinkedDataResource
 		Form dadosDeEntradaForm = new Form("query", query);
 		Entity<Form> formEntity = Entity.form(dadosDeEntradaForm);
 		Response response = client.target(uri).request().post(formEntity);
-		return response;		
+		return response;
 	}
 
 }
